@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "scaffolding";
+
+body {
+    font-family: 'Lato';
+    font-size: 1.6rem;
+    background-color: blue;
+}
+
+//@media (max-width: $width-md){
+//    text-align: left;
+//}
+
+
+
+

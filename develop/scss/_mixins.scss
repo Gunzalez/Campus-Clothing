@@ -1,0 +1,56 @@
+@mixin border-radius($radius: 0px){
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius !important;
+    border-radius: $radius !important;
+}
+
+@mixin transitions($speed: 0.5s){
+    -webkit-transition: all $speed;
+    -moz-transition: all $speed;
+    -o-transition: all $speed;
+    transition: all $speed;
+}
+
+@mixin transition-background($speed: 0.2s){
+    -webkit-transition: background $speed;
+    -moz-transition: background $speed;
+    -o-transition: background $speed;
+    transition: background $speed;
+}
+
+@mixin transitions-height($distance: 0.5s){
+    -webkit-transition: height $distance;
+    -moz-transition: height $distance;
+    -o-transition: height $distance;
+    transition: height $distance;
+}
+
+@mixin clearfix {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@mixin dropshadow() {
+    -webkit-box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0 0 15px 0 rgba(50, 50, 50, 0.75);
+    box-shadow:         0 0 15px 0 rgba(50, 50, 50, 0.75);
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+
+%cleanUl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+%textshadow {
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+}
+
