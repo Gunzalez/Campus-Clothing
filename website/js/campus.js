@@ -153,7 +153,7 @@
     };
 
     campus.init = function () {
-
+        
         // all init here
         campus.environment.init();
         campus.navigation.init();
@@ -181,7 +181,6 @@
     campus.resize = function () {
         campus.environment.resize();
         campus.navigation.resize();
-        campus.customise.resize();
     };
 
     // main init
