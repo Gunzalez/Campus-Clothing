@@ -1,3 +1,3 @@
-# Workflow Course
+# Campus clothing
 
-Files for the Lynda.com course on workflows
+New responsive website application for online campus clothing outlet.
