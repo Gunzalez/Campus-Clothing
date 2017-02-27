@@ -32,6 +32,9 @@ form {
         &:focus {
             border-color: #000000 !important;
         }
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 }
 

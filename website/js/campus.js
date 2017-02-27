@@ -63,7 +63,7 @@
 
         // initial set up
         init: function(){
-            // attach optn action
+            // attach open action
             campus.login.$openBtn.on('click', function(e){
                 e.preventDefault();
                 if(!campus.login.$loginRow.hasClass('open')){
@@ -135,18 +135,8 @@
 
     campus.institutions = {
         // elements for this component
-        input: document.getElementById('selectedInstitution'),
+        input: document.getElementById('selectedInstitution')
 
-        // get list of institutions
-        init: function(){
-            $.getJSON("js/institutions.json", function(result){
-                new Awesomplete (campus.institutions.input, {
-                    minChars: 2,
-                    maxItems: 7,
-                    list: result.institutions
-                });
-            });
-        }
     };
 
     campus.init = function () {
@@ -155,7 +145,7 @@
         campus.environment.init();
         campus.login.init();
         campus.menu.init();
-        campus.institutions.init();
+        //campus.institutions.init();
 
         // resize triggers
         $(window).on('resize', function () {

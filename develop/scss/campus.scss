@@ -83,7 +83,7 @@ body {
         margin-right: 5px;
         color: $brand-white;
         text-transform: capitalize;
-        @media (max-width: $width-sm){
+        @media (max-width: $width-sm - 1){
             display: none;
         }
     }
@@ -114,7 +114,7 @@ body {
             color: #ffffff;
         }
 
-        @media (max-width: $width-sm){
+        @media (max-width: $width-sm - 1){
             float: left;
             margin-left: 0 !important;
         }
@@ -239,7 +239,14 @@ body {
         margin: 10px 0;
         font-size: 0.9em;
         text-transform: uppercase;
-        width: 70%;
+        width: 70% !important;
+        display: block !important;
+        text-shadow: none !important;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 0;
     }
 
     .shopping-basket-link {
@@ -264,7 +271,7 @@ body {
         }
     }
 
-    @media (min-width: $width-sm){
+    @media (min-width: $width-sm + 1){
         form {
             display: inline-block;
             background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;

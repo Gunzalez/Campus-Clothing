@@ -43,7 +43,10 @@ form button {
   box-shadow: none !important;
   border-color: #6a6a6a !important;
   font-family: 'Open Sans', sans-serif;
-  font-weight: normal !important; }
+  font-weight: normal !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   form input:focus,
   form button:focus {
     border-color: #000000 !important; }
@@ -105,7 +108,7 @@ body {
     margin-right: 5px;
     color: #faf6dd;
     text-transform: capitalize; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       #login-form label {
         display: none; } }
   #login-form button {
@@ -128,7 +131,7 @@ body {
     color: #faf6dd; }
     #login-form a:hover {
       color: #ffffff; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       #login-form a {
         float: left;
         margin-left: 0 !important; } }
@@ -203,7 +206,12 @@ body {
     margin: 10px 0;
     font-size: 0.9em;
     text-transform: uppercase;
-    width: 70%; }
+    width: 70% !important;
+    display: block !important;
+    text-shadow: none !important; }
+  .institution .form-group {
+    width: 100%;
+    margin-bottom: 0; }
   .institution .shopping-basket-link {
     position: absolute;
     right: 0;
@@ -224,7 +232,7 @@ body {
       background-color: #ffffff;
       font-size: 0.3em;
       font-weight: bold; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .institution form {
       display: inline-block;
       background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
