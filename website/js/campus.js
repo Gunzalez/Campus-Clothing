@@ -36,11 +36,12 @@
 
     campus.login = {
         $openBtn: $('#open-login-btn'),
+        $closeBtn: $('#close-login-btn'),
         $loginRow: $('.header-login'),
         $loginFrm: $('#login-form'),
 
         openFrm: function(){
-            var newHeight = campus.login.$loginFrm.height() + campus.login.$loginRow.height();
+            var newHeight = campus.login.$loginFrm.outerHeight();
             campus.login.$loginRow.css('height', newHeight);
             campus.login.$loginRow.addClass('open');
         },
@@ -62,6 +63,10 @@
                 } else {
                    campus.login.closeFrm();
                 }
+            });
+            campus.login.$closeBtn.on('click', function(e){
+                e.preventDefault();
+                campus.login.closeFrm();
             });
         }
     };

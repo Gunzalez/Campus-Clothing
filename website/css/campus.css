@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .header-title .open-menu-btn .text {
+.header-login .navigation li .text, #login-form .close-login-btn .text, .header-title .open-menu-btn .text {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -32,6 +32,18 @@ a {
   a:hover {
     color: #00365a; }
 
+form input,
+form button {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-color: #6a6a6a !important;
+  font-family: 'Open Sans', sans-serif; }
+  form input:focus,
+  form button:focus {
+    border-color: #000000 !important; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #ffffff; }
@@ -49,7 +61,7 @@ body {
   -webkit-transition: height 0.2s;
   transition: height 0.2s; }
   .header-login .container {
-    background: url("../images/cc-shield.png") 0 0 no-repeat; }
+    background: url("../images/cc-shield.png") 15px 0 no-repeat; }
   .header-login .navigation {
     float: right;
     height: 35px; }
@@ -70,16 +82,42 @@ body {
       padding: 7px 0; }
       .header-login .navigation li:first-child a {
         border-left: none; }
-  .header-login #login-form {
-    margin-top: 36px;
-    height: 115px; }
+
+#login-form {
+  padding-top: 36px;
+  padding-bottom: 10px; }
+  #login-form label {
+    margin-right: 5px;
+    color: #faf6dd;
+    text-transform: capitalize; }
+  #login-form input {
+    margin-right: 15px; }
+  #login-form button {
+    color: #faf6dd;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 15px; }
+    #login-form button:hover {
+      color: #ffffff; }
+    #login-form button:focus {
+      border-color: #faf6dd; }
+  #login-form a {
+    margin-right: 15px;
+    display: inline-block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #faf6dd; }
+    #login-form a:hover {
+      color: #ffffff; }
 
 .header-title {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
   .header-title .container {
     padding-top: 35px;
     padding-bottom: 10px;
-    background: url("../images/cc-shield.png") 0 0 no-repeat; }
+    background: url("../images/cc-shield.png") 15px 0 no-repeat; }
   .header-title .header-box {
     position: relative; }
   .header-title h1 {
@@ -105,7 +143,7 @@ body {
       display: block; }
   .header-title .open-menu-btn {
     position: absolute;
-    right: 15px;
+    right: 5px;
     top: 50%;
     margin-top: -35px;
     font-size: 5.0em;

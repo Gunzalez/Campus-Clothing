@@ -18,6 +18,19 @@ a {
     }
 }
 
+form {
+    input,
+    button {
+        @include border-radius(0);
+        box-shadow: none !important;
+        border-color: $brand-black !important;
+        font-family: 'Open Sans', sans-serif;
+        &:focus {
+            border-color: #000000 !important;
+        }
+    }
+}
+
 
 
 

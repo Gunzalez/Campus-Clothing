@@ -11,7 +11,7 @@ body {
 .header-login {
 
     .container {
-        background: url("../images/cc-shield.png") 0 0 no-repeat;
+        background: url("../images/cc-shield.png") 15px 0 no-repeat;
     }
 
     height: 35px;
@@ -60,11 +60,52 @@ body {
             }
         }
     }
+}
 
-    #login-form {
-        margin-top: 36px;
-        //background-color: lime;
-        height: 115px;
+#login-form {
+    padding-top: 36px;
+    padding-bottom: 10px;
+
+    label {
+        margin-right: 5px;
+        color: $brand-white;
+        text-transform: capitalize;
+    }
+
+    input {
+        margin-right: 15px;
+    }
+
+    button {
+        color: $brand-white;
+        background: none;
+        border: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-right: 15px;
+        &:hover {
+            color: #ffffff;
+        }
+        &:focus {
+            border-color: $brand-white;
+        }
+    }
+
+    a {
+        margin-right: 15px;
+        display: inline-block;
+        padding: 6px 10px;
+        text-decoration: none;
+        color: $brand-white;
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    .close-login-btn {
+        .text {
+            @extend %visuallyHidden;
+        }
     }
 }
 
@@ -73,7 +114,7 @@ body {
     .container {
         padding-top: 35px;
         padding-bottom: 10px;
-        background: url("../images/cc-shield.png") 0 0 no-repeat;
+        background: url("../images/cc-shield.png") 15px 0 no-repeat;
     }
 
     background: url("../images/texture-blue.png") 0 0 $brand-blue;
@@ -115,7 +156,7 @@ body {
 
     .open-menu-btn {
         position: absolute;
-        right: 15px;
+        right: 5px;
         top: 50%;
         margin-top: -35px;
         font-size: 5.0em;
