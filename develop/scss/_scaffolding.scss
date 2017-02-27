@@ -1,9 +1,23 @@
 
-@media (max-width: $width-lg){
-    .container {
-        width: 100%;
+.container {
+    width: 1170px;
+    @media (max-width: $width-lg){
+            width: 100%;
     }
 }
+
+.section {
+    position: relative;
+}
+
+a {
+    @include transition(color 0.5s);
+
+    &:hover {
+        color: lime !important;
+    }
+}
+
 
 
 

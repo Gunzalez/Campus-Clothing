@@ -1,28 +1,14 @@
-@mixin border-radius($radius: 0px){
+@mixin border-radius($radius: 0){
     -webkit-border-radius: $radius !important;
     -moz-border-radius: $radius !important;
     border-radius: $radius !important;
 }
 
-@mixin transitions($speed: 0.5s){
-    -webkit-transition: all $speed;
-    -moz-transition: all $speed;
-    -o-transition: all $speed;
-    transition: all $speed;
-}
-
-@mixin transition-background($speed: 0.2s){
-    -webkit-transition: background $speed;
-    -moz-transition: background $speed;
-    -o-transition: background $speed;
-    transition: background $speed;
-}
-
-@mixin transitions-height($distance: 0.5s){
-    -webkit-transition: height $distance;
-    -moz-transition: height $distance;
-    -o-transition: height $distance;
-    transition: height $distance;
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
 }
 
 @mixin clearfix {
@@ -52,5 +38,13 @@
 
 %textshadow {
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.75);
+}
+
+%visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; width: 1px;
+    margin: -1px; padding: 0; border: 0;
 }
 

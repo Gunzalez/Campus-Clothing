@@ -1,11 +1,90 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+.header-login .navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 100%; } }
+.header-login .navigation li .text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+.container {
+  width: 1170px; }
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%; } }
+
+.section {
+  position: relative; }
+
+a {
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+  a:hover {
+    color: lime !important; }
 
 body {
   font-family: 'Lato';
   font-size: 1.6rem;
-  background-color: blue; }
+  background-color: #00365a; }
+
+.header-login {
+  height: 35px;
+  background-color: #98322e;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s; }
+  .header-login .navigation {
+    float: right;
+    height: 35px; }
+    .header-login .navigation a {
+      text-transform: uppercase;
+      color: #ffffff;
+      display: block;
+      padding: 0 15px;
+      border-left: 1px dotted #ffffff;
+      text-decoration: none; }
+    .header-login .navigation li {
+      float: left;
+      padding: 7px 0; }
+      .header-login .navigation li:first-child a {
+        border-left: none; }
+  .header-login #login-form {
+    margin-top: 36px;
+    background-color: lime;
+    height: 115px; }
+
+.header-title {
+  padding-top: 40px; }
+  .header-title h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #ffffff;
+    margin: 0;
+    padding: 0; }
+    .header-title h1 a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none; }
+    .header-title h1 .text {
+      display: inline-block;
+      border-bottom: 1px solid #ffffff; }
+    .header-title h1 .imagery {
+      padding-top: 5px;
+      display: block; }
