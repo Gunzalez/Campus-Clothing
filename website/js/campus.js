@@ -68,6 +68,9 @@
                 e.preventDefault();
                 campus.login.closeFrm();
             });
+            campus.login.$loginRow.on('mouseleave', function(){
+                campus.login.closeFrm();
+            })
         }
     };
 
