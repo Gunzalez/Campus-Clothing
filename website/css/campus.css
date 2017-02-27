@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, #login-form .close-login-btn .text, .header-title .open-menu-btn .text {
+.header-login .navigation li .text, #login-form .close-login-btn .text, .header-title .open-menu-btn .text, .institution label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -50,7 +50,7 @@ form button {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #00365a; }
+  background-color: #ffffff; }
 
 .header-login {
   height: 35px;
@@ -192,3 +192,47 @@ body {
     .header-title .open-menu-btn {
       margin-top: -10px;
       font-size: 2.3em; } }
+
+.institution {
+  background: #adadad;
+  text-align: center; }
+  .institution .form-box {
+    position: relative; }
+  .institution input {
+    height: auto;
+    margin: 10px 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    width: 70%; }
+  .institution .shopping-basket-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    font-size: 2.5em;
+    color: #98322e;
+    padding-right: 4px; }
+    .institution .shopping-basket-link .items {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: 15px;
+      height: 15px;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      border-radius: 50% !important;
+      background-color: #ffffff;
+      font-size: 0.3em;
+      font-weight: bold; }
+  @media (min-width: 768px) {
+    .institution form {
+      display: inline-block;
+      background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
+      background-size: contain;
+      padding-left: 100px; }
+    .institution .form-group {
+      background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
+      background-size: contain;
+      padding-right: 100px; }
+    .institution input {
+      width: 470px !important; } }

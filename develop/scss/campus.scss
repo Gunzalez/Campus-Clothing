@@ -5,8 +5,8 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    //background-color: #ffffff;
-    background-color: $brand-blue;
+    background-color: #ffffff;
+    //background-color: $brand-blue;
 }
 
 .header-login {
@@ -220,6 +220,72 @@ body {
 
         }
     }
+}
+
+.institution {
+    background: $brand-coal;
+    text-align: center;
+
+    .form-box {
+        position: relative;
+    }
+
+    label {
+       @extend %visuallyHidden;
+    }
+
+    input {
+        height: auto;
+        margin: 10px 0;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        width: 70%;
+    }
+
+    .shopping-basket-link {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -25px;
+        font-size: 2.5em;
+        color: $brand-red;
+        padding-right: 4px;
+
+        .items {
+            position: absolute;
+            top: 6px;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            @include border-radius(50%);
+            background-color: #ffffff;
+            font-size: 0.3em;
+            font-weight: bold;
+        }
+    }
+
+    @media (min-width: $width-sm){
+        form {
+            display: inline-block;
+            background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
+            background-size: contain;
+            padding-left: 100px;
+        }
+
+        .form-group {
+            background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
+            background-size: contain;
+            padding-right: 100px;
+
+        }
+
+        input {
+            width: 470px !important;
+        }
+    }
+
+
+
 }
 
 
