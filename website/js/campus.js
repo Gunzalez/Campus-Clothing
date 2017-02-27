@@ -55,12 +55,13 @@
         },
 
         init: function(){
-            campus.login.$openBtn.on('click', function(){
-               if(!campus.login.$loginRow.hasClass('open')){
+            campus.login.$openBtn.on('click', function(e){
+                e.preventDefault();
+                if(!campus.login.$loginRow.hasClass('open')){
                    campus.login.openFrm();
-               } else {
+                } else {
                    campus.login.closeFrm();
-               }
+                }
             });
         }
     };
