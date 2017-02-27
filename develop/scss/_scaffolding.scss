@@ -14,7 +14,7 @@ a {
     @include transition(color 0.5s);
 
     &:hover {
-        color: lime !important;
+        color: $brand-blue;
     }
 }
 

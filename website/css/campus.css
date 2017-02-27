@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .header-login .navigation {
   margin: 0;
@@ -30,12 +30,11 @@ a {
   -webkit-transition: color 0.5s;
   transition: color 0.5s; }
   a:hover {
-    color: lime !important; }
+    color: #00365a; }
 
 body {
-  font-family: 'Lato';
-  font-size: 1.6rem;
-  background-color: #00365a; }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff; }
 
 .header-login {
   height: 35px;
@@ -70,7 +69,9 @@ body {
     height: 115px; }
 
 .header-title {
-  padding-top: 40px; }
+  padding-top: 35px;
+  padding-bottom: 10px;
+  background-color: #00365a; }
   .header-title h1 {
     text-align: center;
     text-transform: uppercase;
@@ -82,9 +83,13 @@ body {
       display: inline-block;
       color: #ffffff;
       text-decoration: none; }
+      .header-title h1 a:hover {
+        color: #ffffff; }
     .header-title h1 .text {
       display: inline-block;
-      border-bottom: 1px solid #ffffff; }
+      font-size: 1.6em;
+      border-bottom: 1px solid #ffffff;
+      letter-spacing: 3px; }
     .header-title h1 .imagery {
       padding-top: 5px;
       display: block; }
