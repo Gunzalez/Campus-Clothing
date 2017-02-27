@@ -10,7 +10,7 @@ body {
 
 .header-login {
     height: 35px;
-    background-color: $brand-red;
+    background: url("../images/texture-red.png") 0 0 $brand-red;
     position: absolute;
     top: 0;
     width: 100%;
@@ -58,7 +58,7 @@ body {
 
     #login-form {
         margin-top: 36px;
-        background-color: lime;
+        //background-color: lime;
         height: 115px;
     }
 }
@@ -66,7 +66,7 @@ body {
 .header-title {
     padding-top: 35px;
     padding-bottom: 10px;
-    background-color: $brand-blue;
+    background: url("../images/texture-blue.png") 0 0 $brand-blue;
 
     .header-box {
         position: relative;
@@ -85,14 +85,14 @@ body {
             color: $brand-white;
             text-decoration: none;
             &:hover {
-                color: $brand-white;
+                color: #ffffff;
             }
         }
 
         .text {
             display: inline-block;
             font-size: 1.6em;
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid $brand-white;
             letter-spacing: 3px;
 
         }
