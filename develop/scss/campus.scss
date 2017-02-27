@@ -269,18 +269,22 @@ body {
             display: inline-block;
             background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
             background-size: contain;
-            padding-left: 100px;
+            padding-left: 120px;
         }
 
         .form-group {
             background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
             background-size: contain;
-            padding-right: 100px;
+            padding-right: 120px;
 
         }
 
         input {
             width: 470px !important;
+            height: 40px;
+            font-size: 1.6em;
+            line-height: 40px;
+            text-align: center;
         }
     }
 

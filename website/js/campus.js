@@ -35,27 +35,35 @@
     };
 
     campus.login = {
+        // elements of this component
         $openBtn: $('#open-login-btn'),
         $closeBtn: $('#close-login-btn'),
         $loginRow: $('.header-login'),
         $loginFrm: $('#login-form'),
+        delayedClose: null,
 
+        // open action
         openFrm: function(){
-            var newHeight = campus.login.$loginFrm.outerHeight() + campus.login.$loginRow.height();
+            var newHeight = campus.login.$loginFrm.outerHeight() +
+                    campus.login.$loginRow.height();
             campus.login.$loginRow.css('height', newHeight);
             campus.login.$loginRow.addClass('open');
         },
 
+        // close action
         closeFrm: function(){
             campus.login.$loginRow.removeAttr('style');
             campus.login.$loginRow.removeClass('open');
         },
 
+        // close on resize
         resize: function(){
             campus.login.closeFrm();
         },
 
+        // initial set up
         init: function(){
+            // attach optn action
             campus.login.$openBtn.on('click', function(e){
                 e.preventDefault();
                 if(!campus.login.$loginRow.hasClass('open')){
@@ -64,41 +72,55 @@
                    campus.login.closeFrm();
                 }
             });
+
+            // attach close action
             campus.login.$closeBtn.on('click', function(e){
                 e.preventDefault();
                 campus.login.closeFrm();
             });
+
+            // delay hiding menu after mouseleave
             campus.login.$loginRow.on('mouseleave', function(){
-                campus.login.closeFrm();
+                campus.login.delayedClose = setTimeout(function(){
+                    if(!campus.login.$loginRow.is(":hover")){
+                        campus.login.closeFrm();
+                    } else {
+                        clearInterval(campus.login.delayedClose);
+                    }
+                }, 3000);
             })
         }
     };
 
     campus.menu = {
+        // elements of this component
         $openBtn: $('#open-menu-btn'),
         isOpen: false,
 
+        // open menu
         openMenu: function(){
-            // open menu
             campus.menu.$openBtn.addClass('click-to-close');
             campus.menu.isOpen = true;
             console.log(campus.menu.$openBtn);
             console.log('Menu is ' + campus.menu.isOpen);
         },
 
+        // close menu
         closeMenu: function(){
-            // open menu
             campus.menu.$openBtn.removeClass('click-to-close');
             campus.menu.isOpen = false;
             console.log(campus.menu.$openBtn);
             console.log('Menu is ' + campus.menu.isOpen);
         },
 
+        // close one resize
         resize: function(){
             campus.login.closeMenu();
         },
 
+        // initial set up
         init: function(){
+            // attach toggle open and close
             campus.menu.$openBtn.on('click', function(e){
                 e.preventDefault();
                 if(!campus.menu.isOpen){
