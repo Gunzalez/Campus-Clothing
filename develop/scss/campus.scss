@@ -9,6 +9,11 @@ body {
 }
 
 .header-login {
+
+    .container {
+        background: url("../images/cc-shield.png") 0 0 no-repeat;
+    }
+
     height: 35px;
     background: url("../images/texture-red.png") 0 0 $brand-red;
     position: absolute;
@@ -64,8 +69,13 @@ body {
 }
 
 .header-title {
-    padding-top: 35px;
-    padding-bottom: 10px;
+
+    .container {
+        padding-top: 35px;
+        padding-bottom: 10px;
+        background: url("../images/cc-shield.png") 0 0 no-repeat;
+    }
+
     background: url("../images/texture-blue.png") 0 0 $brand-blue;
 
     .header-box {

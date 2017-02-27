@@ -48,6 +48,8 @@ body {
   -o-transition: height 0.2s;
   -webkit-transition: height 0.2s;
   transition: height 0.2s; }
+  .header-login .container {
+    background: url("../images/cc-shield.png") 0 0 no-repeat; }
   .header-login .navigation {
     float: right;
     height: 35px; }
@@ -73,9 +75,11 @@ body {
     height: 115px; }
 
 .header-title {
-  padding-top: 35px;
-  padding-bottom: 10px;
   background: url("../images/texture-blue.png") 0 0 #00365a; }
+  .header-title .container {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    background: url("../images/cc-shield.png") 0 0 no-repeat; }
   .header-title .header-box {
     position: relative; }
   .header-title h1 {
