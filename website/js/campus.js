@@ -41,7 +41,7 @@
         $loginFrm: $('#login-form'),
 
         openFrm: function(){
-            var newHeight = campus.login.$loginFrm.outerHeight();
+            var newHeight = campus.login.$loginFrm.outerHeight() + campus.login.$loginRow.height();
             campus.login.$loginRow.css('height', newHeight);
             campus.login.$loginRow.addClass('open');
         },

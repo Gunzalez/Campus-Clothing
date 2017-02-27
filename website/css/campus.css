@@ -32,6 +32,9 @@ a {
   a:hover {
     color: #00365a; }
 
+form label {
+  font-weight: normal !important; }
+
 form input,
 form button {
   -webkit-border-radius: 0 !important;
@@ -39,14 +42,15 @@ form button {
   border-radius: 0 !important;
   box-shadow: none !important;
   border-color: #6a6a6a !important;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal !important; }
   form input:focus,
   form button:focus {
     border-color: #000000 !important; }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #ffffff; }
+  background-color: #00365a; }
 
 .header-login {
   height: 35px;
@@ -82,35 +86,52 @@ body {
       padding: 7px 0; }
       .header-login .navigation li:first-child a {
         border-left: none; }
+  .header-login .hide-menu {
+    display: none; }
+  .header-login .show-menu {
+    display: block; }
+  .header-login.open .hide-menu {
+    display: block; }
+  .header-login.open .show-menu {
+    display: none; }
 
 #login-form {
-  padding-top: 36px;
-  padding-bottom: 10px; }
+  padding: 15px 0;
+  float: left;
+  width: 100%;
+  text-align: right; }
   #login-form label {
+    margin-left: 15px;
     margin-right: 5px;
     color: #faf6dd;
     text-transform: capitalize; }
-  #login-form input {
-    margin-right: 15px; }
+    @media (max-width: 768px) {
+      #login-form label {
+        display: none; } }
   #login-form button {
     color: #faf6dd;
     background: none;
+    padding-right: 0;
     border: none;
     text-transform: uppercase;
     font-weight: bold;
-    margin-right: 15px; }
+    margin-left: 15px; }
     #login-form button:hover {
       color: #ffffff; }
     #login-form button:focus {
       border-color: #faf6dd; }
   #login-form a {
-    margin-right: 15px;
     display: inline-block;
-    padding: 6px 10px;
+    padding: 6px 0;
+    margin-left: 15px;
     text-decoration: none;
     color: #faf6dd; }
     #login-form a:hover {
       color: #ffffff; }
+    @media (max-width: 768px) {
+      #login-form a {
+        float: left;
+        margin-left: 0 !important; } }
 
 .header-title {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
@@ -159,3 +180,15 @@ body {
       display: block; }
     .header-title .open-menu-btn.click-to-close .show-menu {
       display: none; }
+  @media (max-width: 768px) {
+    .header-title h1 {
+      text-align: left; }
+      .header-title h1 .text {
+        display: none; }
+      .header-title h1 .imagery {
+        width: 220px; }
+        .header-title h1 .imagery img {
+          width: 100%; }
+    .header-title .open-menu-btn {
+      margin-top: -10px;
+      font-size: 2.3em; } }

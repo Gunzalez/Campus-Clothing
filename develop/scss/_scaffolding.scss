@@ -19,12 +19,16 @@ a {
 }
 
 form {
+    label {
+        font-weight: normal !important;
+    }
     input,
     button {
         @include border-radius(0);
         box-shadow: none !important;
         border-color: $brand-black !important;
         font-family: 'Open Sans', sans-serif;
+        font-weight: normal !important;
         &:focus {
             border-color: #000000 !important;
         }

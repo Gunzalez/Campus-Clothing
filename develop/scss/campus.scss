@@ -5,7 +5,8 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
+    //background-color: #ffffff;
+    background-color: $brand-blue;
 }
 
 .header-login {
@@ -60,29 +61,41 @@ body {
             }
         }
     }
+
+    .hide-menu { display: none; }
+    .show-menu { display: block; }
+
+    &.open {
+        .hide-menu { display: block; }
+        .show-menu { display: none; }
+
+    }
 }
 
 #login-form {
-    padding-top: 36px;
-    padding-bottom: 10px;
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+    text-align: right;
 
     label {
+        margin-left: 15px;
         margin-right: 5px;
         color: $brand-white;
         text-transform: capitalize;
-    }
-
-    input {
-        margin-right: 15px;
+        @media (max-width: $width-sm){
+            display: none;
+        }
     }
 
     button {
         color: $brand-white;
         background: none;
+        padding-right: 0;
         border: none;
         text-transform: uppercase;
         font-weight: bold;
-        margin-right: 15px;
+        margin-left: 15px;
         &:hover {
             color: #ffffff;
         }
@@ -92,13 +105,18 @@ body {
     }
 
     a {
-        margin-right: 15px;
         display: inline-block;
-        padding: 6px 10px;
+        padding: 6px 0;
+        margin-left: 15px;
         text-decoration: none;
         color: $brand-white;
         &:hover {
             color: #ffffff;
+        }
+
+        @media (max-width: $width-sm){
+            float: left;
+            margin-left: 0 !important;
         }
     }
 
@@ -145,7 +163,6 @@ body {
             font-size: 1.6em;
             border-bottom: 1px solid $brand-white;
             letter-spacing: 3px;
-
         }
 
         .imagery {
@@ -177,6 +194,30 @@ body {
         &.click-to-close {
             .hide-menu { display: block; }
             .show-menu { display: none; }
+        }
+    }
+
+    @media (max-width: $width-sm){
+
+        h1 {
+            text-align: left;
+            .text {
+                display: none;
+            }
+
+            .imagery {
+                width: 220px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .open-menu-btn {
+            margin-top: -10px;
+            font-size: 2.3em;
+
         }
     }
 }
