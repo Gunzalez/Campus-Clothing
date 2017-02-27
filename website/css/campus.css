@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text {
+.header-login .navigation li .text, .header-title .open-menu-btn .text {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -53,11 +53,16 @@ body {
     height: 35px; }
     .header-login .navigation a {
       text-transform: uppercase;
-      color: #ffffff;
+      color: #faf6dd;
       display: block;
       padding: 0 15px;
-      border-left: 1px dotted #ffffff;
-      text-decoration: none; }
+      border-left: 1px dotted #faf6dd;
+      text-decoration: none;
+      font-weight: bold; }
+      .header-login .navigation a i {
+        color: #faf6dd; }
+      .header-login .navigation a:hover {
+        color: #ffffff; }
     .header-login .navigation li {
       float: left;
       padding: 7px 0; }
@@ -72,19 +77,21 @@ body {
   padding-top: 35px;
   padding-bottom: 10px;
   background-color: #00365a; }
+  .header-title .header-box {
+    position: relative; }
   .header-title h1 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-    color: #ffffff;
+    color: #faf6dd;
     margin: 0;
     padding: 0; }
     .header-title h1 a {
       display: inline-block;
-      color: #ffffff;
+      color: #faf6dd;
       text-decoration: none; }
       .header-title h1 a:hover {
-        color: #ffffff; }
+        color: #faf6dd; }
     .header-title h1 .text {
       display: inline-block;
       font-size: 1.6em;
@@ -93,3 +100,21 @@ body {
     .header-title h1 .imagery {
       padding-top: 5px;
       display: block; }
+  .header-title .open-menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -35px;
+    font-size: 5.0em;
+    color: #faf6dd;
+    text-decoration: none; }
+    .header-title .open-menu-btn:hover {
+      color: #ffffff; }
+    .header-title .open-menu-btn .hide-menu {
+      display: none; }
+    .header-title .open-menu-btn .show-menu {
+      display: block; }
+    .header-title .open-menu-btn.click-to-close .hide-menu {
+      display: block; }
+    .header-title .open-menu-btn.click-to-close .show-menu {
+      display: none; }

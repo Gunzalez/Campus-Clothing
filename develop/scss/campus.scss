@@ -25,11 +25,20 @@ body {
 
         a {
             text-transform: uppercase;
-            color: #ffffff;
+            color: $brand-white;
             display: block;
             padding: 0 15px;
-            border-left: 1px dotted #ffffff;
+            border-left: 1px dotted $brand-white;
             text-decoration: none;
+            font-weight: bold;
+
+            i {
+                color: $brand-white;
+            }
+
+            &:hover {
+                color: #ffffff;
+            }
         }
 
         li {
@@ -59,20 +68,24 @@ body {
     padding-bottom: 10px;
     background-color: $brand-blue;
 
+    .header-box {
+        position: relative;
+    }
+
     h1 {
         text-align: center;
         text-transform: uppercase;
         font-weight: 100;
-        color: #ffffff;
+        color: $brand-white;
         margin: 0;
         padding: 0;
 
         a {
             display: inline-block;
-            color: #ffffff;
+            color: $brand-white;
             text-decoration: none;
             &:hover {
-                color: #ffffff;
+                color: $brand-white;
             }
         }
 
@@ -87,6 +100,32 @@ body {
         .imagery {
             padding-top: 5px;
             display: block;
+        }
+    }
+
+    .open-menu-btn {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -35px;
+        font-size: 5.0em;
+        color: $brand-white;
+        text-decoration: none;
+
+        &:hover {
+            color: #ffffff;
+        }
+
+        .text {
+           @extend %visuallyHidden;
+        }
+
+        .hide-menu { display: none; }
+        .show-menu { display: block; }
+
+        &.click-to-close {
+            .hide-menu { display: block; }
+            .show-menu { display: none; }
         }
     }
 }
