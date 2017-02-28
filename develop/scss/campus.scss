@@ -14,6 +14,10 @@ body {
 
     .container {
         background: url("../images/cc-shield.png") 15px 0 no-repeat;
+
+        @media (max-width: $width-sm){
+            background-position: -245px 0;
+        }
     }
 
     height: 35px;
@@ -69,6 +73,10 @@ body {
         -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
         -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
         box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
+
+        .container {
+            background-image: url("../images/cc-shield-open.png");
+        }
     }
 
     #login-form {
@@ -138,6 +146,10 @@ body {
         padding-top: 35px;
         padding-bottom: 10px;
         background: url("../images/cc-shield.png") 15px 0 no-repeat;
+
+        @media (max-width: $width-sm){
+            background-position: -245px 0;
+        }
     }
 
     background: url("../images/texture-blue.png") 0 0 $brand-blue;
@@ -426,7 +438,11 @@ body {
     .container {
         padding-top: 15px;
         padding-bottom: 15px;
-        background: url("../images/cc-shield.png") right top no-repeat;
+        background: url("../images/cc-shield.png") right -120px no-repeat;
+
+        @media (max-width: $width-sm){
+            background: url("../images/cc-shield.png") 140px -160px no-repeat;
+        }
     }
     
     .footer-links {

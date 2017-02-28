@@ -84,6 +84,9 @@ body {
   transition: height 0.2s; }
   .header-login .container {
     background: url("../images/cc-shield.png") 15px 0 no-repeat; }
+    @media (max-width: 768px) {
+      .header-login .container {
+        background-position: -245px 0; } }
   .header-login .navigation {
     float: right;
     height: 35px; }
@@ -114,6 +117,8 @@ body {
       display: block; }
     .header-login.open .show-menu {
       display: none; }
+    .header-login.open .container {
+      background-image: url("../images/cc-shield-open.png"); }
   .header-login #login-form {
     padding: 15px 0;
     float: left;
@@ -160,6 +165,9 @@ body {
     padding-top: 35px;
     padding-bottom: 10px;
     background: url("../images/cc-shield.png") 15px 0 no-repeat; }
+    @media (max-width: 768px) {
+      .header-title .container {
+        background-position: -245px 0; } }
   .header-title .header-box {
     position: relative; }
   .header-title h1 {
@@ -352,7 +360,10 @@ body {
   .footer .container {
     padding-top: 15px;
     padding-bottom: 15px;
-    background: url("../images/cc-shield.png") right top no-repeat; }
+    background: url("../images/cc-shield.png") right -120px no-repeat; }
+    @media (max-width: 768px) {
+      .footer .container {
+        background: url("../images/cc-shield.png") 140px -160px no-repeat; } }
   .footer .footer-links {
     text-align: center; }
     .footer .footer-links li {
