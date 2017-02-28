@@ -262,3 +262,48 @@ body {
       font-size: 1.6em;
       line-height: 40px;
       text-align: center; } }
+
+.large-cta {
+  background: #00365a;
+  padding: 10px;
+  margin: 30px 0;
+  color: #faf6dd;
+  text-transform: uppercase;
+  text-align: center; }
+  .large-cta strong {
+    color: #ffffff; }
+  .large-cta p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em; }
+  .large-cta i {
+    margin: 0 10px; }
+    @media (max-width: 992px) {
+      .large-cta i {
+        display: none; } }
+
+.products-list {
+  padding-top: 15px; }
+  .products-list .row {
+    padding-bottom: 30px; }
+  .products-list .product-image {
+    width: 100%; }
+  .products-list .underline hr {
+    margin-top: 10px;
+    border-top: 2px solid #98322e; }
+  .products-list .title {
+    text-transform: uppercase;
+    font-size: 2.0em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 10px 0; }
+    .products-list .title a {
+      text-decoration: none;
+      color: #00365a; }
+
+.footer {
+  background: url("../images/texture-blue.png") 0 0 #00365a; }
+  .footer .container {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    background: url("../images/cc-shield.png") 15px right no-repeat; }

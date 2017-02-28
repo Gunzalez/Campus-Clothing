@@ -158,13 +158,10 @@
                         enabled: true
                     },
                     onChooseEvent: function(){
-                        // cosmetic effect
+                        // cosmetic effect - gives user feedback
                         campus.institutions.$form.addClass('loading');
-
                         // go to new page
-                        setTimeout(function(){
-                            location.assign(campus.institutions.basUrl + campus.institutions.$input.getSelectedItemData().id);
-                        }, 2000);
+                        location.assign(campus.institutions.basUrl + campus.institutions.$input.getSelectedItemData().id);
                     }
                 }
             };

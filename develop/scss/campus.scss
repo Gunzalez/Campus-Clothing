@@ -322,6 +322,76 @@ body {
     }
 }
 
+.large-cta {
+    background: $brand-blue;
+    padding: 10px;
+    margin: 30px 0;
+    color: $brand-white;
+    text-transform: uppercase;
+    text-align: center;
+
+    strong {
+        color: #ffffff;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.2em;
+    }
+
+    i {
+        margin: 0 10px;
+        @media (max-width: $width-md){
+            display: none;
+        }
+    }
+}
+
+.products-list {
+    padding-top: 15px;
+
+    .row {
+        padding-bottom: 30px;
+    }
+
+    .product-image {
+        width: 100%;
+    }
+
+    .item-description {
+    }
+
+    .underline {
+        hr {
+            margin-top: 10px;
+            border-top: 2px solid $brand-red;
+        }
+    }
+
+    .title {
+        text-transform: uppercase;
+        font-size: 2.0em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 0 10px 0;
+        a {
+            text-decoration: none;
+            color: $brand-blue;
+        }
+    }
+}
+
+.footer {
+    background: url("../images/texture-blue.png") 0 0 $brand-blue;
+
+    .container {
+        padding-top: 35px;
+        padding-bottom: 10px;
+        background: url("../images/cc-shield.png") 15px right no-repeat;
+    }
+}
+
 
 
 
