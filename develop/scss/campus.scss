@@ -428,20 +428,21 @@ body {
     
     .footer-links {
         text-align: center;
+        @extend %cleanUl;
 
         li {
             display: inline;
 
             a {
                 display: inline-block;
-                color: $brand-white;
+                color: #ffffff;
                 font-size: 1.0em;
                 text-transform: uppercase;
                 padding: 10px;
                 text-decoration: none;
 
                 &:hover {
-                    color: #ffffff;
+                    color: $brand-white;
                 }
             }
         }
