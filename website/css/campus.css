@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, #login-form .close-login-btn .text, .header-title .open-menu-btn .text, .institution label {
+.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .header-title .open-menu-btn .text, .institution label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -24,19 +24,10 @@
 .section {
   position: relative; }
 
-a {
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s; }
-  a:hover {
-    color: #00365a; }
-
 form label {
   font-weight: normal !important; }
 
-form input,
-form button {
+form input, form select, form textarea, form button {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -47,9 +38,11 @@ form button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
-  form input:focus,
-  form button:focus {
+  form input:focus, form select:focus, form textarea:focus, form button:focus {
     border-color: #000000 !important; }
+
+form input, form select, form textarea {
+  color: #000000; }
 
 .btn-product {
   background-color: #98322e;
@@ -74,7 +67,8 @@ form button {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  font-size: 16px; }
 
 .header-login {
   height: 35px;
@@ -95,16 +89,14 @@ body {
     height: 35px; }
     .header-login .navigation a {
       text-transform: uppercase;
-      color: #faf6dd;
+      color: #ffffff;
       display: block;
       padding: 0 15px;
       border-left: 1px dotted #faf6dd;
       text-decoration: none;
       font-weight: bold; }
-      .header-login .navigation a i {
-        color: #faf6dd; }
       .header-login .navigation a:hover {
-        color: #ffffff; }
+        color: #faf6dd; }
     .header-login .navigation li {
       float: left;
       padding: 7px 0; }
@@ -114,48 +106,53 @@ body {
     display: none; }
   .header-login .show-menu {
     display: block; }
-  .header-login.open .hide-menu {
-    display: block; }
-  .header-login.open .show-menu {
-    display: none; }
-
-#login-form {
-  padding: 15px 0;
-  float: left;
-  width: 100%;
-  text-align: right; }
-  #login-form label {
-    margin-left: 15px;
-    margin-right: 5px;
-    color: #faf6dd;
-    text-transform: capitalize; }
-    @media (max-width: 767px) {
-      #login-form label {
-        display: none; } }
-  #login-form button {
-    color: #faf6dd;
-    background: none;
-    padding-right: 0;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 15px; }
-    #login-form button:hover {
+  .header-login.open {
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.29); }
+    .header-login.open .hide-menu {
+      display: block; }
+    .header-login.open .show-menu {
+      display: none; }
+  .header-login #login-form {
+    padding: 15px 0;
+    float: left;
+    width: 100%;
+    text-align: right; }
+    .header-login #login-form label {
+      margin-left: 15px;
+      margin-right: 5px;
+      color: #ffffff;
+      text-transform: capitalize; }
+      @media (max-width: 767px) {
+        .header-login #login-form label {
+          display: none; } }
+    .header-login #login-form input {
+      border: none; }
+    .header-login #login-form button {
+      color: #ffffff;
+      background: none;
+      padding-right: 0;
+      border: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 15px; }
+      .header-login #login-form button:hover {
+        color: #faf6dd; }
+      .header-login #login-form button:focus {
+        border-color: #faf6dd; }
+    .header-login #login-form a {
+      display: inline-block;
+      padding: 6px 0;
+      margin-left: 30px;
+      text-decoration: none;
       color: #ffffff; }
-    #login-form button:focus {
-      border-color: #faf6dd; }
-  #login-form a {
-    display: inline-block;
-    padding: 6px 0;
-    margin-left: 30px;
-    text-decoration: none;
-    color: #faf6dd; }
-    #login-form a:hover {
-      color: #ffffff; }
-    @media (max-width: 767px) {
-      #login-form a {
-        float: left;
-        margin-left: 0 !important; } }
+      .header-login #login-form a:hover {
+        color: #faf6dd; }
+      @media (max-width: 767px) {
+        .header-login #login-form a {
+          float: left;
+          margin-left: 0 !important; } }
 
 .header-title {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
@@ -174,8 +171,8 @@ body {
     padding: 0; }
     .header-title h1 a {
       display: inline-block;
-      color: #faf6dd;
-      text-decoration: none; }
+      text-decoration: none;
+      color: #faf6dd; }
       .header-title h1 a:hover {
         color: #ffffff; }
     .header-title h1 .text {
@@ -192,10 +189,10 @@ body {
     top: 50%;
     margin-top: -35px;
     font-size: 5.0em;
-    color: #faf6dd;
+    color: #ffffff;
     text-decoration: none; }
     .header-title .open-menu-btn:hover {
-      color: #ffffff; }
+      color: #faf6dd; }
     .header-title .open-menu-btn .hide-menu {
       display: none; }
     .header-title .open-menu-btn .show-menu {

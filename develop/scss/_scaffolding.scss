@@ -10,32 +10,30 @@
     position: relative;
 }
 
-a {
-    @include transition(color 0.5s);
-
-    &:hover {
-        color: $brand-blue;
-    }
-}
-
 form {
     label {
         font-weight: normal !important;
     }
-    input,
-    button {
+
+    input, select, textarea, button {
         @include border-radius(0);
         box-shadow: none !important;
         border-color: $brand-black !important;
         font-family: 'Open Sans', sans-serif;
         font-weight: normal !important;
+
         &:focus {
             border-color: #000000 !important;
         }
+
         -webkit-appearance: none;
         -moz-appearance:    none;
         appearance:         none;
     }
+
+    input, select, textarea {
+        color: #000000;
+     }
 }
 
 

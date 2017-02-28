@@ -7,7 +7,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
-    //background-color: $brand-blue;
+    font-size: 16px;
 }
 
 .header-login {
@@ -32,19 +32,15 @@ body {
 
         a {
             text-transform: uppercase;
-            color: $brand-white;
+            color: #ffffff;
             display: block;
             padding: 0 15px;
             border-left: 1px dotted $brand-white;
             text-decoration: none;
             font-weight: bold;
 
-            i {
-                color: $brand-white;
-            }
-
             &:hover {
-                color: #ffffff;
+                color: $brand-white;
             }
         }
 
@@ -70,63 +66,71 @@ body {
         .hide-menu { display: block; }
         .show-menu { display: none; }
 
+        -webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
+        -moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
+        box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.29);
+    }
+
+    #login-form {
+        padding: 15px 0;
+        float: left;
+        width: 100%;
+        text-align: right;
+
+        label {
+            margin-left: 15px;
+            margin-right: 5px;
+            color: #ffffff;
+            text-transform: capitalize;
+            @media (max-width: $width-sm - 1){
+                display: none;
+            }
+        }
+
+        input {
+            border: none;
+        }
+
+        button {
+            color: #ffffff;
+            background: none;
+            padding-right: 0;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 15px;
+            &:hover {
+                color: $brand-white;
+            }
+            &:focus {
+                border-color: $brand-white;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 6px 0;
+            margin-left: 30px;
+            text-decoration: none;
+            color: #ffffff;
+            &:hover {
+                color: $brand-white;
+            }
+
+            @media (max-width: $width-sm - 1){
+                float: left;
+                margin-left: 0 !important;
+            }
+        }
+
+        .close-login-btn {
+            .text {
+                @extend %visuallyHidden;
+            }
+        }
     }
 }
 
-#login-form {
-    padding: 15px 0;
-    float: left;
-    width: 100%;
-    text-align: right;
-
-    label {
-        margin-left: 15px;
-        margin-right: 5px;
-        color: $brand-white;
-        text-transform: capitalize;
-        @media (max-width: $width-sm - 1){
-            display: none;
-        }
-    }
-
-    button {
-        color: $brand-white;
-        background: none;
-        padding-right: 0;
-        border: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-left: 15px;
-        &:hover {
-            color: #ffffff;
-        }
-        &:focus {
-            border-color: $brand-white;
-        }
-    }
-
-    a {
-        display: inline-block;
-        padding: 6px 0;
-        margin-left: 30px;
-        text-decoration: none;
-        color: $brand-white;
-        &:hover {
-            color: #ffffff;
-        }
-
-        @media (max-width: $width-sm - 1){
-            float: left;
-            margin-left: 0 !important;
-        }
-    }
-
-    .close-login-btn {
-        .text {
-            @extend %visuallyHidden;
-        }
-    }
-}
 
 .header-title {
 
@@ -152,8 +156,8 @@ body {
 
         a {
             display: inline-block;
-            color: $brand-white;
             text-decoration: none;
+            color: $brand-white;
             &:hover {
                 color: #ffffff;
             }
@@ -178,11 +182,11 @@ body {
         top: 50%;
         margin-top: -35px;
         font-size: 5.0em;
-        color: $brand-white;
+        color: #ffffff;
         text-decoration: none;
 
         &:hover {
-            color: #ffffff;
+            color: $brand-white;
         }
 
         .text {

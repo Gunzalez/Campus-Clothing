@@ -170,6 +170,7 @@
             campus.institutions.$input.on('focus', function(){
                 campus.institutions.$form.removeClass('loading');
             });
+            campus.institutions.$form.removeClass('loading'); // fixes bug on page load
 
             // attach action
             campus.institutions.$input.easyAutocomplete(options);
