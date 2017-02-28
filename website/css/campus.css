@@ -89,14 +89,14 @@ body {
     height: 35px; }
     .header-login .navigation a {
       text-transform: uppercase;
-      color: #ffffff;
       display: block;
       padding: 0 15px;
       border-left: 1px dotted #faf6dd;
       text-decoration: none;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #faf6dd; }
       .header-login .navigation a:hover {
-        color: #faf6dd; }
+        color: #ffffff; }
     .header-login .navigation li {
       float: left;
       padding: 7px 0; }
@@ -189,10 +189,10 @@ body {
     top: 50%;
     margin-top: -35px;
     font-size: 5.0em;
-    color: #ffffff;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #faf6dd; }
     .header-title .open-menu-btn:hover {
-      color: #faf6dd; }
+      color: #ffffff; }
     .header-title .open-menu-btn .hide-menu {
       display: none; }
     .header-title .open-menu-btn .show-menu {

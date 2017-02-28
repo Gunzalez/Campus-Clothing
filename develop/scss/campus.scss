@@ -32,15 +32,15 @@ body {
 
         a {
             text-transform: uppercase;
-            color: #ffffff;
             display: block;
             padding: 0 15px;
             border-left: 1px dotted $brand-white;
             text-decoration: none;
             font-weight: bold;
+            color: $brand-white;
 
             &:hover {
-                color: $brand-white;
+                color: #ffffff;
             }
         }
 
@@ -182,11 +182,11 @@ body {
         top: 50%;
         margin-top: -35px;
         font-size: 5.0em;
-        color: #ffffff;
         text-decoration: none;
+        color: $brand-white;
 
         &:hover {
-            color: $brand-white;
+            color: #ffffff;
         }
 
         .text {
@@ -222,7 +222,6 @@ body {
         .open-menu-btn {
             margin-top: -10px;
             font-size: 2.3em;
-
         }
     }
 }
