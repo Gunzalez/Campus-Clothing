@@ -79,7 +79,7 @@
                 campus.login.closeFrm();
             });
 
-            // delay hiding menu after mouseleave
+            // delay hiding menu after 3 seconds mouseleave
             campus.login.$loginRow.on('mouseleave', function(){
                 campus.login.delayedClose = setTimeout(function(){
                     if(!campus.login.$loginRow.is(":hover")){
@@ -135,34 +135,46 @@
 
     campus.institutions = {
         // elements for this component
-        $form: $('#select-institution'),
-        $input: $('#selectedInstitution'),
+        $form: $('#select-institution-form'),
+        $input: $('#institution'),
+        listMax: 5,
+        basUrl: 'another-page.html?from=InstitutionForm&id=',
 
         init: function(){
 
+            // stopping default for action,
+            // not best practice, but breaks the autoComplete :(
             campus.institutions.$form.on('submit', function(e){
                 e.preventDefault();
             });
 
+            // auto complete options
             var options = {
                 url: "js/institutions.json",
                 getValue: "name",
                 list: {
-                    maxNumberOfElements: 5,
+                    maxNumberOfElements: campus.institutions.listMax,
                     match: {
                         enabled: true
                     },
                     onChooseEvent: function(){
+                        // cosmetic effect
                         campus.institutions.$form.addClass('loading');
-                        location.assign('http://www.gunzalez.com/somepage.php?id=' + campus.institutions.$input.getSelectedItemData().id);
+
+                        // go to new page
+                        setTimeout(function(){
+                            location.assign(campus.institutions.basUrl + campus.institutions.$input.getSelectedItemData().id);
+                        }, 2000);
                     }
                 }
             };
 
+            // cosmetic effect
             campus.institutions.$input.on('focus', function(){
                 campus.institutions.$form.removeClass('loading');
             });
 
+            // attach action
             campus.institutions.$input.easyAutocomplete(options);
         }
 

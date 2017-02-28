@@ -34,19 +34,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="another-page.html?from=Twitter" target="_blank">
                                 <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
                                 <span class="text">Twitter</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="another-page.html?from=FaceBook" target="_blank">
                                 <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
                                 <span class="text">Facebook</span>
                             </a>
                         </li>
                     </ul>
-                    <form id="login-form" class="form-inline">
+                    <form id="login-form" action="another-page.html?from=LoginForm" method="get" class="form-inline">
                         <div class="form-group">
                             <label for="orderNumberOrEmail">Order number / email:</label>
                             <input type="text" class="form-control" id="orderNumberOrEmail" placeholder="Order number / email">
@@ -56,7 +56,7 @@
                             <input type="password" class="form-control " id="password" placeholder="Password" />
                         </div>
                         <button type="submit" class="btn">Login <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
-                        <a href="#">Forgotten details <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
+                        <a href="another-page.html?from=ForgottenDetailsLink">Forgotten details <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
                         <!--<a href="#" class="close-login-btn" id="close-login-btn">-->
                         <!--<i class="fa fa-times fa-lg" aria-hidden="true"></i>-->
                         <!--<span class="text">Close</span>-->
@@ -70,7 +70,7 @@
                         <div class="col-sm-12">
                             <div class="header-box">
                                 <h1>
-                                    <a href="/">
+                                    <a href="index.html">
                                         <span class="text">We are forever</span>
                                         <span class="imagery"><img src="images/cc-logo.png" alt="Campus Clothing"></span>
                                     </a>
@@ -92,16 +92,16 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-box">
-                                <form id="select-institution" class="form-inline" autocomplete="off">
+                                <form id="select-institution-form" class="form-inline" autocomplete="off">
                                     <div class="form-group">
-                                        <label for="selectedInstitution" class="sr-only">Institution name:</label>
+                                        <label for="institution" class="sr-only">Institution name:</label>
                                         <div class="input-wrapper">
-                                            <input type="text" class="form-control" id="selectedInstitution" placeholder="Type your institution name..." />
+                                            <input type="text" class="form-control" id="institution" placeholder="Type your institution name..." />
                                             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                                         </div>
                                     </div>
                                 </form>
-                                <a href="#" class="shopping-basket-link">
+                                <a href="another-page.html?from=BasketLink" class="shopping-basket-link">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span class="items">5</span>
                                 </a>
@@ -112,10 +112,6 @@
             </div>
         </div>
     </div>
-
-
-
-
 
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/jquery.easy-autocomplete.min.js"></script>
