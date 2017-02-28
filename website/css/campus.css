@@ -325,7 +325,10 @@ body {
       top: 50%;
       margin-top: -15px; }
     @media (max-width: 768px) {
-      .products-list .underline {
+      .products-list .underline hr {
+        border-width: 1px;
+        margin: -2px 0 5px 0; }
+      .products-list .underline .dot {
         display: none; } }
   .products-list .title {
     text-transform: uppercase;

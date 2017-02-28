@@ -390,7 +390,14 @@ body {
         }
 
         @media (max-width: $width-sm){
-            display: none;
+            hr {
+                border-width: 1px;
+                margin: -2px 0 5px 0;
+            }
+
+            .dot {
+                display: none;
+            }
         }
     }
 
