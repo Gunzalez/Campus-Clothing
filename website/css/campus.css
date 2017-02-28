@@ -232,6 +232,20 @@ body {
       background-color: #ffffff;
       font-size: 0.3em;
       font-weight: bold; }
+  .institution form .input-wrapper {
+    position: relative; }
+    .institution form .input-wrapper i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -10px;
+      font-size: 1.5em;
+      display: none; }
+  .institution form.loading .form-control {
+    padding-right: 50px;
+    text-align: left; }
+  .institution form.loading i {
+    display: block; }
   @media (min-width: 769px) {
     .institution form {
       display: inline-block;

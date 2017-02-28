@@ -135,7 +135,36 @@
 
     campus.institutions = {
         // elements for this component
-        input: document.getElementById('selectedInstitution')
+        $form: $('#select-institution'),
+        $input: $('#selectedInstitution'),
+
+        init: function(){
+
+            campus.institutions.$form.on('submit', function(e){
+                e.preventDefault();
+            });
+
+            var options = {
+                url: "js/institutions.json",
+                getValue: "name",
+                list: {
+                    maxNumberOfElements: 5,
+                    match: {
+                        enabled: true
+                    },
+                    onChooseEvent: function(){
+                        campus.institutions.$form.addClass('loading');
+                        location.assign('http://www.gunzalez.com/somepage.php?id=' + campus.institutions.$input.getSelectedItemData().id);
+                    }
+                }
+            };
+
+            campus.institutions.$input.on('focus', function(){
+                campus.institutions.$form.removeClass('loading');
+            });
+
+            campus.institutions.$input.easyAutocomplete(options);
+        }
 
     };
 
@@ -145,7 +174,7 @@
         campus.environment.init();
         campus.login.init();
         campus.menu.init();
-        //campus.institutions.init();
+        campus.institutions.init();
 
         // resize triggers
         $(window).on('resize', function () {

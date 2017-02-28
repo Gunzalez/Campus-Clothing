@@ -7,7 +7,7 @@
     <title>Campus Clothing</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/vendor/awesomplete.css" rel="stylesheet">
+    <link href="js/vendor/easy-autocomplete.css" rel="stylesheet">
     <link href="css/campus.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -95,7 +95,10 @@
                                 <form id="select-institution" class="form-inline" autocomplete="off">
                                     <div class="form-group">
                                         <label for="selectedInstitution" class="sr-only">Institution name:</label>
-                                        <input type="text" class="form-control" id="selectedInstitution" placeholder="Type your institution name..." />
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control" id="selectedInstitution" placeholder="Type your institution name..." />
+                                            <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                                        </div>
                                     </div>
                                 </form>
                                 <a href="#" class="shopping-basket-link">
@@ -115,7 +118,7 @@
 
 
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/vendor/awesomplete.js"></script>
+    <script src="js/vendor/jquery.easy-autocomplete.min.js"></script>
     <script src="js/campus.js"></script>
 </body>
 </html>

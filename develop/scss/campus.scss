@@ -271,6 +271,33 @@ body {
         }
     }
 
+    form {
+
+        .input-wrapper {
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -10px;
+                font-size: 1.5em;
+                display: none;
+            }
+        }
+
+        &.loading {
+            .form-control {
+                padding-right: 50px;
+                text-align: left;
+            }
+
+            i {
+                display: block;
+            }
+        }
+    }
+
     @media (min-width: $width-sm + 1){
         form {
             display: inline-block;
