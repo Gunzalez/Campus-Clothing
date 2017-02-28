@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .footer .footer-links {
+.header-login .navigation, .header-links, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -222,6 +222,21 @@ body {
       margin-top: -10px;
       font-size: 2.3em; } }
 
+.header-links {
+  text-align: center;
+  padding: 15px 0; }
+  .header-links li {
+    display: inline; }
+    .header-links li a {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 1.4em;
+      text-transform: uppercase;
+      padding: 10px;
+      text-decoration: none; }
+      .header-links li a:hover {
+        color: #faf6dd; }
+
 .institution {
   background: #adadad;
   text-align: center; }
@@ -360,10 +375,10 @@ body {
   .footer .container {
     padding-top: 15px;
     padding-bottom: 15px;
-    background: url("../images/cc-shield.png") right -120px no-repeat; }
+    background: url("../images/cc-shield.png") right -160px no-repeat; }
     @media (max-width: 768px) {
       .footer .container {
-        background: url("../images/cc-shield.png") 140px -160px no-repeat; } }
+        background: url("../images/cc-shield.png") 140px -200px no-repeat; } }
   .footer .footer-links {
     text-align: center; }
     .footer .footer-links li {

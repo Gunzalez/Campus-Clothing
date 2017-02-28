@@ -238,6 +238,31 @@ body {
     }
 }
 
+
+.header-links {
+    text-align: center;
+    @extend %cleanUl;
+    padding: 15px 0;
+
+    li {
+        display: inline;
+
+        a {
+            display: inline-block;
+            color: #ffffff;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            padding: 10px;
+            text-decoration: none;
+
+            &:hover {
+                color: $brand-white;
+            }
+        }
+    }
+}
+
+
 .institution {
     background: $brand-coal;
     text-align: center;
@@ -438,10 +463,10 @@ body {
     .container {
         padding-top: 15px;
         padding-bottom: 15px;
-        background: url("../images/cc-shield.png") right -120px no-repeat;
+        background: url("../images/cc-shield.png") right -160px no-repeat;
 
         @media (max-width: $width-sm){
-            background: url("../images/cc-shield.png") 140px -160px no-repeat;
+            background: url("../images/cc-shield.png") 140px -200px no-repeat;
         }
     }
     
