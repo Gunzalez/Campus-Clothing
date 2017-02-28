@@ -2,6 +2,7 @@
 @import "mixins";
 @import "fonts";
 @import "scaffolding";
+@import "buttons";
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -326,6 +327,9 @@ body {
     background: $brand-blue;
     padding: 10px;
     margin: 30px 0;
+    @media (max-width: $width-md){
+        margin: 15px 0;
+    }
     color: $brand-white;
     text-transform: uppercase;
     text-align: center;
@@ -357,6 +361,7 @@ body {
 
     .product-image {
         width: 100%;
+        padding-bottom: 10px;
     }
 
     .item-description {
@@ -366,6 +371,9 @@ body {
         hr {
             margin-top: 10px;
             border-top: 2px solid $brand-red;
+        }
+        @media (max-width: $width-md){
+            display: none;
         }
     }
 
@@ -378,6 +386,9 @@ body {
         a {
             text-decoration: none;
             color: $brand-blue;
+        }
+        @media (max-width: $width-md){
+            font-size: 1.5em;
         }
     }
 }

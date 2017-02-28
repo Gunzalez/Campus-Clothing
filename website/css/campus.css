@@ -51,6 +51,20 @@ form button {
   form button:focus {
     border-color: #000000 !important; }
 
+.btn-product {
+  background-color: #98322e;
+  color: #faf6dd;
+  -moz-transition: all, 0.25s;
+  -o-transition: all, 0.25s;
+  -webkit-transition: all, 0.25s;
+  transition: all, 0.25s; }
+  .btn-product:hover, .btn-product:focus {
+    color: #ffffff;
+    background-color: #712522; }
+  .btn-product:focus {
+    color: #ffffff;
+    background-color: #6a6a6a; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #ffffff; }
@@ -270,6 +284,9 @@ body {
   color: #faf6dd;
   text-transform: uppercase;
   text-align: center; }
+  @media (max-width: 992px) {
+    .large-cta {
+      margin: 15px 0; } }
   .large-cta strong {
     color: #ffffff; }
   .large-cta p {
@@ -287,10 +304,14 @@ body {
   .products-list .row {
     padding-bottom: 30px; }
   .products-list .product-image {
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 10px; }
   .products-list .underline hr {
     margin-top: 10px;
     border-top: 2px solid #98322e; }
+  @media (max-width: 992px) {
+    .products-list .underline {
+      display: none; } }
   .products-list .title {
     text-transform: uppercase;
     font-size: 2.0em;
@@ -300,6 +321,9 @@ body {
     .products-list .title a {
       text-decoration: none;
       color: #00365a; }
+    @media (max-width: 992px) {
+      .products-list .title {
+        font-size: 1.5em; } }
 
 .footer {
   background: url("../images/texture-blue.png") 0 0 #00365a; }

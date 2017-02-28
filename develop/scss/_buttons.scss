@@ -1,0 +1,80 @@
+// buttons
+
+.btn-product {
+    background-color: $brand-red;
+    color: $brand-white;
+    @include transition(all, 0.25s);
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: darken($brand-red, 10%);
+    }
+
+    &:focus {
+        color: #ffffff;
+        background-color: $brand-black;
+    }
+
+    .btn-left {
+
+    }
+
+    .btn-right {
+
+    }
+}
+
+//a.btn-point-right,
+//a.btn-point-left {
+//    height:38px;
+//    line-height:38px;
+//    vertical-align:middle;
+//    text-align:center;
+//    padding:0 15px;
+//    color: #ffffff !important;
+//    background-color: $brand-red;
+//    position:relative;
+//    display:inline-block;
+//    border-radius: 5px;
+//    border-top-right-radius: 0;
+//    border-bottom-right-radius: 0;
+//    border: none;
+//    @include transition(background, 0.5s);
+//}
+//
+//a.btn-point-right:after {
+//    position:absolute;
+//    right:-26px;
+//    content:" ";
+//    width: 0px;
+//    height: 0px;
+//    border-style: solid;
+//    border-width: 19px 0 19px 26px;
+//    border-radius: -5px;
+//    border-color: transparent transparent transparent $brand-red;
+//    @include transition(background, 0.5s);
+//}
+//
+//a.btn-point-left:before {
+//    position:absolute;
+//    left:-26px;
+//    content:" ";
+//    width: 0px;
+//    height: 0px;
+//    border-style: solid;
+//    border-width: 19px 0 19px 26px;
+//    border-radius: -5px;
+//    border-color: transparent transparent transparent $brand-red;
+//    @include transition(background, 0.5s);
+//}
+//
+//a.btn-point-right:hover,
+//a.btn-point-left:hover {
+//    background-color: $brand-red;
+//}
+//
+//a.btn-point-right:hover:after,
+//a.btn-point-left:hover:after  {
+//    border-color: transparent transparent transparent $brand-red;
+//}
