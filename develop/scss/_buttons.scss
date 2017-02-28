@@ -4,6 +4,8 @@
     background-color: $brand-red;
     color: $brand-white;
     @include transition(all, 0.25s);
+    padding: 12px 20px;
+    @include border-radius(4%);
 
     &:hover,
     &:focus {
@@ -14,6 +16,10 @@
     &:focus {
         color: #ffffff;
         background-color: $brand-black;
+    }
+
+    @media (max-width: $width-md){
+        padding: 6px 12px;
     }
 
     .btn-left {

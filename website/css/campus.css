@@ -57,13 +57,20 @@ form button {
   -moz-transition: all, 0.25s;
   -o-transition: all, 0.25s;
   -webkit-transition: all, 0.25s;
-  transition: all, 0.25s; }
+  transition: all, 0.25s;
+  padding: 12px 20px;
+  -webkit-border-radius: 4% !important;
+  -moz-border-radius: 4% !important;
+  border-radius: 4% !important; }
   .btn-product:hover, .btn-product:focus {
     color: #ffffff;
     background-color: #712522; }
   .btn-product:focus {
     color: #ffffff;
     background-color: #6a6a6a; }
+  @media (max-width: 992px) {
+    .btn-product {
+      padding: 6px 12px; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -346,6 +353,29 @@ body {
 .footer {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
   .footer .container {
-    padding-top: 35px;
-    padding-bottom: 10px;
-    background: url("../images/cc-shield.png") 15px right no-repeat; }
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: url("../images/cc-shield.png") right top no-repeat; }
+  .footer .footer-links {
+    text-align: center; }
+    .footer .footer-links li {
+      display: inline; }
+      .footer .footer-links li a {
+        display: inline-block;
+        color: #faf6dd;
+        font-size: 1.0em;
+        text-transform: uppercase;
+        padding: 10px;
+        text-decoration: none; }
+        .footer .footer-links li a:hover {
+          color: #ffffff; }
+  .footer .footer-copy {
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.85em;
+    padding: 15px 0; }
+    .footer .footer-copy a {
+      color: #faf6dd;
+      text-decoration: none; }
+      .footer .footer-copy a:hover {
+        color: #ffffff; }

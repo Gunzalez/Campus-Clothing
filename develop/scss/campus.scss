@@ -421,9 +421,46 @@ body {
     background: url("../images/texture-blue.png") 0 0 $brand-blue;
 
     .container {
-        padding-top: 35px;
-        padding-bottom: 10px;
-        background: url("../images/cc-shield.png") 15px right no-repeat;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: url("../images/cc-shield.png") right top no-repeat;
+    }
+    
+    .footer-links {
+        text-align: center;
+
+        li {
+            display: inline;
+
+            a {
+                display: inline-block;
+                color: $brand-white;
+                font-size: 1.0em;
+                text-transform: uppercase;
+                padding: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .footer-copy {
+        text-align: center;
+        color: #ffffff;
+        font-size: 0.85em;
+        padding: 15px 0;
+
+        a {
+            color: $brand-white;
+            text-decoration: none;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
     }
 }
 
