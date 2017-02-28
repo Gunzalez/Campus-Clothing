@@ -48,6 +48,11 @@
                     campus.login.$loginRow.height();
             campus.login.$loginRow.css('height', newHeight);
             campus.login.$loginRow.addClass('open');
+
+            // close main navigation if open
+            if(campus.menu.isOpen){
+                campus.menu.$toggleBtn.trigger('click');
+            }
         },
 
         // close action
@@ -94,40 +99,79 @@
 
     campus.menu = {
         // elements of this component
-        $openBtn: $('#open-menu-btn'),
+        $toggleBtn: $('#menu-toggle-btn'),
         isOpen: false,
 
         // open menu
         openMenu: function(){
-            campus.menu.$openBtn.addClass('click-to-close');
-            campus.menu.isOpen = true;
-            console.log(campus.menu.$openBtn);
-            console.log('Menu is ' + campus.menu.isOpen);
+            campus.menu.$toggleBtn.addClass('click-to-close');
         },
 
         // close menu
         closeMenu: function(){
-            campus.menu.$openBtn.removeClass('click-to-close');
-            campus.menu.isOpen = false;
-            console.log(campus.menu.$openBtn);
-            console.log('Menu is ' + campus.menu.isOpen);
+            campus.menu.$toggleBtn.removeClass('click-to-close');
         },
 
         // close one resize
         resize: function(){
-            campus.login.closeMenu();
+            campus.menu.closeMenu();
         },
 
         // initial set up
         init: function(){
-            // attach toggle open and close
-            campus.menu.$openBtn.on('click', function(e){
-                e.preventDefault();
-                if(!campus.menu.isOpen){
+
+            campus.menu.$toggleBtn.sidr({
+
+                // Name for the sidr.
+                name: 'main-navigation',
+
+                // How long the animation will run.
+                speed: 250,
+
+                // Left or right, the location for the sidebar.
+                side: 'right',
+
+                // A jQuery selector, an url or a callback function.
+                source: null,
+
+                // When filling the sidr with existing content, choose to rename or not the classes and ids.
+                renaming: true,
+
+                // For doing the page movement the 'body' element is animated by default, you can select another element to animate with this option.
+                body: 'body',
+
+                // Displace the body content or not
+                displace: true,
+
+                // Timing function for CSS transitions
+                timing: 'ease',
+
+                // The method to call when element is clicked
+                method: 'toggle',
+
+                // The event(s) to trigger the menu
+                bind: 'touchstart click',
+
+                // Callback when sidr opened
+                onOpen: function onOpen() {
                     campus.menu.openMenu();
-                } else {
+                },
+
+                // Callback when sidr closed
+                onClose: function onClose() {
+                    campus.menu.isOpen = false;
+                },
+
+                // Callback when sidr end opening
+                onOpenEnd: function onOpenEnd() {
+                    campus.menu.isOpen = true;
+                },
+
+                // Callback when sidr end closing
+                onCloseEnd: function onCloseEnd() {
                     campus.menu.closeMenu();
                 }
+
             });
         }
 

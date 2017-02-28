@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .header-links, .footer .footer-links {
+.header-login .navigation, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .header-title .open-menu-btn .text, .institution label {
+.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .header-title .menu-toggle-btn .text, .institution label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -191,7 +191,7 @@ body {
     .header-title h1 .imagery {
       padding-top: 5px;
       display: block; }
-  .header-title .open-menu-btn {
+  .header-title .menu-toggle-btn {
     position: absolute;
     right: 5px;
     top: 50%;
@@ -199,15 +199,15 @@ body {
     font-size: 5.0em;
     text-decoration: none;
     color: #faf6dd; }
-    .header-title .open-menu-btn:hover {
+    .header-title .menu-toggle-btn:hover {
       color: #ffffff; }
-    .header-title .open-menu-btn .hide-menu {
+    .header-title .menu-toggle-btn .hide-menu {
       display: none; }
-    .header-title .open-menu-btn .show-menu {
+    .header-title .menu-toggle-btn .show-menu {
       display: block; }
-    .header-title .open-menu-btn.click-to-close .hide-menu {
+    .header-title .menu-toggle-btn.click-to-close .hide-menu {
       display: block; }
-    .header-title .open-menu-btn.click-to-close .show-menu {
+    .header-title .menu-toggle-btn.click-to-close .show-menu {
       display: none; }
   @media (max-width: 768px) {
     .header-title h1 {
@@ -220,22 +220,7 @@ body {
           width: 100%; }
     .header-title .open-menu-btn {
       margin-top: -10px;
-      font-size: 2.3em; } }
-
-.header-links {
-  text-align: center;
-  padding: 15px 0; }
-  .header-links li {
-    display: inline; }
-    .header-links li a {
-      display: inline-block;
-      color: #ffffff;
-      font-size: 1.4em;
-      text-transform: uppercase;
-      padding: 10px;
-      text-decoration: none; }
-      .header-links li a:hover {
-        color: #faf6dd; }
+      font-size: 2.0em; } }
 
 .institution {
   background: #adadad;
@@ -257,7 +242,7 @@ body {
     position: absolute;
     right: 0;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -28px;
     font-size: 2.5em;
     color: #98322e;
     padding-right: 4px; }
