@@ -368,11 +368,28 @@ body {
     }
 
     .underline {
+        position: relative;
+        $inset: 12%;
+
         hr {
             margin-top: 10px;
             border-top: 2px solid $brand-red;
+            margin-left: -$inset;
         }
-        @media (max-width: $width-md){
+
+        .dot {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: $brand-red;
+            @include border-radius(50%);
+            position: absolute;
+            left: -$inset;
+            top: 50%;
+            margin-top: -15px;
+        }
+
+        @media (max-width: $width-sm){
             display: none;
         }
     }
