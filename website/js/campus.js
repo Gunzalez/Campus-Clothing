@@ -22,9 +22,7 @@
 
     campus.environment = {
 
-        resize: function(){
-            campus.login.resize();
-        },
+        resize: function(){},
 
         init: function (){
             // check for mobile
@@ -50,8 +48,8 @@
             campus.login.$loginRow.addClass('open');
 
             // close main navigation if open
-            if(campus.menu.isOpen){
-                campus.menu.$toggleBtn.trigger('click');
+            if(campus.navigation.isOpen){
+                campus.navigation.$toggleBtn.trigger('click');
             }
         },
 
@@ -97,23 +95,39 @@
         }
     };
 
-    campus.menu = {
+    campus.navigation = {
         // elements of this component
+        $toggleBtn: null,
+        $content: null,
+        $container: null,
+        $nav: null,
+        $contentLayer: null,
         isOpen: false,
 
         // open menu
-        openMenu: function(){
-            campus.menu.isOpen = true;
+        open: function(){
+            campus.navigation.isOpen = true;
+            campus.navigation.$toggleBtn.addClass('click-to-close');
         },
 
         // close menu
-        closeMenu: function(){
-            campus.menu.isOpen = false;
+        close: function(){
+            campus.navigation.isOpen = false;
+            campus.navigation.$toggleBtn.removeClass('click-to-close');
+        },
+
+        reset: function(){
+            campus.navigation.$content.css('width', 'auto');
+            campus.navigation.$contentLayer.css('display', 'none');
+            campus.navigation.$nav.css('opacity', 0);
+            campus.navigation.$content.css('min-height', 'auto');
         },
 
         // close one resize
         resize: function(){
-
+            campus.navigation.$container.removeAttr('style');
+            campus.navigation.reset();
+            campus.navigation.close();
         },
 
         // initial set up
@@ -122,54 +136,51 @@
             // Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
             // Date: 21.05.13
 
-            var $toggleBtn = $('#hamburger'),
-                $content = $('#content'),
-                $container = $('#container'),
-                $nav = $('#main-navigation'),
-                $contentLayer = $('#content-layer');
+            campus.navigation.$toggleBtn = $('#hamburger');
+            campus.navigation.$content = $('#content');
+            campus.navigation.$container = $('#container');
+            campus.navigation.$nav = $('#main-navigation');
+            campus.navigation.$contentLayer = $('#content-layer');
 
-                $toggleBtn.on('click',function (e) {
+            campus.navigation.$toggleBtn.on('click',function (e) {
                     e.preventDefault();
 
-                    $content.css('min-height', $(window).height());
-                    $nav.css('opacity', 1);
+                campus.navigation.$content.css('min-height', $(window).height());
+                campus.navigation.$nav.css('opacity', 1);
 
                     //set the width of primary content container -> content should not scale while animating
-                    var contentWidth = $content.width();
+                    var contentWidth = campus.navigation.$content.width();
 
                     //set the content with the width that it has originally
-                    $content.css('width', contentWidth);
+                    campus.navigation.$content.css('width', contentWidth);
 
                     //display a layer to disable clicking and scrolling on the content while menu is shown
-                    $contentLayer.css('display', 'block');
+                    campus.navigation.$contentLayer.css('display', 'block');
 
                     //disable all scrolling on mobile devices while menu is shown
-                    $content.bind('touchmove', function (e) {
-                        e.preventDefault()
-                    });
+                    campus.navigation.$content.bind('touchmove', function (e) {
+                            e.preventDefault()
+                        });
 
                     //set margin for the whole container with a jquery UI animation
-                    campus.menu.openMenu();
-                    $toggleBtn.addClass('click-to-close');
-                    $container.animate({"marginLeft": ["-70%", 'easeOutExpo']}, {
+                    campus.navigation.open();
+                    campus.navigation.$container.animate(
+                        {"marginLeft": ["-70%", 'easeOutExpo']}, {
                         duration: 700
                     });
                 });
 
-            $contentLayer.on('click', function () {
+            campus.navigation.$contentLayer.on('click', function () {
                 //enable all scrolling on mobile devices when menu is closed
-                $container.unbind('touchmove');
+                campus.navigation.$container.unbind('touchmove');
 
                 //set margin for the whole container back to original state with a jquery UI animation
-                campus.menu.closeMenu();
-                $toggleBtn.removeClass('click-to-close');
-                $container.animate({"marginLeft": ["-1", 'easeOutExpo']}, {
+                campus.navigation.close();
+                campus.navigation.$container.animate(
+                    {"marginLeft": ["-1", 'easeOutExpo']}, {
                     duration: 700,
                     complete: function () {
-                        $content.css('width', 'auto');
-                        $contentLayer.css('display', 'none');
-                        $nav.css('opacity', 0);
-                        $content.css('min-height', 'auto');
+                        campus.navigation.reset();
                     }
                 });
             });
@@ -226,7 +237,7 @@
         // all init here
         campus.environment.init();
         campus.login.init();
-        campus.menu.init();
+        campus.navigation.init();
         campus.institutions.init();
 
         // resize triggers
@@ -249,6 +260,8 @@
     // main resize
     campus.resize = function () {
         campus.environment.resize();
+        campus.login.resize();
+        campus.navigation.resize();
     };
 
     // main init
