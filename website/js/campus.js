@@ -47,7 +47,7 @@
             campus.login.$loginRow.css('height', newHeight);
             campus.login.$loginRow.addClass('open');
 
-            // close main navigation if open
+            // if Main Navigation is open, close it first
             if(campus.navigation.isOpen){
                 campus.navigation.$toggleBtn.trigger('click');
             }
@@ -97,95 +97,50 @@
 
     campus.navigation = {
         // elements of this component
-        $toggleBtn: null,
-        $content: null,
-        $container: null,
-        $nav: null,
-        $contentLayer: null,
+        $parentRow: $('.header-title'),
+        $toggleBtn: $('#toggle-btn', this.$parentRow),
+        $buttonsContainer: $('.main-navigation', this.$parentRow),
+        $buttons: $('.header-links', this.$parentRow),
         isOpen: false,
 
         // open menu
         open: function(){
+            campus.navigation.$parentRow.addClass('open');
             campus.navigation.isOpen = true;
             campus.navigation.$toggleBtn.addClass('is-active');
+            campus.navigation.$buttonsContainer.height(campus.navigation.$buttons.height());
         },
 
         // close navigation
         close: function(){
+            campus.navigation.$parentRow.removeClass('open');
             campus.navigation.isOpen = false;
             campus.navigation.$toggleBtn.removeClass('is-active');
+            campus.navigation.$buttonsContainer.height('0');
         },
 
         // rest navigation
         reset: function(){
-            campus.navigation.$content.css('width', 'auto');
-            campus.navigation.$contentLayer.css('display', 'none');
-            campus.navigation.$nav.css('opacity', 0);
-            campus.navigation.$content.css('min-height', 'auto');
+            campus.navigation.isOpen = false;
+            campus.navigation.$toggleBtn.removeClass('is-active');
+            campus.navigation.$buttonsContainer.removeClass('animate').height('0');
         },
 
         // close on resize
         resize: function(){
-            campus.navigation.$container.removeAttr('style');
             campus.navigation.reset();
-            campus.navigation.close();
         },
 
         // initial set up
         init: function(){
-            // Inspired by hamburger.js
-            // Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
-            // Date: 21.05.13
-
-            campus.navigation.$toggleBtn = $('#menu-toggle-btn');
-            campus.navigation.$content = $('#content');
-            campus.navigation.$container = $('#container');
-            campus.navigation.$nav = $('#main-navigation');
-            campus.navigation.$contentLayer = $('#content-layer');
-
-            campus.navigation.$toggleBtn.on('click',function (e) {
-                    e.preventDefault();
-
-                campus.navigation.$content.css('min-height', $(window).height());
-                campus.navigation.$nav.css('opacity', 1);
-
-                    //set the width of primary content container -> content should not scale while animating
-                    var contentWidth = campus.navigation.$content.width();
-
-                    //set the content with the width that it has originally
-                    campus.navigation.$content.css('width', contentWidth);
-
-                    //display a layer to disable clicking and scrolling on the content while menu is shown
-                    campus.navigation.$contentLayer.css('display', 'block');
-
-                    //disable all scrolling on mobile devices while menu is shown
-                    campus.navigation.$content.bind('touchmove', function (e) {
-                            e.preventDefault()
-                        });
-
-                    //set margin for the whole container with a jquery UI animation
-                    campus.navigation.$container.animate(
-                        {"marginLeft": ["-70%", 'easeOutExpo']}, {
-                        duration: 700,
-                        complete: function () {
-                            campus.navigation.open();
-                        }
-                    });
-                });
-
-            campus.navigation.$contentLayer.on('click', function () {
-                //enable all scrolling on mobile devices when menu is closed
-                campus.navigation.$container.unbind('touchmove');
-
-                //set margin for the whole container back to original state with a jquery UI animation
-                campus.navigation.$container.animate(
-                    {"marginLeft": ["-1", 'easeOutExpo']}, {
-                    duration: 700,
-                    complete: function () {
-                        campus.navigation.reset();
-                        campus.navigation.close();
-                    }
-                });
+            campus.navigation.$toggleBtn.on('click', function(e){
+                e.preventDefault();
+                campus.navigation.$buttonsContainer.addClass('animate');
+                if(!campus.navigation.isOpen){
+                    campus.navigation.open();
+                } else {
+                    campus.navigation.close();
+                }
             });
         }
     };

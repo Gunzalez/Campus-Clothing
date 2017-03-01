@@ -154,6 +154,12 @@ body {
         }
     }
 
+    &.open {
+        .container {
+            background-image: url("../images/cc-shield-open.png");
+        }
+    }
+
     background: url("../images/texture-blue.png") 0 0 $brand-blue;
 
     .header-box {
@@ -190,7 +196,7 @@ body {
         }
     }
 
-    .menu-toggle-btn {
+    .toggle-btn {
         position: absolute;
         right: 5px;
         top: 50%;
@@ -240,77 +246,52 @@ body {
     }
 
     .header-links {
-        //display: none;
+        @extend %cleanUl;
+        text-align: center;
+        li { display: inline; }
+
+        a {
+            display: inline-block;
+            font-size: 1.5em;
+            padding: 15px 10px;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include transition(color, 0.25s);
+
+            &:hover {
+                color: $brand-white;
+            }
+        }
+
+        @media (max-width: $width-md) {
+            a {
+                font-size: 1.0em;
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: $width-sm) {
+            a {
+                display: block;
+                text-align: right;
+                padding: 10px;
+            }
+        }
     }
-}
-
-#content {
-    background-color: #ffffff;
-    position: relative;
-    width: auto;
-    height: 100%;
-    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.47);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.47);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.47);
-}
-
-#content-layer {
-    display: none;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 31%;
-    z-index: 5;
-}
-
-#main-navigation {
-    opacity: 0;
-    right: 0px;
-    top: 0px;
-    position: fixed;
-    z-index: 0;
-    width: 70%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: #3e3c3d;
-    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
-    background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0);
-
-    ul {
-        list-style: none;
-        margin: 0;
-        width: 100%;
-        padding: 0;
-    }
-
-    li {
+    
+    .main-navigation {
         position: relative;
-        border-bottom: 1px solid #222222;
-        border-top: 1px solid #444444;
-    }
-
-    a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 1.0em;
-        text-transform: uppercase;
-        display: block;
-        padding: 15px 20px;
+        &.animate {
+            @include transition(height, 0.25s);
+        }
     }
 }
 
+.js .main-navigation {
+    height: 0;
+}
 
 .institution {
     background: $brand-coal;
@@ -415,10 +396,7 @@ body {
 .large-cta {
     background: $brand-blue;
     padding: 10px;
-    margin: 30px 0;
-    @media (max-width: $width-md){
-        margin: 15px 0;
-    }
+    margin: 15px 0;
     color: $brand-white;
     text-transform: uppercase;
     text-align: center;
