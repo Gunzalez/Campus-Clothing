@@ -199,10 +199,10 @@ body {
     position: absolute;
     right: 5px;
     top: 50%;
-    margin-top: -35px;
-    font-size: 5.0em;
+    margin-top: -15px;
     text-decoration: none;
-    color: #faf6dd; }
+    color: #faf6dd;
+    outline: none !important; }
     .header-title .menu-toggle-btn:hover {
       color: #ffffff; }
     .header-title .menu-toggle-btn .hide-menu {
@@ -223,7 +223,7 @@ body {
         .header-title h1 .imagery img {
           width: 100%; }
     .header-title .menu-toggle-btn {
-      margin-top: -10px;
+      margin-top: -20px;
       font-size: 2.0em; } }
 
 #content {

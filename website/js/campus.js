@@ -107,15 +107,16 @@
         // open menu
         open: function(){
             campus.navigation.isOpen = true;
-            campus.navigation.$toggleBtn.addClass('click-to-close');
+            campus.navigation.$toggleBtn.addClass('is-active');
         },
 
-        // close menu
+        // close navigation
         close: function(){
             campus.navigation.isOpen = false;
-            campus.navigation.$toggleBtn.removeClass('click-to-close');
+            campus.navigation.$toggleBtn.removeClass('is-active');
         },
 
+        // rest navigation
         reset: function(){
             campus.navigation.$content.css('width', 'auto');
             campus.navigation.$contentLayer.css('display', 'none');
@@ -123,7 +124,7 @@
             campus.navigation.$content.css('min-height', 'auto');
         },
 
-        // close one resize
+        // close on resize
         resize: function(){
             campus.navigation.$container.removeAttr('style');
             campus.navigation.reset();
@@ -163,10 +164,12 @@
                         });
 
                     //set margin for the whole container with a jquery UI animation
-                    campus.navigation.open();
                     campus.navigation.$container.animate(
                         {"marginLeft": ["-70%", 'easeOutExpo']}, {
-                        duration: 700
+                        duration: 700,
+                        complete: function () {
+                            campus.navigation.open();
+                        }
                     });
                 });
 
@@ -175,12 +178,12 @@
                 campus.navigation.$container.unbind('touchmove');
 
                 //set margin for the whole container back to original state with a jquery UI animation
-                campus.navigation.close();
                 campus.navigation.$container.animate(
                     {"marginLeft": ["-1", 'easeOutExpo']}, {
                     duration: 700,
                     complete: function () {
                         campus.navigation.reset();
+                        campus.navigation.close();
                     }
                 });
             });
