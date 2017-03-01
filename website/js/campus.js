@@ -144,7 +144,7 @@
         $form: $('#select-institution-form'),
         $input: $('#institution'),
         listMax: 5,
-        basUrl: 'another-page.html?from=InstitutionForm&id=',
+        basUrl: 'institution.html?id=',
 
         init: function(){
 

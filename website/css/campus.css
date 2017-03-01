@@ -332,6 +332,13 @@ body {
       line-height: 40px;
       text-align: center; } }
 
+.institution-image .hero {
+  width: 100% !important; }
+
+@media (max-width: 1200px) {
+  .institution-image .container {
+    padding: 0; } }
+
 .large-cta {
   background: #00365a;
   padding: 10px;
