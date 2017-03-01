@@ -99,82 +99,81 @@
 
     campus.menu = {
         // elements of this component
-        $toggleBtn: $('#menu-toggle-btn'),
         isOpen: false,
 
         // open menu
         openMenu: function(){
-            campus.menu.$toggleBtn.addClass('click-to-close');
+            campus.menu.isOpen = true;
         },
 
         // close menu
         closeMenu: function(){
-            campus.menu.$toggleBtn.removeClass('click-to-close');
+            campus.menu.isOpen = false;
         },
 
         // close one resize
         resize: function(){
-            campus.menu.closeMenu();
+
         },
 
         // initial set up
         init: function(){
+            // Inspired by hamburger.js
+            // Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
+            // Date: 21.05.13
 
-            campus.menu.$toggleBtn.sidr({
+            var $toggleBtn = $('#hamburger'),
+                $content = $('#content'),
+                $container = $('#container'),
+                $nav = $('#main-navigation'),
+                $contentLayer = $('#content-layer');
 
-                // Name for the sidr.
-                name: 'main-navigation',
+                $toggleBtn.on('click',function (e) {
+                    e.preventDefault();
 
-                // How long the animation will run.
-                speed: 250,
+                    $content.css('min-height', $(window).height());
+                    $nav.css('opacity', 1);
 
-                // Left or right, the location for the sidebar.
-                side: 'right',
+                    //set the width of primary content container -> content should not scale while animating
+                    var contentWidth = $content.width();
 
-                // A jQuery selector, an url or a callback function.
-                source: null,
+                    //set the content with the width that it has originally
+                    $content.css('width', contentWidth);
 
-                // When filling the sidr with existing content, choose to rename or not the classes and ids.
-                renaming: true,
+                    //display a layer to disable clicking and scrolling on the content while menu is shown
+                    $contentLayer.css('display', 'block');
 
-                // For doing the page movement the 'body' element is animated by default, you can select another element to animate with this option.
-                body: 'body',
+                    //disable all scrolling on mobile devices while menu is shown
+                    $content.bind('touchmove', function (e) {
+                        e.preventDefault()
+                    });
 
-                // Displace the body content or not
-                displace: true,
-
-                // Timing function for CSS transitions
-                timing: 'ease',
-
-                // The method to call when element is clicked
-                method: 'toggle',
-
-                // The event(s) to trigger the menu
-                bind: 'touchstart click',
-
-                // Callback when sidr opened
-                onOpen: function onOpen() {
+                    //set margin for the whole container with a jquery UI animation
                     campus.menu.openMenu();
-                },
+                    $toggleBtn.addClass('click-to-close');
+                    $container.animate({"marginLeft": ["-70%", 'easeOutExpo']}, {
+                        duration: 700
+                    });
+                });
 
-                // Callback when sidr closed
-                onClose: function onClose() {
-                    campus.menu.isOpen = false;
-                },
+            $contentLayer.on('click', function () {
+                //enable all scrolling on mobile devices when menu is closed
+                $container.unbind('touchmove');
 
-                // Callback when sidr end opening
-                onOpenEnd: function onOpenEnd() {
-                    campus.menu.isOpen = true;
-                },
-
-                // Callback when sidr end closing
-                onCloseEnd: function onCloseEnd() {
-                    campus.menu.closeMenu();
-                }
-
+                //set margin for the whole container back to original state with a jquery UI animation
+                campus.menu.closeMenu();
+                $toggleBtn.removeClass('click-to-close');
+                $container.animate({"marginLeft": ["-1", 'easeOutExpo']}, {
+                    duration: 700,
+                    complete: function () {
+                        $content.css('width', 'auto');
+                        $contentLayer.css('display', 'none');
+                        $nav.css('opacity', 0);
+                        $content.css('min-height', 'auto');
+                    }
+                });
             });
         }
-
     };
 
     campus.institutions = {

@@ -8,7 +8,6 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="js/vendor/easy-autocomplete.css" rel="stylesheet">
-    <link href="js/vendor/jquery.sidr.dark.min.css" rel="stylesheet">
     <link href="css/campus.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -21,9 +20,23 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="container">
 
-    <div id="panel" class="page">
+    <div id="content-layer" aria-hidden="true"></div>
+
+    <div id="main-navigation">
+        <ul class="header-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="size-guide.html">Size guide</a></li>
+        </ul>
+    </div>
+
+    <div id="content" class="page">
         <div class="section">
             <div class="header-login">
                 <div class="container">
@@ -58,10 +71,6 @@
                         </div>
                         <button type="submit" class="btn">Login <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
                         <a href="another-page.html?goingTo=ForgottenDetailsPage">Forgotten details <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
-                        <!--<a href="#" class="close-login-btn" id="close-login-btn">-->
-                        <!--<i class="fa fa-times fa-lg" aria-hidden="true"></i>-->
-                        <!--<span class="text">Close</span>-->
-                        <!--</a>-->
                     </form>
                 </div>
             </div>
@@ -76,7 +85,7 @@
                                         <span class="imagery"><img src="images/cc-logo.png" alt="Campus Clothing"></span>
                                     </a>
                                 </h1>
-                                <a href="#" id="menu-toggle-btn" class="menu-toggle-btn">
+                                <a href="#" id="hamburger" class="menu-toggle-btn">
                                     <i class="fa fa-bars show-menu" aria-hidden="true"></i>
                                     <i class="fa fa-times hide-menu" aria-hidden="true"></i>
                                     <span class="text">Menu</span>
@@ -84,6 +93,13 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm-12">-->
+                            <!---->
+                        <!--</div>-->
+                    <!--</div>-->
+
                 </div>
             </div>
         </div>
@@ -220,19 +236,9 @@
         </div>
     </div>
 
-    <ul id="main-navigation" class="header-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="institutes.html">Institutes</a></li>
-        <li><a href="corporate.html">Corporate</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="size-guide.html">Size guide</a></li>
-    </ul>
-
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/vendor/jquery.easy-autocomplete.min.js"></script>
-    <script src="js/vendor/jquery.sidr.min.js"></script>
+    <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/easy-autocomplete.min.js"></script>
     <script src="js/campus.js"></script>
 </body>
 </html>
