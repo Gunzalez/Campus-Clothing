@@ -17,9 +17,10 @@ body {
 
     .container {
         background: url("../images/cc-shield.png") 15px 0 no-repeat;
+        @include transition(background, 0.5s);
 
         @media (max-width: $width-sm){
-            background-position: -245px 0;
+            background-position: -85px 0;
         }
     }
 
@@ -145,9 +146,10 @@ body {
         padding-top: 35px;
         padding-bottom: 10px;
         background: url("../images/cc-shield.png") 15px 0 no-repeat;
+        @include transition(background, 0.5s);
 
         @media (max-width: $width-sm){
-            background-position: -245px 0;
+            background-position: -85px 0;
         }
     }
 
@@ -195,27 +197,17 @@ body {
 
     .toggle-btn {
         position: absolute;
-        right: 5px;
+        right: 0;
         top: 50%;
         margin-top: -15px;
-        text-decoration: none;
-        color: $brand-white;
+        color: $brand-white !important;
         outline: none !important;
-
         &:hover {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
-        .text {
-           @extend %visuallyHidden;
-        }
-
-        .hide-menu { display: none; }
-        .show-menu { display: block; }
-
-        &.click-to-close {
-            .hide-menu { display: block; }
-            .show-menu { display: none; }
+        @media (max-width: $width-sm){
+            margin-top: -6px;
         }
     }
 
@@ -228,7 +220,7 @@ body {
             }
 
             .imagery {
-                width: 220px;
+                width: 240px;
 
                 img {
                     width: 100%;
@@ -243,6 +235,7 @@ body {
     }
 
     .header-links {
+        padding-top: 10px;
         @extend %cleanUl;
         text-align: center;
         li { display: inline; }

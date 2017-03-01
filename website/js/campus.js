@@ -108,7 +108,7 @@
             campus.navigation.$parentRow.addClass('open');
             campus.navigation.isOpen = true;
             campus.navigation.$toggleBtn.addClass('is-active');
-            campus.navigation.$buttonsContainer.height(campus.navigation.$buttons.height());
+            campus.navigation.$buttonsContainer.height(campus.navigation.$buttons.outerHeight());
         },
 
         // close navigation

@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .header-title .toggle-btn .text, .institution label {
+.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .institution label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -87,10 +87,14 @@ body {
   -webkit-transition: height 0.2s;
   transition: height 0.2s; }
   .header-login .container {
-    background: url("../images/cc-shield.png") 15px 0 no-repeat; }
+    background: url("../images/cc-shield.png") 15px 0 no-repeat;
+    -moz-transition: background, 0.5s;
+    -o-transition: background, 0.5s;
+    -webkit-transition: background, 0.5s;
+    transition: background, 0.5s; }
     @media (max-width: 768px) {
       .header-login .container {
-        background-position: -245px 0; } }
+        background-position: -85px 0; } }
   .header-login .navigation {
     float: right;
     height: 35px; }
@@ -168,10 +172,14 @@ body {
   .header-title .container {
     padding-top: 35px;
     padding-bottom: 10px;
-    background: url("../images/cc-shield.png") 15px 0 no-repeat; }
+    background: url("../images/cc-shield.png") 15px 0 no-repeat;
+    -moz-transition: background, 0.5s;
+    -o-transition: background, 0.5s;
+    -webkit-transition: background, 0.5s;
+    transition: background, 0.5s; }
     @media (max-width: 768px) {
       .header-title .container {
-        background-position: -245px 0; } }
+        background-position: -85px 0; } }
   .header-title.open .container {
     background-image: url("../images/cc-shield-open.png"); }
   .header-title .header-box {
@@ -199,35 +207,30 @@ body {
       display: block; }
   .header-title .toggle-btn {
     position: absolute;
-    right: 5px;
+    right: 0;
     top: 50%;
     margin-top: -15px;
-    text-decoration: none;
-    color: #faf6dd;
+    color: #faf6dd !important;
     outline: none !important; }
     .header-title .toggle-btn:hover {
-      color: #ffffff; }
-    .header-title .toggle-btn .hide-menu {
-      display: none; }
-    .header-title .toggle-btn .show-menu {
-      display: block; }
-    .header-title .toggle-btn.click-to-close .hide-menu {
-      display: block; }
-    .header-title .toggle-btn.click-to-close .show-menu {
-      display: none; }
+      color: #ffffff !important; }
+    @media (max-width: 768px) {
+      .header-title .toggle-btn {
+        margin-top: -6px; } }
   @media (max-width: 768px) {
     .header-title h1 {
       text-align: left; }
       .header-title h1 .text {
         display: none; }
       .header-title h1 .imagery {
-        width: 220px; }
+        width: 240px; }
         .header-title h1 .imagery img {
           width: 100%; }
     .header-title .menu-toggle-btn {
       margin-top: -20px;
       font-size: 2.0em; } }
   .header-title .header-links {
+    padding-top: 10px;
     text-align: center; }
     .header-title .header-links li {
       display: inline; }
