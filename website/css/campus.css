@@ -227,12 +227,13 @@ body {
       font-size: 2.0em; } }
 
 #content {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   width: auto;
   height: 100%;
-  -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.47);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.47); }
 
 #content-layer {
   display: none;
@@ -242,7 +243,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 30%;
+  width: 31%;
   z-index: 5; }
 
 #main-navigation {
@@ -421,10 +422,7 @@ body {
   .footer .container {
     padding-top: 15px;
     padding-bottom: 15px;
-    background: url("../images/cc-shield.png") right -160px no-repeat; }
-    @media (max-width: 768px) {
-      .footer .container {
-        background: url("../images/cc-shield.png") 140px -200px no-repeat; } }
+    background: url("../images/cc-shield-small.png") right -40px no-repeat; }
   .footer .footer-links {
     text-align: center; }
     .footer .footer-links li {

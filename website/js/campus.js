@@ -136,7 +136,7 @@
             // Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
             // Date: 21.05.13
 
-            campus.navigation.$toggleBtn = $('#hamburger');
+            campus.navigation.$toggleBtn = $('#menu-toggle-btn');
             campus.navigation.$content = $('#content');
             campus.navigation.$container = $('#container');
             campus.navigation.$nav = $('#main-navigation');
