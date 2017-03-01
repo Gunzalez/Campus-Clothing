@@ -34,18 +34,17 @@
 
     campus.login = {
         // elements of this component
-        $openBtn: $('#open-login-btn'),
-        $closeBtn: $('#close-login-btn'),
-        $loginRow: $('.header-login'),
-        $loginFrm: $('#login-form'),
+        $parentRow: $('.header-login'),
+        $openBtn: $('.toggle-btn', this.$parentRow),
+        $loginFrm: $('.login-form', this.$parentRow),
         delayedClose: null,
 
         // open action
         openFrm: function(){
             var newHeight = campus.login.$loginFrm.outerHeight() +
-                    campus.login.$loginRow.height();
-            campus.login.$loginRow.css('height', newHeight);
-            campus.login.$loginRow.addClass('open');
+                    campus.login.$parentRow.height();
+            campus.login.$parentRow.css('height', newHeight);
+            campus.login.$parentRow.addClass('open');
 
             // if Main Navigation is open, close it first
             if(campus.navigation.isOpen){
@@ -55,8 +54,8 @@
 
         // close action
         closeFrm: function(){
-            campus.login.$loginRow.removeAttr('style');
-            campus.login.$loginRow.removeClass('open');
+            campus.login.$parentRow.removeAttr('style');
+            campus.login.$parentRow.removeClass('open');
         },
 
         // close on resize
@@ -66,26 +65,21 @@
 
         // initial set up
         init: function(){
+
             // attach open action
             campus.login.$openBtn.on('click', function(e){
                 e.preventDefault();
-                if(!campus.login.$loginRow.hasClass('open')){
+                if(!campus.login.$parentRow.hasClass('open')){
                    campus.login.openFrm();
                 } else {
                    campus.login.closeFrm();
                 }
             });
 
-            // attach close action
-            campus.login.$closeBtn.on('click', function(e){
-                e.preventDefault();
-                campus.login.closeFrm();
-            });
-
             // delay hiding menu after 3 seconds mouseleave
-            campus.login.$loginRow.on('mouseleave', function(){
+            campus.login.$parentRow.on('mouseleave', function(){
                 campus.login.delayedClose = setTimeout(function(){
-                    if(!campus.login.$loginRow.is(":hover")){
+                    if(!campus.login.$parentRow.is(":hover")){
                         campus.login.closeFrm();
                     } else {
                         clearInterval(campus.login.delayedClose);
@@ -98,7 +92,7 @@
     campus.navigation = {
         // elements of this component
         $parentRow: $('.header-title'),
-        $toggleBtn: $('#toggle-btn', this.$parentRow),
+        $toggleBtn: $('.toggle-navigation', this.$parentRow),
         $buttonsContainer: $('.main-navigation', this.$parentRow),
         $buttons: $('.header-links', this.$parentRow),
         isOpen: false,

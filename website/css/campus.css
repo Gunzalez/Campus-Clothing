@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .header-login #login-form .close-login-btn .text, .institution label {
+.header-login .navigation li .text, .institution label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -127,22 +127,22 @@ body {
       display: none; }
     .header-login.open .container {
       background-image: url("../images/cc-shield-open.png"); }
-  .header-login #login-form {
+  .header-login .login-form {
     padding: 15px 0;
     float: left;
     width: 100%;
     text-align: right; }
-    .header-login #login-form label {
+    .header-login .login-form label {
       margin-left: 15px;
       margin-right: 5px;
       color: #ffffff;
       text-transform: capitalize; }
       @media (max-width: 767px) {
-        .header-login #login-form label {
+        .header-login .login-form label {
           display: none; } }
-    .header-login #login-form input {
+    .header-login .login-form input {
       border: none; }
-    .header-login #login-form button {
+    .header-login .login-form button {
       color: #ffffff;
       background: none;
       padding-right: 0;
@@ -150,20 +150,20 @@ body {
       text-transform: uppercase;
       font-weight: bold;
       margin-left: 15px; }
-      .header-login #login-form button:hover {
+      .header-login .login-form button:hover {
         color: #faf6dd; }
-      .header-login #login-form button:focus {
+      .header-login .login-form button:focus {
         border-color: #faf6dd; }
-    .header-login #login-form a {
+    .header-login .login-form a {
       display: inline-block;
       padding: 6px 0;
       margin-left: 30px;
       text-decoration: none;
       color: #ffffff; }
-      .header-login #login-form a:hover {
+      .header-login .login-form a:hover {
         color: #faf6dd; }
       @media (max-width: 767px) {
-        .header-login #login-form a {
+        .header-login .login-form a {
           float: left;
           margin-left: 0 !important; } }
 
@@ -205,17 +205,17 @@ body {
     .header-title h1 .imagery {
       padding-top: 5px;
       display: block; }
-  .header-title .toggle-btn {
+  .header-title .toggle-navigation {
     position: absolute;
     right: 0;
     top: 50%;
     margin-top: -15px;
     color: #faf6dd !important;
     outline: none !important; }
-    .header-title .toggle-btn:hover {
+    .header-title .toggle-navigation:hover {
       color: #ffffff !important; }
     @media (max-width: 768px) {
-      .header-title .toggle-btn {
+      .header-title .toggle-navigation {
         margin-top: -6px; } }
   @media (max-width: 768px) {
     .header-title h1 {
@@ -225,10 +225,7 @@ body {
       .header-title h1 .imagery {
         width: 240px; }
         .header-title h1 .imagery img {
-          width: 100%; }
-    .header-title .menu-toggle-btn {
-      margin-top: -20px;
-      font-size: 2.0em; } }
+          width: 100%; } }
   .header-title .header-links {
     padding-top: 10px;
     text-align: center; }

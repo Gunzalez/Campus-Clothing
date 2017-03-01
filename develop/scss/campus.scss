@@ -80,7 +80,7 @@ body {
         }
     }
 
-    #login-form {
+    .login-form {
         padding: 15px 0;
         float: left;
         width: 100%;
@@ -129,12 +129,6 @@ body {
             @media (max-width: $width-sm - 1){
                 float: left;
                 margin-left: 0 !important;
-            }
-        }
-
-        .close-login-btn {
-            .text {
-                @extend %visuallyHidden;
             }
         }
     }
@@ -195,7 +189,7 @@ body {
         }
     }
 
-    .toggle-btn {
+    .toggle-navigation {
         position: absolute;
         right: 0;
         top: 50%;
@@ -215,6 +209,7 @@ body {
 
         h1 {
             text-align: left;
+
             .text {
                 display: none;
             }
@@ -226,11 +221,6 @@ body {
                     width: 100%;
                 }
             }
-        }
-
-        .menu-toggle-btn {
-            margin-top: -20px;
-            font-size: 2.0em;
         }
     }
 
