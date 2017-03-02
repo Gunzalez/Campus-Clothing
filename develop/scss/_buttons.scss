@@ -5,7 +5,7 @@
     color: $brand-white;
     @include transition(all, 0.25s);
     padding: 12px 20px;
-    @include border-radius(4%);
+    @include border-radius(4px);
 
     &:hover,
     &:focus {

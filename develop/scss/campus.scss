@@ -386,12 +386,8 @@ body {
 
     .meta-box {
         position: relative;
-        margin: 15px;
+        margin: 15px 0;
         min-height: 105px;
-
-        @media (max-width: $width-lg){
-            margin-left: 0;
-        }
     }
 
     .institution-logo {
@@ -450,7 +446,7 @@ body {
 
     .shopping-basket-link {
         position: absolute;
-        right: -10px;
+        right: 5px;
         top: -10px;
     }
 
@@ -468,6 +464,56 @@ body {
         }
     }
 
+}
+
+.institution-navigation {
+
+    .list-box {
+        padding: 15px;
+        float: left;
+        width: 100%;
+    }
+
+    ul {
+        @extend %cleanUl;
+        float: left;
+        background: $brand-vGrey;
+        @include border-radius(6px);
+        width: 100%;
+    }
+
+    li {
+        float: left;
+        border-right: 1px solid #ffffff;
+
+        &:first-child {
+            a {
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+        }
+
+        &.active {
+            a {
+                background: $brand-blue;
+            }
+        }
+    }
+
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 8px 18px;
+        background: $brand-red;
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            color: $brand-white;
+        }
+    }
 }
 
 .large-cta {

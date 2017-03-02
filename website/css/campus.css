@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .footer .footer-links {
+.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .institution-navigation ul, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -56,9 +56,9 @@ h1, h2 {
   -webkit-transition: all, 0.25s;
   transition: all, 0.25s;
   padding: 12px 20px;
-  -webkit-border-radius: 4% !important;
-  -moz-border-radius: 4% !important;
-  border-radius: 4% !important; }
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  border-radius: 4px !important; }
   .btn-product:hover, .btn-product:focus {
     color: #ffffff;
     background-color: #712522; }
@@ -350,11 +350,8 @@ body {
   background: #e1e1e1; }
   .institution-detail .meta-box {
     position: relative;
-    margin: 15px;
+    margin: 15px 0;
     min-height: 105px; }
-    @media (max-width: 1200px) {
-      .institution-detail .meta-box {
-        margin-left: 0; } }
   .institution-detail .institution-logo {
     position: absolute;
     top: 0;
@@ -388,7 +385,7 @@ body {
       padding: 15px 0 0 0; } }
   .institution-detail .shopping-basket-link {
     position: absolute;
-    right: -10px;
+    right: 5px;
     top: -10px; }
 
 .institution-hero .hero {
@@ -397,6 +394,40 @@ body {
 @media (max-width: 1200px) {
   .institution-hero .container {
     padding: 0; } }
+
+.institution-navigation .list-box {
+  padding: 15px;
+  float: left;
+  width: 100%; }
+
+.institution-navigation ul {
+  float: left;
+  background: #e1e1e1;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  border-radius: 6px !important;
+  width: 100%; }
+
+.institution-navigation li {
+  float: left;
+  border-right: 1px solid #ffffff; }
+  .institution-navigation li:first-child a {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px; }
+  .institution-navigation li.active a {
+    background: #00365a; }
+
+.institution-navigation a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 8px 18px;
+  background: #98322e;
+  color: #ffffff;
+  display: block;
+  text-decoration: none; }
+  .institution-navigation a:hover {
+    color: #faf6dd; }
 
 .large-cta {
   background: #00365a;
