@@ -326,10 +326,9 @@ body {
     display: block; }
   .institutions-search .shopping-basket-link {
     position: absolute;
-    right: 0;
+    right: 7px;
     top: 50%;
-    margin-top: -28px;
-    padding-right: 4px; }
+    margin-top: -28px; }
   @media (min-width: 769px) {
     .institutions-search form {
       display: inline-block;
@@ -351,8 +350,11 @@ body {
   background: #e1e1e1; }
   .institution-detail .meta-box {
     position: relative;
-    margin: 15px 0;
+    margin: 15px;
     min-height: 105px; }
+    @media (max-width: 1200px) {
+      .institution-detail .meta-box {
+        margin-left: 0; } }
   .institution-detail .institution-logo {
     position: absolute;
     top: 0;
@@ -385,9 +387,9 @@ body {
     .institution-detail .institution-meta {
       padding: 15px 0 0 0; } }
   .institution-detail .shopping-basket-link {
-    float: right;
-    margin-right: 10px;
-    margin-top: -10px; }
+    position: absolute;
+    right: -10px;
+    top: -10px; }
 
 .institution-hero .hero {
   width: 100% !important; }
