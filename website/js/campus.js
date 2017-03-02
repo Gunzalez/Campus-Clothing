@@ -41,48 +41,48 @@
 
         // open action
         openFrm: function(){
-            var newHeight = campus.login.$loginFrm.outerHeight() +
-                    campus.login.$parentRow.height();
-            campus.login.$parentRow.css('height', newHeight);
-            campus.login.$parentRow.addClass('open');
+            var newHeight = this.$loginFrm.outerHeight() +
+                    this.$parentRow.height();
+            this.$parentRow.css('height', newHeight);
+            this.$parentRow.addClass('open');
 
             // if Main Navigation is open, close it first
-            if(campus.navigation.isOpen){
-                campus.navigation.$toggleBtn.trigger('click');
+            if(this.isOpen){
+                this.$toggleBtn.trigger('click');
             }
         },
 
         // close action
         closeFrm: function(){
-            campus.login.$parentRow.removeAttr('style');
-            campus.login.$parentRow.removeClass('open');
+            this.$parentRow.removeAttr('style');
+            this.$parentRow.removeClass('open');
         },
 
         // close on resize
         resize: function(){
-            campus.login.closeFrm();
+            this.closeFrm();
         },
 
         // initial set up
         init: function(){
-
             // attach open action
-            campus.login.$openBtn.on('click', function(e){
+            var self = this;
+            this.$openBtn.on('click', function(e){
                 e.preventDefault();
-                if(!campus.login.$parentRow.hasClass('open')){
-                   campus.login.openFrm();
+                if(!self.$parentRow.hasClass('open')){
+                    self.openFrm();
                 } else {
-                   campus.login.closeFrm();
+                    self.closeFrm();
                 }
             });
 
             // delay hiding menu after 3 seconds mouseleave
-            campus.login.$parentRow.on('mouseleave', function(){
-                campus.login.delayedClose = setTimeout(function(){
-                    if(!campus.login.$parentRow.is(":hover")){
-                        campus.login.closeFrm();
+            this.$parentRow.on('mouseleave', function(){
+                self.delayedClose = setTimeout(function(){
+                    if(!self.$parentRow.is(":hover")){
+                        self.closeFrm();
                     } else {
-                        clearInterval(campus.login.delayedClose);
+                        clearInterval(self.delayedClose);
                     }
                 }, 3000);
             })
@@ -99,41 +99,42 @@
 
         // open menu
         open: function(){
-            campus.navigation.$parentRow.addClass('open');
-            campus.navigation.isOpen = true;
-            campus.navigation.$toggleBtn.addClass('is-active');
-            campus.navigation.$buttonsContainer.height(campus.navigation.$buttons.outerHeight());
+            this.$parentRow.addClass('open');
+            this.isOpen = true;
+            this.$toggleBtn.addClass('is-active');
+            this.$buttonsContainer.height(campus.navigation.$buttons.outerHeight());
         },
 
         // close navigation
         close: function(){
-            campus.navigation.$parentRow.removeClass('open');
-            campus.navigation.isOpen = false;
-            campus.navigation.$toggleBtn.removeClass('is-active');
-            campus.navigation.$buttonsContainer.height('0');
+            this.$parentRow.removeClass('open');
+            this.isOpen = false;
+            this.$toggleBtn.removeClass('is-active');
+            this.$buttonsContainer.height('0');
         },
 
         // rest navigation
         reset: function(){
-            campus.navigation.isOpen = false;
-            campus.navigation.$toggleBtn.removeClass('is-active');
-            campus.navigation.$buttonsContainer.removeClass('animate').height('0');
+            this.isOpen = false;
+            this.$toggleBtn.removeClass('is-active');
+            this.$buttonsContainer.removeClass('animate').height('0');
         },
 
         // close on resize
         resize: function(){
-            campus.navigation.reset();
+            this.reset();
         },
 
         // initial set up
         init: function(){
-            campus.navigation.$toggleBtn.on('click', function(e){
+            var self = this;
+            this.$toggleBtn.on('click', function(e){
                 e.preventDefault();
-                campus.navigation.$buttonsContainer.addClass('animate');
-                if(!campus.navigation.isOpen){
-                    campus.navigation.open();
+                self.$buttonsContainer.addClass('animate');
+                if(!self.isOpen){
+                    self.open();
                 } else {
-                    campus.navigation.close();
+                    self.close();
                 }
             });
         }
@@ -148,9 +149,11 @@
 
         init: function(){
 
+            var self = this;
+
             // stopping default for action,
             // not best practice, but breaks the autoComplete :(
-            campus.institutions.$form.on('submit', function(e){
+            this.$form.on('submit', function(e){
                 e.preventDefault();
             });
 
@@ -159,7 +162,7 @@
                 url: "js/institutions.json",
                 getValue: "name",
                 list: {
-                    maxNumberOfElements: campus.institutions.listMax,
+                    maxNumberOfElements: self.listMax,
                     match: {
                         enabled: true
                     },
@@ -167,19 +170,19 @@
                         // cosmetic effect - gives user feedback
                         campus.institutions.$form.addClass('loading');
                         // go to new page
-                        location.assign(campus.institutions.basUrl + campus.institutions.$input.getSelectedItemData().id);
+                        location.assign(self.basUrl + self.$input.getSelectedItemData().id);
                     }
                 }
             };
 
             // cosmetic effect
-            campus.institutions.$input.on('focus', function(){
-                campus.institutions.$form.removeClass('loading');
+            this.$input.on('focus', function(){
+                self.$form.removeClass('loading');
             });
-            campus.institutions.$form.removeClass('loading'); // fixes bug on page load
+            this.$form.removeClass('loading'); // fixes bug on page load
 
             // attach action
-            campus.institutions.$input.easyAutocomplete(options);
+            this.$input.easyAutocomplete(options);
         }
 
     };
