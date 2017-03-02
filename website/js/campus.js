@@ -188,6 +188,22 @@
 
     };
 
+    campus.products = {
+        $list: $('.products-list'),
+        $buttons: $('.list-title', this.$list),
+
+
+        init: function(){
+            var self = this;
+            this.$buttons.each(function(i, obj){
+                $(obj).on('click', function(){
+                    self.$list.removeClass('active');
+                    $(obj).parents('.products-list').addClass('active');
+                })
+            });
+        }
+    };
+
     campus.init = function () {
 
         // all init here
@@ -195,6 +211,7 @@
         campus.login.init();
         campus.navigation.init();
         campus.institutions.init();
+        campus.products.init();
 
         // resize triggers
         $(window).on('resize', function () {
