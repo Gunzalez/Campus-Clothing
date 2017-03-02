@@ -42,6 +42,12 @@ form {
             text-align: left !important;
         }
     }
+
+    .form-inline {
+        label {
+            display: block;
+        }
+    }
 }
 
 

@@ -50,6 +50,9 @@ form .form-horizontal {
     font-weight: normal !important;
     text-align: left !important; }
 
+form .form-inline label {
+  display: block; }
+
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0; }
@@ -61,10 +64,10 @@ h1, h2, h3, h4 {
   -o-transition: all, 0.25s;
   -webkit-transition: all, 0.25s;
   transition: all, 0.25s;
-  padding: 12px 20px;
   -webkit-border-radius: 4px !important;
   -moz-border-radius: 4px !important;
-  border-radius: 4px !important; }
+  border-radius: 4px !important;
+  border: none; }
   .btn-product:hover, .btn-product:focus {
     color: #ffffff;
     background-color: #712522; }
@@ -502,7 +505,26 @@ body {
       padding: 0 15px 0 0; }
 
 .product-detail .shout-out {
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 25px; }
+
+.product-detail .form-inline {
+  padding-bottom: 15px; }
+  .product-detail .form-inline label,
+  .product-detail .form-inline .like-label {
+    color: #00365a;
+    font-weight: bold !important;
+    display: block;
+    width: 100%; }
+  .product-detail .form-inline .help-block {
+    font-size: 0.9em;
+    float: left; }
+
+.product-detail .img-personalise {
+  padding-bottom: 15px; }
+
+.product-detail button {
+  display: block; }
 
 .product-detail,
 .products-list {

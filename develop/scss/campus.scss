@@ -601,6 +601,33 @@ body {
 
     .shout-out {
         font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    .form-inline {
+        padding-bottom: 15px;
+
+        label,
+        .like-label {
+            color: $brand-blue;
+            font-weight: bold !important;
+            display: block;
+            width: 100%;
+        }
+
+        .help-block {
+            font-size: 0.9em;
+            float: left;
+        }
+
+    }
+
+    .img-personalise {
+        padding-bottom: 15px;
+    }
+
+    button {
+        display: block;
     }
 
 
