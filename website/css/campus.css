@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .product-navigation ul, .footer .footer-links {
+.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -412,12 +412,12 @@ body {
       .large-cta i {
         display: none; } }
 
-.product-navigation .list-box {
+.products-navigation .list-box {
   padding: 15px;
   float: left;
   width: 100%; }
 
-.product-navigation ul {
+.products-navigation ul {
   float: left;
   background: #e1e1e1;
   -webkit-border-radius: 6px !important;
@@ -425,16 +425,16 @@ body {
   border-radius: 6px !important;
   width: 100%; }
 
-.product-navigation li {
+.products-navigation li {
   float: left;
   border-right: 1px solid #ffffff; }
-  .product-navigation li:first-child a {
+  .products-navigation li:first-child a {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px; }
-  .product-navigation li.active a {
+  .products-navigation li.active a {
     background: #00365a; }
 
-.product-navigation a {
+.products-navigation a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2em;
@@ -443,24 +443,24 @@ body {
   color: #ffffff;
   display: block;
   text-decoration: none; }
-  .product-navigation a:hover {
+  .products-navigation a:hover {
     color: #faf6dd; }
 
 @media (max-width: 768px) {
-  .product-navigation ul {
+  .products-navigation ul {
     text-align: justify;
     float: none;
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important; }
-  .product-navigation ul:after {
+  .products-navigation ul:after {
     content: '';
     display: inline-block;
     width: 100%; }
-  .product-navigation ul li {
+  .products-navigation ul li {
     display: inline-block;
     float: none; }
-  .product-navigation a {
+  .products-navigation a {
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;

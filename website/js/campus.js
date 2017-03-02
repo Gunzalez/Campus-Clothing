@@ -190,15 +190,33 @@
 
     campus.products = {
         $list: $('.products-list'),
-        $buttons: $('.list-title', this.$list),
+        $titles: $('.list-title', this.$list),
+        $buttons: $('.products-navigation a'),
 
+        setPosition: function(position){
+            // controls header and copy display
+            this.$list.removeClass('active');
+            this.$list.eq(position).addClass('active');
+
+            // controls buttons
+            this.$buttons.parents('li').removeClass('active');
+            this.$buttons.eq(position).parents('li').addClass('active');
+        },
 
         init: function(){
-            var self = this;
-            this.$buttons.each(function(i, obj){
+            var products = this;
+            this.$titles.each(function(i, obj){
                 $(obj).on('click', function(){
-                    self.$list.removeClass('active');
-                    $(obj).parents('.products-list').addClass('active');
+                    var index = products.$titles.index($(obj));
+                    products.setPosition(index);
+                })
+            });
+
+            this.$buttons.each(function(i, obj){
+                $(obj).on('click', function(e){
+                    e.preventDefault();
+                    var index = products.$buttons.index($(obj));
+                    products.setPosition(index);
                 })
             });
         }
