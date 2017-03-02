@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .header-title .header-links, .footer .footer-links {
+.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .institution label {
+.header-login .navigation li .text, .institutions-search label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -43,6 +43,10 @@ form input, form select, form textarea, form button {
 
 form input, form select, form textarea {
   color: #000000; }
+
+h1, h2 {
+  margin: 0;
+  padding: 0; }
 
 .btn-product {
   background-color: #98322e;
@@ -265,12 +269,37 @@ body {
 .js .main-navigation {
   height: 0; }
 
-.institution {
+.shopping-basket-link {
+  font-size: 2.5em;
+  color: #98322e;
+  position: relative;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s; }
+  .shopping-basket-link:hover {
+    color: #00365a; }
+  .shopping-basket-link .items {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    background-color: #ffffff;
+    font-size: 0.3em;
+    line-height: 15px;
+    font-weight: bold;
+    text-align: center; }
+
+.institutions-search {
   background: #adadad;
   text-align: center; }
-  .institution .form-box {
+  .institutions-search .form-box {
     position: relative; }
-  .institution input {
+  .institutions-search input {
     height: auto;
     margin: 10px 0;
     font-size: 0.9em;
@@ -278,65 +307,93 @@ body {
     width: 70% !important;
     display: block !important;
     text-shadow: none !important; }
-  .institution .form-group {
+  .institutions-search .form-group {
     width: 100%;
     margin-bottom: 0; }
-  .institution .shopping-basket-link {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -28px;
-    font-size: 2.5em;
-    color: #98322e;
-    padding-right: 4px; }
-    .institution .shopping-basket-link .items {
-      position: absolute;
-      top: 6px;
-      right: 0;
-      width: 15px;
-      height: 15px;
-      -webkit-border-radius: 50% !important;
-      -moz-border-radius: 50% !important;
-      border-radius: 50% !important;
-      background-color: #ffffff;
-      font-size: 0.3em;
-      font-weight: bold; }
-  .institution form .input-wrapper {
+  .institutions-search form .input-wrapper {
     position: relative; }
-    .institution form .input-wrapper i {
+    .institutions-search form .input-wrapper i {
       position: absolute;
       left: 10px;
       top: 50%;
       margin-top: -8px;
       font-size: 1.2em;
       display: none; }
-  .institution form.loading .form-control {
+  .institutions-search form.loading .form-control {
     padding-left: 40px;
     text-align: left; }
-  .institution form.loading i {
+  .institutions-search form.loading i {
     display: block; }
+  .institutions-search .shopping-basket-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -28px;
+    padding-right: 4px; }
   @media (min-width: 769px) {
-    .institution form {
+    .institutions-search form {
       display: inline-block;
       background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
       background-size: contain;
       padding-left: 120px; }
-    .institution .form-group {
+    .institutions-search .form-group {
       background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
       background-size: contain;
       padding-right: 120px; }
-    .institution input {
+    .institutions-search input {
       width: 470px !important;
       height: 40px;
       font-size: 1.6em;
       line-height: 40px;
       text-align: center; } }
 
-.institution-image .hero {
+.institution-detail {
+  background: #e1e1e1; }
+  .institution-detail .meta-box {
+    position: relative;
+    margin: 15px 0;
+    min-height: 105px; }
+  .institution-detail .institution-logo {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .institution-detail .institution-meta {
+    padding-left: 135px;
+    padding-right: 120px; }
+    .institution-detail .institution-meta h1 {
+      font-size: 1.6em;
+      color: #000000;
+      padding-bottom: 10px;
+      font-weight: bold; }
+    .institution-detail .institution-meta h2 {
+      font-size: 1.2em;
+      color: #00365a;
+      padding-bottom: 10px;
+      font-weight: bold; }
+    .institution-detail .institution-meta li {
+      display: inline;
+      padding-right: 15px; }
+    .institution-detail .institution-meta a {
+      color: #98322e;
+      font-size: 0.8em;
+      font-weight: bold; }
+      .institution-detail .institution-meta a:hover {
+        text-decoration: none; }
+  @media (max-width: 768px) {
+    .institution-detail .institution-logo {
+      position: static; }
+    .institution-detail .institution-meta {
+      padding: 15px 0 0 0; } }
+  .institution-detail .shopping-basket-link {
+    float: right;
+    margin-right: 10px;
+    margin-top: -10px; }
+
+.institution-hero .hero {
   width: 100% !important; }
 
 @media (max-width: 1200px) {
-  .institution-image .container {
+  .institution-hero .container {
     padding: 0; } }
 
 .large-cta {

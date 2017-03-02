@@ -142,8 +142,9 @@
 
     campus.institutions = {
         // elements for this component
-        $form: $('#select-institution-form'),
-        $input: $('#institution'),
+        $parentRow: $('.institutions-search'),
+        $form: $('#select-institution-form', this.$parentRow),
+        $input: $('#institution-name', this.$parentRow),
         listMax: 5,
         basUrl: 'institution.html?id=',
 
