@@ -57,6 +57,9 @@ form .form-inline label {
 form .form-inline input {
   float: none !important; }
 
+form .form-inline .form-group {
+  margin: 0 !important; }
+
 form .form-3-char {
   width: 40% !important;
   display: block; }

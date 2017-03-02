@@ -1,6 +1,8 @@
 Preparations
 
-b0d211d055793a11769250b667709a4e4a0d5513
+09a78b38f06d4e57927807dc03dc2a62b010d7b3
 
 
-// Align basket better on mobile
+Align basket better on mobile
+Table on mobile
+Horizontal lines across product detail page
