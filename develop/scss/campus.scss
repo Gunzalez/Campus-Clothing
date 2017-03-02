@@ -539,12 +539,36 @@ body {
     }
 }
 
+.product-detail {
+    .size-guide {
+        width: 100%;
+        margin: 20px 0;
+
+        th{
+            padding: 5px 10px;
+            font-weight: normal;
+            background: $brand-blue;
+            border-bottom: 1px solid $brand-coal;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        td,
+        th[scope="row"]{
+            padding: 5px 10px;
+            background: $brand-vGrey;
+            border-bottom: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            color: #000000;
+            text-transform: lowercase;
+        }
+    }
+
+}
+
+.product-detail,
 .products-list {
     padding-top: 15px;
-//
-//    .row {
-//        padding-bottom: 30px;
-//    }
 
     .product-image {
         display: block;
