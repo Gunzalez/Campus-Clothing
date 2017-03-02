@@ -47,8 +47,8 @@
             this.$parentRow.addClass('open');
 
             // if Main Navigation is open, close it first
-            if(this.isOpen){
-                this.$toggleBtn.trigger('click');
+            if(campus.navigation.isOpen){
+                campus.navigation.$toggleBtn.trigger('click');
             }
         },
 
