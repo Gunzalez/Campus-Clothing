@@ -46,7 +46,17 @@ form {
     .form-inline {
         label {
             display: block;
+            float: left;
         }
+        
+        input {
+            float: none !important;
+        }
+    }
+
+    .form-3-char {
+        width: 40% !important;
+        display: block;
     }
 }
 

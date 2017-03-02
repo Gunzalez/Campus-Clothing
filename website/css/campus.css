@@ -51,6 +51,14 @@ form .form-horizontal {
     text-align: left !important; }
 
 form .form-inline label {
+  display: block;
+  float: left; }
+
+form .form-inline input {
+  float: none !important; }
+
+form .form-3-char {
+  width: 40% !important;
   display: block; }
 
 h1, h2, h3, h4 {
@@ -517,8 +525,7 @@ body {
     display: block;
     width: 100%; }
   .product-detail .form-inline .help-block {
-    font-size: 0.9em;
-    float: left; }
+    font-size: 0.9em; }
 
 .product-detail .img-personalise {
   padding-bottom: 15px; }
