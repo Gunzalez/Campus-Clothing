@@ -489,6 +489,7 @@ body {
 }
 
 .products-navigation {
+    display: none; // only for JS users
 
     .list-box {
         padding: 15px;
@@ -536,36 +537,10 @@ body {
             color: $brand-white;
         }
     }
-
-
-    @media (max-width: $width-sm){
-
-        ul {
-            text-align: justify;
-            //min-width: 500px;
-            float: none;
-            @include border-radius(0);
-        }
-        ul:after {
-            content: '';
-            display: inline-block;
-            width: 100%;
-        }
-        ul li {
-            display: inline-block;
-            float: none;
-        }
-        a {
-            @include border-radius(0);
-            display: block;
-            width: 100%;
-        }
-    }
 }
 
 .products-list {
-    //margin-top: 15px;
-//    padding-top: 15px;
+    padding-top: 15px;
 //
 //    .row {
 //        padding-bottom: 30px;
@@ -607,7 +582,7 @@ body {
             margin-top: -15px;
         }
 
-        @media (max-width: $width-sm){
+        @media (max-width: $width-sm - 1){
             hr {
                 border-width: 1px;
                 margin: -2px 0 5px 0;
@@ -640,16 +615,33 @@ body {
             background: $brand-red;
             color: #ffffff;
             margin-bottom: 15px;
+            @include border-radius(4px);
+            font-weight: normal;
+            position: relative;
 
             &.open {
                 background: $brand-blue;
             }
-            
-            .glyphicon {
-                float: right;
+
+            .open-list,
+            .close-list {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                margin-top: -7px;
                 color: #ffffff;
+                font-size: 0.7em;
+                display: none;
             }
         }
+    }
+}
+
+.js .products-navigation {
+    display: block;
+
+    @media (max-width: $width-sm - 1){
+        display: none;
     }
 }
 
@@ -658,6 +650,7 @@ body {
     &:not(.static){
 
         &.active {
+
             .header {
                 .title {
                     background: $brand-blue;
@@ -667,17 +660,54 @@ body {
         }
 
         .header {
-            .title {
-                cursor: pointer;
+            cursor: pointer;
+            @media (min-width: $width-sm){
+                display: none;
             }
         }
 
         &:not(.active){
+            @media (min-width: $width-sm){
+                padding-top: 0;
+            }
+
             .row {
                 &:not(.header){
                     @extend %visuallyHidden;
                 }
             }
+
+            @media (max-width: $width-sm){
+                .header {
+                    .title {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:last-child {
+                    .header {
+                        .title {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .open-list {
+        display: inline-block !important;
+    }
+    .close-list {
+        display: none !important;
+    }
+
+    &.active {
+        .open-list {
+            display: none !important;
+        }
+        .close-list {
+            display: inline-block !important;
         }
     }
 }
