@@ -68,6 +68,12 @@ h1, h2, h3, h4 {
   margin: 0;
   padding: 0; }
 
+hr {
+  border-color: #e1e1e1; }
+
+.hrule hr {
+  margin: 0 0 15px 0; }
+
 .btn-product {
   background-color: #98322e;
   color: #faf6dd;
@@ -498,7 +504,7 @@ body {
     .product-detail h3.strike-through.large {
       font-size: 1.6em; }
     .product-detail h3.strike-through:before {
-      border-top: 2px solid #dfdfdf;
+      border-top: 1px solid #e1e1e1;
       content: "";
       margin: 0 auto;
       /* this centers the line to the full width specified */
@@ -515,9 +521,12 @@ body {
       background: #fff;
       padding: 0 15px 0 0; }
 
-.product-detail .shout-out {
-  font-weight: bold;
-  margin-bottom: 25px; }
+.product-detail .copy-border-bottom {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 15px; }
+  .product-detail .copy-border-bottom .shout-out {
+    font-weight: bold;
+    margin-bottom: 10px; }
 
 .product-detail .form-inline {
   padding-bottom: 15px; }

@@ -582,7 +582,7 @@ body {
             }
 
             &:before {
-                border-top: 2px solid #dfdfdf;
+                border-top: 1px solid $brand-vGrey;
                 content:"";
                 margin: 0 auto; /* this centers the line to the full width specified */
                 position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
@@ -599,10 +599,16 @@ body {
         }
     }
 
-    .shout-out {
-        font-weight: bold;
-        margin-bottom: 25px;
+    .copy-border-bottom {
+        border-bottom: 1px solid $brand-vGrey;
+        margin-bottom: 15px;
+
+        .shout-out {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     }
+
 
     .form-inline {
         padding-bottom: 15px;
@@ -628,9 +634,6 @@ body {
     button {
         display: block;
     }
-
-
-
 }
 
 .product-detail,
