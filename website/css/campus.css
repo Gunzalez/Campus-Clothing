@@ -5,7 +5,7 @@
   padding: 0;
   list-style: none; }
 
-.header-login .navigation li .text, .institutions-search label, .js .products-list:not(.active) .row:not(.header) {
+.header-login .navigation li .text, .institutions-search label, .js .products-list:not(.static):not(.active) .row:not(.header) {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -525,11 +525,11 @@ body {
       float: right;
       color: #ffffff; }
 
-.js .products-list.active .header .title {
+.js .products-list:not(.static).active .header .title {
   background: #00365a;
   cursor: default; }
 
-.js .products-list .header .title {
+.js .products-list:not(.static) .header .title {
   cursor: pointer; }
 
 .footer {

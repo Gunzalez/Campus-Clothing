@@ -655,25 +655,28 @@ body {
 
 .js .products-list {
 
-    &.active {
-        .header {
-            .title {
-                background: $brand-blue;
-                cursor: default;
+    &:not(.static){
+
+        &.active {
+            .header {
+                .title {
+                    background: $brand-blue;
+                    cursor: default;
+                }
             }
         }
-    }
 
-    .header {
-        .title {
-            cursor: pointer;
+        .header {
+            .title {
+                cursor: pointer;
+            }
         }
-    }
 
-    &:not(.active){
+        &:not(.active){
             .row {
                 &:not(.header){
-                @extend %visuallyHidden;
+                    @extend %visuallyHidden;
+                }
             }
         }
     }
