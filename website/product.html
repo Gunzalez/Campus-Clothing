@@ -13,6 +13,8 @@
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">-->
 
     <script src="js/lib/jsChecks.js"></script>
 
@@ -99,7 +101,8 @@
         </div>
     </div>
     <div class="section">
-        <div class="institution-detail">
+        <form id="" action="">
+            <div class="institution-detail">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -122,62 +125,148 @@
                 </div>
             </div>
         </div>
-        <div class="product-detail">
+            <div class="product-detail">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-4 col-sm-3">
-                        <a href="product.html?id=xxxx" class="product-image">
-                            <img src="uploaded/item-13.png" alt="Mordor Hooide" />
-                        </a>
+                        <img src="uploaded/item-13.png" class="img-responsive" alt="Mordor Hooide" />
                     </div>
                     <div class="col-xs-8 col-sm-9">
                         <div class="product-description">
-                            <h1 class="title">
-                                <a href="product.html?id=xxxx">Mordor High Hoodie</a>
-                            </h1>
+                            <h1 class="title">Mordor High Hoodie</h1>
                             <div class="underline">
                                 <span class="dot" aria-hidden="true"></span><hr>
                             </div>
-                            <p>Aliquam posuere lacus eget urna cursus porta. Sed ligula lacus, mattis nec hendrerit et, venenatis et ligula. Sed luctus, elit ac commodo porttitor, elit ante eleifend odio, vitae sollicitudin eros quam consectetur odio. </p>
+                            <p>A et ligula. Sed luctus, elit ac commodo porttitor, elit ante eleifend odio, vitae sollicitudin eros quam consectetur odio. </p>
                             <p>Praesent elementum justo quis volutpat cursus. Curabitur semper, libero ut congue pharetra, diam ex auctor justo,.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9 col-sm-push-3">
+                        <table width="100%" border="0" class="size-guide">
+                            <tbody>
+                            <tr>
+                                <th scope="col">Chest size</th>
+                                <th scope="col">XS</th>
+                                <th scope="col">S</th>
+                                <th scope="col">M</th>
+                                <th scope="col">L</th>
+                                <th scope="col">XL</th>
+                                <th scope="col">XXL</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">inches</th>
+                                <td>19"</td>
+                                <td>20"</td>
+                                <td>21"</td>
+                                <td>22"</td>
+                                <td>23"</td>
+                                <td>26"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">cm</th>
+                                <td>48cm</td>
+                                <td>51cm</td>
+                                <td>53cm</td>
+                                <td>55cm</td>
+                                <td>57cm</td>
+                                <td>64cm</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9 col-sm-push-3">
+                        <div class="about">
 
-                            <table width="100%" border="0" class="size-guide">
-                                <tbody>
-                                <tr>
-                                    <th scope="col">Chest size</th>
-                                    <th scope="col">XS</th>
-                                    <th scope="col">S</th>
-                                    <th scope="col">M</th>
-                                    <th scope="col">L</th>
-                                    <th scope="col">XL</th>
-                                    <th scope="col">XXL</th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">inches</th>
-                                    <td>19"</td>
-                                    <td>20"</td>
-                                    <td>21"</td>
-                                    <td>22"</td>
-                                    <td>23"</td>
-                                    <td>26"</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">cm</th>
-                                    <td>48cm</td>
-                                    <td>51cm</td>
-                                    <td>53cm</td>
-                                    <td>55cm</td>
-                                    <td>57cm</td>
-                                    <td>64cm</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <h3 class="strike-through"><span>About your garment</span></h3>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="size" class="col-sm-3 control-label">Size:</label>
+                                    <div class="col-sm-4">
+                                        <select id="size" name="size" class="form-control">
+                                            <option value="0" selected>Select</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="colour" class="col-sm-3 control-label">Colour:</label>
+                                    <div class="col-sm-4">
+                                        <select id="colour" name="colour" class="form-control">
+                                            <option selected>Select</option>
+                                            <option value="0">Sport Grey</option>
+                                            <option value="1">Deep Red</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quantity" class="col-sm-3 control-label">Quantity:</label>
+                                    <div class="col-sm-4">
+                                        <select id="quantity" name="quantity" class="form-control">
+                                            <option selected>Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                                <!--<div class="form-group">-->
+                                    <!--<div class="col-sm-offset-2 col-sm-10">-->
+                                        <!--<div class="checkbox">-->
+                                            <!--<label>-->
+                                                <!--<input type="checkbox"> Remember me-->
+                                            <!--</label>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="form-group">-->
+                                    <!--<div class="col-sm-offset-2 col-sm-10">-->
+                                        <!--<button type="submit" class="btn btn-default">Sign in</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                            <h3 class="strike-through"><span>About your ceremony</span></h3>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="year" class="col-sm-3 control-label">Graduation Year:</label>
+                                    <div class="col-sm-4">
+                                        <select id="year" name="size" class="form-control">
+                                            <option value="0" selected>Select</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time" class="col-sm-3 control-label">Ceremony Time:</label>
+                                    <div class="col-sm-4">
+                                        <select id="time" name="time" class="form-control">
+                                            <option selected>Select</option>
+                                            <option value="0">Sport Grey</option>
+                                            <option value="1">Deep Red</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-3 control-label">Confirm your name:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" id="name" name="name" class="form-control" value="" placeholder="Type and select.." />
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
     </div>
     <div class="section">
         <div class="footer">
@@ -208,6 +297,10 @@
 
 <script src="js/vendor/jquery-2.1.4.min.js"></script>
 <script src="js/vendor/easy-autocomplete.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>-->
 <script src="js/campus.js"></script>
 </body>
 </html>

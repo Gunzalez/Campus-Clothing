@@ -222,6 +222,17 @@
         }
     };
 
+    campus.selectstyling = {
+
+        init: function(){
+            //$('.selectpicker').selectpicker({
+            //    style: 'btn-info',
+            //    size: 4
+            //});
+
+        }
+    };
+
     campus.init = function () {
 
         // all init here
@@ -230,6 +241,7 @@
         campus.navigation.init();
         campus.institutions.init();
         campus.products.init();
+        campus.selectstyling.init();
 
         // resize triggers
         $(window).on('resize', function () {

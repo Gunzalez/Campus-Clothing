@@ -34,9 +34,18 @@ form {
     input, select, textarea {
         color: #000000;
      }
+
+    .form-horizontal {
+        margin-bottom: 30px;
+        label {
+            font-weight: normal !important;
+            text-align: left !important;
+        }
+    }
 }
 
-h1, h2 {
+
+h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
