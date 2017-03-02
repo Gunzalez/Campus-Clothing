@@ -569,13 +569,17 @@ body {
     h3 {
         margin-bottom: 15px;
         color: $brand-blue;
-        font-size: 1.4em;
         text-transform: uppercase;
         font-weight: bold;
 
         &.strike-through {
             position: relative;
             z-index: 1;
+            font-size: 1.2em;
+
+            &.large {
+                font-size: 1.6em;
+            }
 
             &:before {
                 border-top: 2px solid #dfdfdf;
@@ -593,6 +597,10 @@ body {
                 padding: 0 15px 0 0;
             }
         }
+    }
+
+    .shout-out {
+        font-weight: bold;
     }
 
 

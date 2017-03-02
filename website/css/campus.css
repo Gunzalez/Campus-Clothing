@@ -475,12 +475,14 @@ body {
 .product-detail h3 {
   margin-bottom: 15px;
   color: #00365a;
-  font-size: 1.4em;
   text-transform: uppercase;
   font-weight: bold; }
   .product-detail h3.strike-through {
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    font-size: 1.2em; }
+    .product-detail h3.strike-through.large {
+      font-size: 1.6em; }
     .product-detail h3.strike-through:before {
       border-top: 2px solid #dfdfdf;
       content: "";
@@ -498,6 +500,9 @@ body {
       /* to hide the lines from behind the text, you have to set the background color the same as the container */
       background: #fff;
       padding: 0 15px 0 0; }
+
+.product-detail .shout-out {
+  font-weight: bold; }
 
 .product-detail,
 .products-list {
