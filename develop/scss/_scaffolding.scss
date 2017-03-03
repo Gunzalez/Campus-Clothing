@@ -16,6 +16,7 @@ form {
     }
 
     input, select, textarea, button {
+
         @include border-radius(0);
         box-shadow: none !important;
         border-color: $brand-black !important;
@@ -25,10 +26,15 @@ form {
         &:focus {
             border-color: #000000 !important;
         }
+    }
 
-        -webkit-appearance: none;
-        -moz-appearance:    none;
-        appearance:         none;
+    input, select, textarea, button {
+
+        &:not([type="checkbox"]) {
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;
+        }
     }
 
     input, select, textarea {
@@ -55,7 +61,7 @@ form {
 
         .form-group {
             margin: 0 !important;
-
+            width: 100%;
         }
     }
 

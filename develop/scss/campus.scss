@@ -544,6 +544,17 @@ body {
         width: 100%;
         margin: 0 0 30px 0;
 
+        caption {
+            font-size: 1.0em;
+            font-weight: bold;
+            color: $brand-blue;
+            width: 100%;
+
+            @media (min-width: $width-xs + 1){
+                display: none;
+            }
+        }
+
         th{
             padding: 5px 10px;
             font-weight: normal;
@@ -563,6 +574,12 @@ body {
             color: #000000;
             text-transform: lowercase;
             font-size: 0.8em;
+        }
+
+        @media (max-width: $width-xs){
+            th:first-child {
+                display: none;
+            }
         }
     }
 
@@ -602,11 +619,21 @@ body {
     .copy-border-bottom {
         border-bottom: 1px solid $brand-vGrey;
         margin-bottom: 15px;
+    }
 
-        .shout-out {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .copy-border-top {
+        border-top: 1px solid $brand-vGrey;
+        padding-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .shout-out {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .money {
+        font-size: 1.2em;
     }
 
 
@@ -631,9 +658,9 @@ body {
         padding-bottom: 15px;
     }
 
-    button {
-        display: block;
-    }
+//    button {
+//        display: block;
+//    }
 }
 
 .product-detail,
