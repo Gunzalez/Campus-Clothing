@@ -494,6 +494,7 @@ body {
     font-weight: normal;
     background: #00365a;
     border-bottom: 1px solid #adadad;
+    border-right: 1px solid #ffffff;
     color: #ffffff;
     text-transform: uppercase;
     font-size: 0.8em; }
@@ -553,7 +554,7 @@ body {
   margin-bottom: 10px; }
 
 .product-detail .money {
-  font-size: 1.2em; }
+  font-size: 1.1em; }
 
 .product-detail .form-inline {
   padding-bottom: 15px; }

@@ -1,8 +1,14 @@
 Preparations
 
-09a78b38f06d4e57927807dc03dc2a62b010d7b3
-
-
+TODO
 Align basket better on mobile
-Table on mobile
+Style select
+Style pointy buttons
+Product carousel
+Sort out hours
+
+
+
+DONE
 Horizontal lines across product detail page
+Table on mobile

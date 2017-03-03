@@ -560,6 +560,7 @@ body {
             font-weight: normal;
             background: $brand-blue;
             border-bottom: 1px solid $brand-coal;
+            border-right: 1px solid #ffffff;
             color: #ffffff;
             text-transform: uppercase;
             font-size: 0.8em;
@@ -633,9 +634,8 @@ body {
     }
 
     .money {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
-
 
     .form-inline {
         padding-bottom: 15px;
