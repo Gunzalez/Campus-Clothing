@@ -6,9 +6,21 @@ Style select
 Style pointy buttons
 Product carousel
 Sort out hours
-
+Change typeAhead, does not work on IE9
+fix table for iPhone 5
 
 
 DONE
 Horizontal lines across product detail page
 Table on mobile
+
+
+
+// TIME
+25 - 0
+26 - 3
+27 - 12
+28 - 8
+1 - 6
+2 - 10
+3 - 15

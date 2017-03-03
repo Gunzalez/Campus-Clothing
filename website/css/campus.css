@@ -77,6 +77,20 @@ hr {
 .hrule hr {
   margin: 0 0 15px 0; }
 
+.checkbox-right {
+  position: relative;
+  width: 100%;
+  min-height: 30px; }
+  .checkbox-right span {
+    display: inline-block;
+    padding-right: 27px; }
+  .checkbox-right input {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 15px;
+    height: 15px; }
+
 .btn-product {
   background-color: #98322e;
   color: #faf6dd;
@@ -564,8 +578,12 @@ body {
     font-weight: bold !important;
     display: block;
     width: 100%; }
+  .product-detail .form-inline input[type="text"] {
+    display: block; }
   .product-detail .form-inline .help-block {
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    display: block;
+    width: 100%; }
 
 .product-detail .img-personalise {
   padding-bottom: 15px; }

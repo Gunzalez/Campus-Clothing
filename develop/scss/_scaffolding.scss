@@ -87,6 +87,23 @@ hr {
     }
 }
 
+.checkbox-right {
+    position: relative;
+    width: 100%;
+    min-height: 30px;
+    span {
+        display: inline-block;
+        padding-right: 27px;
+    }
+    input {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
 
 
 
