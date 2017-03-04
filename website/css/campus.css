@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .product-detail .product-image-carousel .image-list,
-.products-list .product-image-carousel .image-list, .footer .footer-links {
+.products-list .product-image-carousel .image-list, .footer .footer-links, .order-states ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -485,7 +485,7 @@ body {
 .products-navigation {
   display: none; }
   .products-navigation .list-box {
-    padding: 15px;
+    padding: 15px 0;
     float: left;
     width: 100%; }
   .products-navigation ul {
@@ -818,3 +818,35 @@ body {
       text-decoration: none; }
       .footer .footer-copy a:hover {
         color: #ffffff; }
+
+.order-states {
+  padding: 15px 0;
+  overflow: auto; }
+  .order-states ul {
+    background: #e1e1e1;
+    float: left;
+    width: 100%; }
+  .order-states li {
+    font-size: 1.2em;
+    float: left;
+    padding: 10px 16px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #6a6a6a; }
+    .order-states li:last-child {
+      border-right: none; }
+  .order-states .current-state {
+    background: #00365a; }
+
+.order-announcement {
+  padding-bottom: 15px; }
+  .order-announcement .title {
+    font-size: 1.2em;
+    text-decoration: underline;
+    float: left;
+    text-transform: uppercase; }
+  .order-announcement .announcement {
+    clear: left; }
