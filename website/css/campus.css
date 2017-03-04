@@ -638,7 +638,11 @@ body {
     .products-list .product-image-carousel .dot-image {
       display: block;
       border: 1px solid #ffffff;
-      padding: 5px; }
+      padding: 5px;
+      -moz-transition: border 0.5s;
+      -o-transition: border 0.5s;
+      -webkit-transition: border 0.5s;
+      transition: border 0.5s; }
       .product-detail .product-image-carousel .dot-image.active,
       .products-list .product-image-carousel .dot-image.active {
         border-color: #00365a; }

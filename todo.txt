@@ -1,21 +1,24 @@
-Preparations
 
 TODO - nice to have
 Align basket better on mobile
 Style pointy buttons
+Scroll tabs to view on mobile screens
 
 TODO - essentials
 Change typeAhead, does not work on IE9
+
+TODO - Ask Robin
+Ask how Product page works?
 
 
 DONE
 Horizontal lines across product detail page
 Table on mobile
 Sort out hours
-fix table for iPhone 5
+Fix table for iPhone 5
 Product carousel
 Style select
-
+Preparations
 
 
 // TIME
