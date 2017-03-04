@@ -516,18 +516,18 @@ body {
     .products-navigation a:hover {
       color: #faf6dd; }
 
-.product-detail .size-guide {
+.size-guide {
   width: 100%;
   margin: 0 0 30px 0; }
-  .product-detail .size-guide caption {
+  .size-guide caption {
     font-size: 1.0em;
     font-weight: bold;
     color: #00365a;
     width: 100%; }
     @media (min-width: 481px) {
-      .product-detail .size-guide caption {
+      .size-guide caption {
         display: none; } }
-  .product-detail .size-guide th {
+  .size-guide th {
     padding: 4px 7px;
     font-weight: normal;
     background: #00365a;
@@ -536,8 +536,8 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 0.8em; }
-  .product-detail .size-guide td,
-  .product-detail .size-guide th[scope="row"] {
+  .size-guide td,
+  .size-guide th[scope="row"] {
     padding: 4px 7px;
     background: #e1e1e1;
     border-bottom: 1px solid #ffffff;
@@ -546,53 +546,8 @@ body {
     text-transform: lowercase;
     font-size: 0.8em; }
   @media (max-width: 480px) {
-    .product-detail .size-guide th:first-child {
+    .size-guide th:first-child {
       display: none; } }
-
-.product-detail h3 {
-  margin-bottom: 15px;
-  color: #00365a;
-  text-transform: uppercase;
-  font-weight: bold; }
-  .product-detail h3.strike-through {
-    position: relative;
-    z-index: 1;
-    font-size: 1.2em; }
-    .product-detail h3.strike-through.large {
-      font-size: 1.6em; }
-    .product-detail h3.strike-through:before {
-      border-top: 1px solid #e1e1e1;
-      content: "";
-      margin: 0 auto;
-      /* this centers the line to the full width specified */
-      position: absolute;
-      /* positioning must be absolute here, and relative positioning must be applied to the parent */
-      top: 50%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      z-index: -1; }
-    .product-detail h3.strike-through span {
-      /* to hide the lines from behind the text, you have to set the background color the same as the container */
-      background: #fff;
-      padding: 0 15px 0 0; }
-
-.product-detail .copy-border-bottom {
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 15px; }
-
-.product-detail .copy-border-top {
-  border-top: 1px solid #e1e1e1;
-  padding-top: 10px;
-  margin-bottom: 15px; }
-
-.product-detail .shout-out {
-  font-weight: bold;
-  margin-bottom: 10px; }
-
-.product-detail .money {
-  font-size: 1.1em; }
 
 .product-detail .form-inline {
   padding-bottom: 15px; }
@@ -611,6 +566,51 @@ body {
 
 .product-detail .img-personalise {
   padding-bottom: 15px; }
+
+h3 {
+  margin-bottom: 15px;
+  color: #00365a;
+  text-transform: uppercase;
+  font-weight: bold; }
+  h3.strike-through {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em; }
+    h3.strike-through.large {
+      font-size: 1.6em; }
+    h3.strike-through:before {
+      border-top: 1px solid #e1e1e1;
+      content: "";
+      margin: 0 auto;
+      /* this centers the line to the full width specified */
+      position: absolute;
+      /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1; }
+    h3.strike-through span {
+      /* to hide the lines from behind the text, you have to set the background color the same as the container */
+      background: #fff;
+      padding: 0 15px 0 0; }
+
+.copy-border-bottom {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 15px; }
+
+.copy-border-top {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 10px;
+  margin-bottom: 15px; }
+
+.shout-out {
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.money {
+  font-size: 1.1em; }
 
 .product-detail,
 .products-list {
@@ -841,12 +841,13 @@ body {
   .order-states .current-state {
     background: #00365a; }
 
-.order-announcement {
-  padding-bottom: 15px; }
-  .order-announcement .title {
-    font-size: 1.2em;
-    text-decoration: underline;
-    float: left;
-    text-transform: uppercase; }
-  .order-announcement .announcement {
-    clear: left; }
+.order-announcement .title {
+  font-size: 1.2em;
+  text-decoration: underline;
+  float: left;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-weight: bold; }
+
+.order-announcement .announcement {
+  clear: left; }
