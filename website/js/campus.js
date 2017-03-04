@@ -222,14 +222,23 @@
         }
     };
 
-    campus.selectstyling = {
+    campus.product = {
+        // elements for this component
+        $parent: $('.product-detail'),
+        $miniCarousel: $('.product-image-carousel', this.$parent),
 
         init: function(){
-            //$('.selectpicker').selectpicker({
-            //    style: 'btn-info',
-            //    size: 4
-            //});
-
+            campus.product.$miniCarousel.each(function(i, obj){
+                var $buttons = $('[data-image-target]', $(obj));
+                $buttons.on('click', function(e){
+                    e.preventDefault();
+                    var $targetImage = $('.' + $(this).attr('data-image-target'));
+                    var imagePath = $('img', $(this)).attr('src');
+                    $targetImage.attr('src', imagePath);
+                    $buttons.removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
         }
     };
 
@@ -241,7 +250,7 @@
         campus.navigation.init();
         campus.institutions.init();
         campus.products.init();
-        campus.selectstyling.init();
+        campus.product.init();
 
         // resize triggers
         $(window).on('resize', function () {

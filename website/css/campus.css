@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .footer .footer-links {
+.header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .product-detail .product-image-carousel .image-list,
+.products-list .product-image-carousel .image-list, .footer .footer-links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -28,11 +29,11 @@ form label {
   font-weight: normal !important; }
 
 form input, form select, form textarea, form button {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
   box-shadow: none !important;
-  border-color: #6a6a6a !important;
+  border-color: #adadad !important;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal !important; }
   form input:focus, form select:focus, form textarea:focus, form button:focus {
@@ -89,7 +90,24 @@ hr {
     right: 0;
     top: 2px;
     width: 15px;
-    height: 15px; }
+    height: 15px;
+    outline: none !important; }
+
+/* styling select dropdown form field */
+select {
+  background: transparent;
+  background: url("../images/bg-select.png") right center no-repeat !important; }
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+  display: none;
+  /* remove default arrow in IE 10 and 11 */ }
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0) {
+  select {
+    background: none\9;
+    padding: 5px\9; } }
 
 .btn-product {
   background-color: #98322e;
@@ -417,6 +435,9 @@ body {
     .institution-detail .institution-meta li {
       display: inline;
       padding-right: 15px; }
+      @media (max-width: 480px) {
+        .institution-detail .institution-meta li {
+          display: block; } }
     .institution-detail .institution-meta a {
       color: #98322e;
       font-size: 0.9em;
@@ -504,7 +525,7 @@ body {
       .product-detail .size-guide caption {
         display: none; } }
   .product-detail .size-guide th {
-    padding: 5px 10px;
+    padding: 4px 7px;
     font-weight: normal;
     background: #00365a;
     border-bottom: 1px solid #adadad;
@@ -514,7 +535,7 @@ body {
     font-size: 0.8em; }
   .product-detail .size-guide td,
   .product-detail .size-guide th[scope="row"] {
-    padding: 5px 10px;
+    padding: 4px 7px;
     background: #e1e1e1;
     border-bottom: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
@@ -593,12 +614,61 @@ body {
   padding-top: 15px; }
   .product-detail .product-image,
   .products-list .product-image {
-    display: block;
     margin-bottom: 15px; }
     .product-detail .product-image img,
     .products-list .product-image img {
       width: 100%;
       padding-bottom: 10px; }
+  .product-detail .product-image-carousel,
+  .products-list .product-image-carousel {
+    padding-bottom: 15px;
+    overflow: auto;
+    margin-top: -10px; }
+    .product-detail .product-image-carousel .image-list,
+    .products-list .product-image-carousel .image-list {
+      float: left;
+      width: 100%; }
+    .product-detail .product-image-carousel .item,
+    .products-list .product-image-carousel .item {
+      width: 33.33337%;
+      float: left;
+      position: relative;
+      padding: 0 10px; }
+    .product-detail .product-image-carousel .dot-image,
+    .products-list .product-image-carousel .dot-image {
+      display: block;
+      border: 1px solid #ffffff;
+      padding: 5px; }
+      .product-detail .product-image-carousel .dot-image.active,
+      .products-list .product-image-carousel .dot-image.active {
+        border-color: #00365a; }
+    @media (max-width: 767px) {
+      .product-detail .product-image-carousel .item,
+      .products-list .product-image-carousel .item {
+        padding: 0;
+        text-align: center; }
+      .product-detail .product-image-carousel .dot-image,
+      .products-list .product-image-carousel .dot-image {
+        width: 20px;
+        height: 20px;
+        background: #98322e;
+        -webkit-border-radius: 50% !important;
+        -moz-border-radius: 50% !important;
+        border-radius: 50% !important;
+        display: inline-block;
+        padding: 0;
+        border: none;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
+        .product-detail .product-image-carousel .dot-image.active,
+        .products-list .product-image-carousel .dot-image.active {
+          border-color: #00365a;
+          background-color: #00365a; }
+        .product-detail .product-image-carousel .dot-image img,
+        .products-list .product-image-carousel .dot-image img {
+          display: none; } }
   .product-detail .product-description,
   .products-list .product-description {
     margin-bottom: 15px; }

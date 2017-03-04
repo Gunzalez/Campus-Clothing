@@ -17,9 +17,9 @@ form {
 
     input, select, textarea, button {
 
-        @include border-radius(0);
+        @include border-radius(2px);
         box-shadow: none !important;
-        border-color: $brand-black !important;
+        border-color: $brand-coal !important;
         font-family: 'Open Sans', sans-serif;
         font-weight: normal !important;
 
@@ -101,6 +101,27 @@ hr {
         top: 2px;
         width: 15px;
         height: 15px;
+        outline: none !important;
+    }
+}
+
+
+/* styling select dropdown form field */
+select {
+    background: transparent;
+    background: url('../images/bg-select.png') right center no-repeat !important;
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+    select {
+        background:none\9;
+        padding: 5px\9;
     }
 }
 
