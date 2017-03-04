@@ -1,26 +1,28 @@
 Preparations
 
-TODO
+TODO - nice to have
 Align basket better on mobile
-Style select
 Style pointy buttons
-Product carousel
-Sort out hours
+
+TODO - essentials
 Change typeAhead, does not work on IE9
-fix table for iPhone 5
 
 
 DONE
 Horizontal lines across product detail page
 Table on mobile
+Sort out hours
+fix table for iPhone 5
+Product carousel
+Style select
 
 
 
 // TIME
-25 - 0
-26 - 3
-27 - 12
-28 - 8
-1 - 6
-2 - 10
-3 - 15
+25 - 3
+26 - 12
+27 - 8
+28 - 6
+1 - 10
+2 - 15
+3 - 2
