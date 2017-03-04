@@ -174,7 +174,8 @@ body {
       border-left: 1px dotted #faf6dd;
       text-decoration: none;
       font-weight: bold;
-      color: #faf6dd; }
+      color: #faf6dd;
+      outline: none; }
       .header-login .navigation a:hover {
         color: #ffffff; }
     .header-login .navigation li {
@@ -341,7 +342,8 @@ body {
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
   -webkit-transition: color 0.5s;
-  transition: color 0.5s; }
+  transition: color 0.5s;
+  outline: none; }
   .shopping-basket-link .items {
     position: absolute;
     top: 6px;
@@ -509,7 +511,8 @@ body {
     background: #98322e;
     color: #ffffff;
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none; }
     .products-navigation a:hover {
       color: #faf6dd; }
 
@@ -642,7 +645,8 @@ body {
       -moz-transition: border 0.5s;
       -o-transition: border 0.5s;
       -webkit-transition: border 0.5s;
-      transition: border 0.5s; }
+      transition: border 0.5s;
+      outline: none; }
       .product-detail .product-image-carousel .dot-image.active,
       .products-list .product-image-carousel .dot-image.active {
         border-color: #00365a; }

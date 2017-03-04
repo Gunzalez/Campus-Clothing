@@ -46,6 +46,7 @@ body {
             text-decoration: none;
             font-weight: bold;
             color: $brand-white;
+            outline: none;
 
             &:hover {
                 color: #ffffff;
@@ -277,6 +278,7 @@ body {
     color: $brand-red !important;
     position: relative;
     @include transition(color 0.5s);
+    outline: none;
 
     .items {
         position: absolute;
@@ -536,6 +538,7 @@ body {
         color: #ffffff;
         display: block;
         text-decoration: none;
+        outline: none;
 
         &:hover {
             color: $brand-white;
@@ -709,6 +712,7 @@ body {
             border: 1px solid #ffffff;
             padding: 5px;
             @include transition(border 0.5s);
+            outline: none;
 
             &.active {
                 border-color: $brand-blue;
