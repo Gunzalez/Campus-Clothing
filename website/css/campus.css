@@ -65,8 +65,7 @@ form .form-inline .form-group {
   width: 100%; }
 
 form .form-3-char {
-  width: 40% !important;
-  display: block; }
+  width: 40% !important; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -940,3 +939,6 @@ body {
     padding-top: 5px;
     font-size: 1.2em;
     font-weight: bold; }
+
+.tool-tip {
+  color: #000000; }

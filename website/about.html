@@ -99,7 +99,7 @@
         </div>
     </div>
     <div class="section">
-        <form id="delivery-stage" action="about.html">
+        <form id="" action="">
 
             <div class="order-status">
                 <div class="container">
@@ -108,8 +108,8 @@
                             <div class="progress-meter">
                                 <ul>
                                     <li>Products</li>
-                                    <li class="current-state">Delivery</li>
-                                    <li>Payment</li>
+                                    <li>Delivery</li>
+                                    <li class="current-state">Payment</li>
                                 </ul>
                             </div>
                         </div>
@@ -122,107 +122,50 @@
                     <div class="row">
                         <div class="col-sm-6">
 
-                            <h3 class="strike-through"><span>Payment Address</span></h3>
+                            <h3 class="strike-through"><span>Checkout</span></h3>
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="first-name" class="col-sm-5 control-label">First name:</label>
+                                    <label for="card-type" class="col-sm-5 control-label">Card Type:</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="first-name" name="first-name" class="form-control" value="" placeholder="First name" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last-name" class="col-sm-5 control-label">Last name:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="last-name" name="last-name" class="form-control" value="" placeholder="Last name" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="col-sm-5 control-label">Email address:</label>
-                                    <div class="col-sm-7">
-                                        <input type="email" id="email" name="email" class="form-control" value="" placeholder="Email address" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="col-sm-5 control-label">Telephone:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="phone" name="phone" class="form-control" value="" placeholder="Phone" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="country" class="col-sm-5 control-label">Country:</label>
-                                    <div class="col-sm-7">
-                                        <select id="country" name="country" class="form-control">
-                                            <option selected>United Kingdom</option>
+                                        <select id="card-type" name="card-type" class="form-control">
+                                            <option selected>Visa Credit</option>
                                             <option value="0">United States</option>
                                             <option value="1">Manchester United</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email" class="col-sm-5 control-label">Post code:</label>
+                                    <label for="card-name" class="col-sm-5 control-label">Card name:</label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="post-code" name="post-code" class="form-control" value="" placeholder="Post code" />
+                                        <input type="text" id="card-name" name="card-name" class="form-control" value="" placeholder="Name as it appears on card" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-7 col-sm-push-5">
-                                        <label class="checkbox-left">
-                                            <input type="checkbox" id="delivery-address" value="yes" class="js-toggle-display" data-toggle-display="delivery-address-section" />
-                                            <span>Same as delivery address</span>
-                                        </label>
+                                    <label for="card-number" class="col-sm-5 control-label">Card number:</label>
+                                    <div class="col-sm-7">
+                                        <input type="email" id="card-number" name="card-number" class="form-control" value="" placeholder="Card number" />
                                     </div>
                                 </div>
-                            </div>
-
-                            <div id="delivery-address-section">
-
-                                <h3 class="strike-through"><span>Delivery Address</span></h3>
-                                <div class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="delivery-first-name" class="col-sm-5 control-label">First name:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" id="delivery-first-name" name="delivery-first-name" class="form-control" value="" placeholder="First name" />
-                                        </div>
+                                <div class="form-group">
+                                    <label for="phone" class="col-sm-5 control-label">Issue number:</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="phone" name="phone" class="form-control form-3-char" max="3" value="" placeholder="" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="delivery-last-name" class="col-sm-5 control-label">Last name:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" id="delivery-last-name" name="delivery-last-name" class="form-control" value="" placeholder="Last name" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="delivery-email" class="col-sm-5 control-label">Email address:</label>
-                                        <div class="col-sm-7">
-                                            <input type="email" id="delivery-email" name="delivery-email" class="form-control" value="" placeholder="Email address" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="delivery-phone" class="col-sm-5 control-label">Telephone:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" id="delivery-phone" name="delivery-phone" class="form-control" value="" placeholder="Phone" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="delivery-country" class="col-sm-5 control-label">Country:</label>
-                                        <div class="col-sm-7">
-                                            <select id="delivery-country" name="delivery-country" class="form-control">
-                                                <option selected>United Kingdom</option>
-                                                <option value="0">United States</option>
-                                                <option value="1">Manchester United</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="delivery-post-code" class="col-sm-5 control-label">Post code:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" id="delivery-post-code" name="delivery-post-code" class="form-control" value="" placeholder="Post code" />
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv" class="col-sm-5 control-label">CVV: <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="3 digit number located on the reverse of your bank card">
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        <!--(help)-->
+                                    </a></label>
+                                    <div class="col-sm-7">
+                                        <input type="text" id="cvv" name="cvv" class="form-control form-3-char" max="3" value="" placeholder="" />
                                     </div>
                                 </div>
 
 
-
                             </div>
+
+
 
                         </div>
                         <div class="col-sm-6">
@@ -365,6 +308,7 @@
 
 <script src="js/vendor/jquery-2.1.4.min.js"></script>
 <script src="js/vendor/easy-autocomplete.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/campus.js"></script>
 </body>
 </html>

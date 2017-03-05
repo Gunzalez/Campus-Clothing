@@ -22,8 +22,9 @@
 
     campus.environment = {
 
-        // globally used show/hide panels
-        $displayToggles: $('.js-toggle-display'),
+        // globally used functions
+        $displayToggles: $('.js-toggle-display'), // show/hide
+        $tooltips: $('[data-toggle="tooltip"]'),  // tool tips
 
         resize: function(){},
 
@@ -33,6 +34,10 @@
                 campus.properties.isMobile = true;
             }
 
+            // displays tool tips
+            if(campus.environment.$tooltips.length > 0){
+                campus.environment.$tooltips.tooltip();
+            }
 
             // toggles display of divs
             campus.environment.$displayToggles.each(function(i, obj){
