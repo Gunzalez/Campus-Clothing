@@ -132,6 +132,10 @@ body {
                 margin-left: 0 !important;
             }
         }
+
+        i {
+            font-size: 1.0em;
+        }
     }
 }
 
@@ -450,6 +454,10 @@ body {
         position: absolute;
         right: 5px;
         top: -10px;
+    }
+
+    i {
+        font-size: 1.1em;
     }
 
 }
@@ -987,6 +995,7 @@ body {
         height: 0;
         overflow: hidden;
         @include transition(height 0.25s);
+
         .display-inner {
             width: 100%;
             position: absolute;
@@ -994,6 +1003,57 @@ body {
             left: 0;
         }
     }
+}
+
+.basket-item-controls {
+    @extend %cleanUl;
+    float: left;
+    border-top: 1px solid $brand-vGrey;
+    border-bottom: 1px solid $brand-vGrey;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    li {
+        float: left;
+        color: $brand-coal;
+        padding-right: 30px;
+        font-size: 0.9em;
+    }
+
+    a {
+        color: $brand-red;
+        &:hover {
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
+
+.item-image {
+    margin-bottom: 15px;
+}
+
+.item-attributes {
+    margin-bottom: 15px;
+
+    dt, dd {
+        float: left;
+        font-weight: normal;
+    }
+
+    dt {
+        padding-right: 5px;
+    }
+
+    dt + dd {
+        float: none;
+        font-weight: bold;
+    }
+}
+
+.item-title {
+    padding-bottom: 15px;
 }
 
 

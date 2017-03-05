@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .product-detail .product-image-carousel .image-list,
-.products-list .product-image-carousel .image-list, .footer .footer-links, .progress-meter ul {
+.products-list .product-image-carousel .image-list, .footer .footer-links, .progress-meter ul, .basket-item-controls {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -287,6 +287,8 @@ body {
         .header-login .login-form a {
           float: left;
           margin-left: 0 !important; } }
+    .header-login .login-form i {
+      font-size: 1.0em; }
 
 .header-title {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
@@ -506,6 +508,8 @@ body {
     position: absolute;
     right: 5px;
     top: -10px; }
+  .institution-detail i {
+    font-size: 1.1em; }
 
 .institution-hero .hero {
   width: 100% !important; }
@@ -895,3 +899,38 @@ body {
     position: absolute;
     bottom: 0;
     left: 0; }
+
+.basket-item-controls {
+  float: left;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px; }
+  .basket-item-controls li {
+    float: left;
+    color: #adadad;
+    padding-right: 30px;
+    font-size: 0.9em; }
+  .basket-item-controls a {
+    color: #98322e; }
+    .basket-item-controls a:hover {
+      text-decoration: none;
+      font-weight: bold; }
+
+.item-image {
+  margin-bottom: 15px; }
+
+.item-attributes {
+  margin-bottom: 15px; }
+  .item-attributes dt, .item-attributes dd {
+    float: left;
+    font-weight: normal; }
+  .item-attributes dt {
+    padding-right: 5px; }
+  .item-attributes dt + dd {
+    float: none;
+    font-weight: bold; }
+
+.item-title {
+  padding-bottom: 15px; }
