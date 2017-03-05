@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .product-detail .product-image-carousel .image-list,
-.products-list .product-image-carousel .image-list, .footer .footer-links, .order-states ul {
+.products-list .product-image-carousel .image-list, .footer .footer-links, .progress-meter ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -110,20 +110,39 @@ hr {
 .hrule hr {
   margin: 0 0 15px 0; }
 
-.checkbox-right {
+.display-none {
+  display: none; }
+
+.checkbox-right,
+.checkbox-left {
   position: relative;
   width: 100%;
   min-height: 30px; }
-  .checkbox-right span {
+  .checkbox-right span,
+  .checkbox-left span {
     display: inline-block;
     padding-right: 27px; }
-  .checkbox-right input {
+  .checkbox-right input,
+  .checkbox-left input {
     position: absolute;
     right: 0;
     top: 2px;
     width: 15px;
     height: 15px;
-    outline: none !important; }
+    outline: none !important;
+    cursor: pointer; }
+
+.checkbox-right span {
+  padding-right: 27px; }
+
+.checkbox-right input {
+  right: 0; }
+
+.checkbox-left span {
+  padding-left: 27px; }
+
+.checkbox-left input {
+  left: 0; }
 
 /* styling select dropdown form field */
 select {
@@ -822,14 +841,14 @@ body {
       .footer .footer-copy a:hover {
         color: #ffffff; }
 
-.order-states {
+.progress-meter {
   padding: 15px 0;
   overflow: auto; }
-  .order-states ul {
+  .progress-meter ul {
     background: #e1e1e1;
     float: left;
     width: 100%; }
-  .order-states li {
+  .progress-meter li {
     font-size: 1.2em;
     float: left;
     padding: 10px 16px;
@@ -837,25 +856,24 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
-    background: #6a6a6a; }
-    .order-states li:last-child {
+    background: #adadad; }
+    .progress-meter li:last-child {
       border-right: none; }
-  .order-states .current-state {
+  .progress-meter .current-state {
     background: #00365a; }
   @media (max-width: 768px) {
-    .order-states li {
+    .progress-meter li {
       float: none;
       border-right: none;
       border-bottom: 1px solid #ffffff; }
-      .order-states li:last-child {
+      .progress-meter li:last-child {
         border-bottom: none; } }
 
-.order-announcement .title {
-  color: #000000;
-  margin-bottom: 5px; }
-
-.order-announcement .announcement {
-  clear: left; }
+.order-announcement {
+  margin-bottom: 15px; }
+  .order-announcement .title {
+    color: #000000;
+    margin-bottom: 5px; }
 
 .order-detail {
   padding-bottom: 15px; }

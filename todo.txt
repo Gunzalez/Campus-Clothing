@@ -6,6 +6,10 @@ Scroll tabs to view on mobile screens
 
 TODO - essentials
 Change typeAhead, does not work on IE9
+TypeAhead for Product page form
+TypeAhead for Order status page form
+Add in validation error messages
+Ask about JS validation or backend
 
 TODO - Ask Robin
 Ask how Product page works?

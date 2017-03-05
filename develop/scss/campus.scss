@@ -917,7 +917,7 @@ body {
     }
 }
 
-.order-states {
+.progress-meter {
     padding: 15px 0;
     overflow: auto;
 
@@ -936,7 +936,7 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         color: #ffffff;
-        background: $brand-black;
+        background: $brand-coal;
 
         &:last-child {
             border-right: none;
@@ -963,14 +963,11 @@ body {
 }
 
 .order-announcement {
+    margin-bottom: 15px;
 
    .title {
        color: #000000;
        margin-bottom: 5px;
-    }
-
-    .announcement {
-        clear: left;
     }
 }
 

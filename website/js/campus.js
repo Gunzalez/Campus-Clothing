@@ -22,6 +22,8 @@
 
     campus.environment = {
 
+        $displayToggles: $('.js-toggle-display'),
+
         resize: function(){},
 
         init: function (){
@@ -29,6 +31,22 @@
             if (campus.utils.mobileCheck()){
                 campus.properties.isMobile = true;
             }
+
+
+            campus.environment.$displayToggles.each(function(i, obj){
+                $(obj).on('click', function(){
+                    var toggleTargetId = $(this).attr('data-toggle-display'),
+                        $toggleTarget = $('#'+toggleTargetId),
+                        isChecked = $(this).prop("checked");
+
+                    if(isChecked){
+                        $toggleTarget.addClass('display-none');
+                    } else {
+                        $toggleTarget.removeClass('display-none');
+                    }
+                })
+
+            })
         }
     };
 

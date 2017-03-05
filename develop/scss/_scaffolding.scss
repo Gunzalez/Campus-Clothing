@@ -126,10 +126,16 @@ hr {
     }
 }
 
-.checkbox-right {
+.display-none {
+    display: none;
+}
+
+.checkbox-right,
+.checkbox-left {
     position: relative;
     width: 100%;
     min-height: 30px;
+
     span {
         display: inline-block;
         padding-right: 27px;
@@ -141,6 +147,25 @@ hr {
         width: 15px;
         height: 15px;
         outline: none !important;
+        cursor: pointer;
+    }
+}
+
+.checkbox-right {
+    span {
+        padding-right: 27px;
+    }
+    input {
+        right: 0;
+    }
+}
+
+.checkbox-left {
+    span {
+        padding-left: 27px;
+    }
+    input {
+        left: 0;
     }
 }
 
