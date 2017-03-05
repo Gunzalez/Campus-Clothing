@@ -25,47 +25,41 @@
 .section {
   position: relative; }
 
-form label {
-  font-weight: normal !important; }
-
-form input, form select, form textarea, form button {
-  -webkit-border-radius: 2px !important;
-  -moz-border-radius: 2px !important;
-  border-radius: 2px !important;
-  box-shadow: none !important;
-  border-color: #adadad !important;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal !important; }
-  form input:focus, form select:focus, form textarea:focus, form button:focus {
-    border-color: #000000 !important; }
-
-form input:not([type="checkbox"]), form select:not([type="checkbox"]), form textarea:not([type="checkbox"]), form button:not([type="checkbox"]) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-
-form input, form select, form textarea {
-  color: #000000; }
-
-form .form-horizontal {
+form {
   padding-bottom: 15px; }
-  form .form-horizontal label {
-    font-weight: normal !important;
-    text-align: left !important; }
-
-form .form-inline label {
-  display: block;
-  float: left; }
-
-form .form-inline input {
-  float: none !important; }
-
-form .form-inline .form-group {
-  margin: 0 !important;
-  width: 100%; }
-
-form .form-3-char {
-  width: 40% !important; }
+  form label {
+    font-weight: normal !important; }
+  form input, form select, form textarea, form button {
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    border-color: #adadad !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal !important; }
+    form input:focus, form select:focus, form textarea:focus, form button:focus {
+      border-color: #000000 !important; }
+  form input:not([type="checkbox"]), form select:not([type="checkbox"]), form textarea:not([type="checkbox"]), form button:not([type="checkbox"]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  form input, form select, form textarea {
+    color: #000000; }
+  form .form-horizontal {
+    padding-bottom: 15px; }
+    form .form-horizontal label {
+      font-weight: normal !important;
+      text-align: left !important; }
+  form .form-inline label {
+    display: block;
+    float: left; }
+  form .form-inline input {
+    float: none !important; }
+  form .form-inline .form-group {
+    margin: 0 !important;
+    width: 100%; }
+  form .form-3-char {
+    width: 40% !important; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -424,6 +418,7 @@ body {
   .institutions-search .form-box {
     position: relative; }
   .institutions-search input {
+    text-align: center;
     height: auto;
     margin: 10px 0;
     font-size: 0.9em;
@@ -434,20 +429,22 @@ body {
   .institutions-search .form-group {
     width: 100%;
     margin-bottom: 0; }
-  .institutions-search form .input-wrapper {
-    position: relative; }
-    .institutions-search form .input-wrapper i {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      margin-top: -8px;
-      font-size: 1.2em;
-      display: none; }
-  .institutions-search form.loading .form-control {
-    padding-left: 40px;
-    text-align: left; }
-  .institutions-search form.loading i {
-    display: block; }
+  .institutions-search form {
+    padding-bottom: 0 !important; }
+    .institutions-search form .input-wrapper {
+      position: relative; }
+      .institutions-search form .input-wrapper i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -8px;
+        font-size: 1.2em;
+        display: none; }
+    .institutions-search form.loading .form-control {
+      padding-left: 40px;
+      text-align: left; }
+    .institutions-search form.loading i {
+      display: block; }
   .institutions-search .shopping-basket-link {
     position: absolute;
     right: 7px;
@@ -926,6 +923,14 @@ body {
   .item-attributes dt + dd {
     float: none;
     font-weight: bold; }
+
+.basket-total {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 15px; }
+  @media (max-width: 768px) {
+    .basket-total {
+      border: none;
+      padding-top: 0; } }
 
 .total-table {
   margin-bottom: 15px; }

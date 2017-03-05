@@ -312,6 +312,7 @@ body {
     }
 
     input {
+        text-align: center;
         height: auto;
         margin: 10px 0;
         font-size: 0.9em;
@@ -327,6 +328,7 @@ body {
     }
 
     form {
+        padding-bottom: 0 !important;
         .input-wrapper {
             position: relative;
 
@@ -967,7 +969,6 @@ body {
                 border-bottom: none;
             }
         }
-
     }
 }
 
@@ -1037,6 +1038,16 @@ body {
     dt + dd {
         float: none;
         font-weight: bold;
+    }
+}
+
+.basket-total {
+    border-top: 1px solid $brand-vGrey;
+    padding-top: 15px;
+
+    @media (max-width: $width-sm){
+        border: none;
+        padding-top: 0;
     }
 }
 
