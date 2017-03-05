@@ -48,7 +48,7 @@ form input, form select, form textarea {
   color: #000000; }
 
 form .form-horizontal {
-  margin-bottom: 30px; }
+  padding-bottom: 15px; }
   form .form-horizontal label {
     font-weight: normal !important;
     text-align: left !important; }
@@ -880,3 +880,18 @@ body {
   .order-detail .product-image {
     width: 100%;
     padding-bottom: 15px; }
+
+.display-outer.animated {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  -moz-transition: height 0.25s;
+  -o-transition: height 0.25s;
+  -webkit-transition: height 0.25s;
+  transition: height 0.25s; }
+  .display-outer.animated .display-inner {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }

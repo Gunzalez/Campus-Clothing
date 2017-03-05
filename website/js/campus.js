@@ -23,6 +23,7 @@
     campus.environment = {
 
         $displayToggles: $('.js-toggle-display'),
+        $displayTargets: $('.display-outer'),
 
         resize: function(){},
 
@@ -33,6 +34,11 @@
             }
 
 
+            // toggles display of divs
+            campus.environment.$displayTargets.each(function(i, obj){
+                var $innerDivHeight = $('.display-inner', $(obj)).outerHeight();
+                $(obj).addClass('animated').css('height', $innerDivHeight);
+            });
             campus.environment.$displayToggles.each(function(i, obj){
                 $(obj).on('click', function(){
                     var toggleTargetId = $(this).attr('data-toggle-display'),
@@ -40,13 +46,16 @@
                         isChecked = $(this).prop("checked");
 
                     if(isChecked){
-                        $toggleTarget.addClass('display-none');
+                        $toggleTarget.css('height',0);
                     } else {
-                        $toggleTarget.removeClass('display-none');
+                        var $innerDivHeight = $('.display-inner', $toggleTarget).outerHeight();
+                        $toggleTarget.css('height', $innerDivHeight);
                     }
                 })
+            });
 
-            })
+
+
         }
     };
 
