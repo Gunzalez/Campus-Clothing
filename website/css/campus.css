@@ -99,10 +99,18 @@ h3 {
       bottom: 0;
       width: 100%;
       z-index: -1; }
-    h3.strike-through span {
+    h3.strike-through > span {
       /* to hide the lines from behind the text, you have to set the background color the same as the container */
       background: #fff;
       padding: 0 15px 0 0; }
+  h3 .shopping-basket-link {
+    position: absolute;
+    right: 0;
+    padding: 0 !important;
+    background: #ffffff;
+    top: 55%;
+    margin-top: -26px;
+    font-size: 2.0em; }
 
 hr {
   border-color: #e1e1e1; }
@@ -400,16 +408,16 @@ body {
     position: absolute;
     top: 6px;
     right: 0;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     -webkit-border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
-    background-color: #ffffff;
     font-size: 0.3em;
     line-height: 15px;
     font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    background-color: #e1e1e1; }
 
 .institutions-search {
   background: #adadad;

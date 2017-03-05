@@ -288,14 +288,14 @@ body {
         position: absolute;
         top: 6px;
         right: 0;
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         @include border-radius(50%);
-        background-color: #ffffff;
         font-size: 0.3em;
         line-height: 15px;
         font-weight: bold;
         text-align: center;
+        background-color: $brand-vGrey;
     }
 }
 
@@ -988,7 +988,6 @@ body {
         padding-bottom: 15px;
     }
 }
-
 
 .basket-item-controls {
     @extend %cleanUl;
