@@ -3,12 +3,14 @@ TODO - nice to have
 Align basket better on mobile
 Style pointy buttons
 Scroll tabs to view on mobile screens
+Change basket to include 'items |', instead of number
+
 
 TODO - essentials
-Change typeAhead, does not work on IE9
-TypeAhead for Product page form
-TypeAhead for Order status page form
-Add in validation error messages
+- Change typeAhead, does not work on IE9
+- TypeAhead for Product page form
+- TypeAhead for Order status page form
+Add in validation error messages to form fields
 Ask about JS validation or backend
 
 
@@ -16,7 +18,7 @@ TODO - Ask Robin
 Ask how Product page works?
 
 
-DONE
+TODO - done
 Horizontal lines across product detail page
 Table on mobile
 Sort out hours
@@ -28,7 +30,7 @@ Checkbox position on JOBS.html.
 Same Delivery functionality on browser resize.
 
 
-// TIME
+TODO - time log
 25 - 3
 26 - 12
 27 - 8
@@ -37,3 +39,4 @@ Same Delivery functionality on browser resize.
 2 - 15
 3 - 2
 4 - 5
+5 - 6
