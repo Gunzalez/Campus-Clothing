@@ -11,8 +11,6 @@ TypeAhead for Order status page form
 Add in validation error messages
 Ask about JS validation or backend
 
-- Checkbox position on JOBS.html.
-- See about Same Delivery functionality on browser resize.
 
 TODO - Ask Robin
 Ask how Product page works?
@@ -26,6 +24,8 @@ Fix table for iPhone 5
 Product carousel
 Style select
 Preparations
+Checkbox position on JOBS.html.
+Same Delivery functionality on browser resize.
 
 
 // TIME

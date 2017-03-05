@@ -120,8 +120,7 @@ hr {
   min-height: 30px; }
   .checkbox-right span,
   .checkbox-left span {
-    display: inline-block;
-    padding-right: 27px; }
+    display: inline-block; }
   .checkbox-right input,
   .checkbox-left input {
     position: absolute;
@@ -886,21 +885,6 @@ body {
     width: 100%;
     padding-bottom: 15px; }
 
-.display-outer.animated {
-  position: relative;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  -moz-transition: height 0.25s;
-  -o-transition: height 0.25s;
-  -webkit-transition: height 0.25s;
-  transition: height 0.25s; }
-  .display-outer.animated .display-inner {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
-
 .basket-item-controls {
   float: left;
   border-top: 1px solid #e1e1e1;
@@ -939,9 +923,12 @@ body {
 .total-table {
   margin-bottom: 15px; }
   .total-table th, .total-table td {
-    padding: 0 0 5px 30px; }
+    padding: 0 0 5px 30px;
+    font-weight: normal; }
   .total-table td {
-    text-align: right; }
+    text-align: right;
+    font-weight: bold; }
   .total-table tr:last-child th, .total-table tr:last-child td {
     padding-top: 5px;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    font-weight: bold; }
