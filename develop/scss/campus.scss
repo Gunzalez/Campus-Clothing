@@ -933,7 +933,6 @@ body {
         float: left;
         padding: 10px 16px;
         border-right: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
         font-weight: bold;
         text-transform: uppercase;
         color: #ffffff;
@@ -947,17 +946,27 @@ body {
     .current-state {
         background: $brand-blue;
     }
+
+    @media (max-width: $width-sm){
+
+        li {
+            float: none;
+            border-right: none;
+            border-bottom: 1px solid #ffffff;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+    }
 }
 
 .order-announcement {
 
    .title {
-       font-size: 1.2em;
-       text-decoration: underline;
-       float: left;
-       text-transform: uppercase;
-       padding-bottom: 5px;
-       font-weight: bold;
+       color: #000000;
+       margin-bottom: 5px;
     }
 
     .announcement {
@@ -967,6 +976,11 @@ body {
 
 .order-detail {
     padding-bottom: 15px;
+
+    .product-image {
+        width: 100%;
+        padding-bottom: 15px;
+    }
 }
 
 
