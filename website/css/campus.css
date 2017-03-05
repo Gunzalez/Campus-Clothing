@@ -629,7 +629,8 @@ body {
 .copy-border-top {
   border-top: 1px solid #e1e1e1;
   padding-top: 10px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  clear: both; }
 
 .shout-out {
   font-weight: bold;
@@ -921,6 +922,9 @@ body {
 .item-image {
   margin-bottom: 15px; }
 
+.item-title {
+  padding-bottom: 15px; }
+
 .item-attributes {
   margin-bottom: 15px; }
   .item-attributes dt, .item-attributes dd {
@@ -932,5 +936,12 @@ body {
     float: none;
     font-weight: bold; }
 
-.item-title {
-  padding-bottom: 15px; }
+.total-table {
+  margin-bottom: 15px; }
+  .total-table th, .total-table td {
+    padding: 0 0 5px 30px; }
+  .total-table td {
+    text-align: right; }
+  .total-table tr:last-child th, .total-table tr:last-child td {
+    padding-top: 5px;
+    font-size: 1.2em; }

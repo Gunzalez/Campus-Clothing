@@ -637,6 +637,7 @@ body {
     border-top: 1px solid $brand-vGrey;
     padding-top: 10px;
     margin-bottom: 15px;
+    clear: both;
 }
 
 .shout-out {
@@ -1034,6 +1035,10 @@ body {
     margin-bottom: 15px;
 }
 
+.item-title {
+    padding-bottom: 15px;
+}
+
 .item-attributes {
     margin-bottom: 15px;
 
@@ -1052,8 +1057,26 @@ body {
     }
 }
 
-.item-title {
-    padding-bottom: 15px;
+.total-table {
+    margin-bottom: 15px;
+
+    th, td {
+        padding: 0 0 5px 30px;
+    }
+
+    td {
+        text-align: right;
+    }
+
+    tr {
+        &:last-child {
+            th, td {
+                padding-top: 5px;
+                font-size: 1.2em;
+            }
+        }
+    }
+
 }
 
 

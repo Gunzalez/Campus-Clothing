@@ -46,7 +46,7 @@
                         isChecked = $(this).prop("checked");
 
                     if(isChecked){
-                        $toggleTarget.css('height',0);
+                        $toggleTarget.removeAttr('style');
                     } else {
                         var $innerDivHeight = $('.display-inner', $toggleTarget).outerHeight();
                         $toggleTarget.css('height', $innerDivHeight);
