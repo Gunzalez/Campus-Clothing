@@ -47,7 +47,7 @@ form {
     color: #000000; }
   form .form-horizontal {
     padding-bottom: 15px; }
-    form .form-horizontal label {
+    form .form-horizontal label:not(.checkbox-right) {
       font-weight: normal !important;
       text-align: left !important; }
   form .form-inline label {
@@ -60,6 +60,35 @@ form {
     width: 100%; }
   form .form-3-char {
     width: 40% !important; }
+  form .checkbox-right,
+  form .checkbox-left {
+    position: relative;
+    width: 100%;
+    min-height: 30px; }
+    form .checkbox-right span,
+    form .checkbox-left span {
+      display: inline-block; }
+    form .checkbox-right input,
+    form .checkbox-left input {
+      position: absolute;
+      top: 4px;
+      width: 15px;
+      height: 15px;
+      outline: none !important;
+      cursor: pointer;
+      margin: 0; }
+  form .checkbox-right {
+    text-align: right !important; }
+    form .checkbox-right span {
+      padding-right: 27px; }
+    form .checkbox-right input {
+      right: 0; }
+  form .checkbox-left {
+    text-align: left !important; }
+    form .checkbox-left span {
+      padding-left: 27px; }
+    form .checkbox-left input {
+      left: 0; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -114,36 +143,6 @@ hr {
 .display-none {
   display: none; }
 
-.checkbox-right,
-.checkbox-left {
-  position: relative;
-  width: 100%;
-  min-height: 30px; }
-  .checkbox-right span,
-  .checkbox-left span {
-    display: inline-block; }
-  .checkbox-right input,
-  .checkbox-left input {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    width: 15px;
-    height: 15px;
-    outline: none !important;
-    cursor: pointer; }
-
-.checkbox-right span {
-  padding-right: 27px; }
-
-.checkbox-right input {
-  right: 0; }
-
-.checkbox-left span {
-  padding-left: 27px; }
-
-.checkbox-left input {
-  left: 0; }
-
 /* styling select dropdown form field */
 select {
   background: transparent;
@@ -159,6 +158,11 @@ select::-ms-expand {
   select {
     background: none\9;
     padding: 5px\9; } }
+
+select.short-select {
+  width: 60px;
+  display: inline;
+  float: left; }
 
 .btn-product {
   background-color: #98322e;
@@ -947,3 +951,7 @@ body {
 
 .tool-tip {
   color: #000000; }
+
+span.logo {
+  display: inline-block;
+  margin: 0 10px; }

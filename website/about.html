@@ -54,7 +54,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control " id="password" placeholder="Password" />
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
                     </div>
                     <button type="submit" class="btn">Login <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     <a href="forgot.html">Forgotten details <i class="fa fa-caret-right" aria-hidden="true"></i></a>
@@ -146,25 +146,87 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone" class="col-sm-5 control-label">Issue number:</label>
+                                    <label for="phone" class="col-sm-5 control-label">Issue number: <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="If applicable">
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                    </a></label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="phone" name="phone" class="form-control form-3-char" max="3" value="" placeholder="" />
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-push-6">
+                                                <input type="text" id="phone" name="phone" class="form-control" maxlength="3" value="" placeholder="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="cvv" class="col-sm-5 control-label">CVV: <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="3 digit number located on the reverse of your bank card">
-                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
-                                        <!--(help)-->
-                                    </a></label>
+                                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        </a></label>
                                     <div class="col-sm-7">
-                                        <input type="text" id="cvv" name="cvv" class="form-control form-3-char" max="3" value="" placeholder="" />
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-push-6">
+                                                <input type="text" id="cvv" name="cvv" class="form-control" maxlength="3" value="" placeholder="" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
 
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5" for="start-month">Start Date: <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="If a start date is present">
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        </a></label>
+                                    <div class="col-sm-7">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <select id="start-month" class="form-control" name="start-month" >
+                                                    <option selected>March</option>
+                                                    <option value="0">April</option>
+                                                    <option value="1">May</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select id="start-year" class="form-control" name="start-year">
+                                                    <option selected>2017</option>
+                                                    <option value="0">2018</option>
+                                                    <option value="1">2019</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-5" for="end-month">Expiry Date:</label>
+                                    <div class="col-sm-7">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <select id="end-month" class="form-control" name="end-month" >
+                                                    <option selected>April</option>
+                                                    <option value="0">May</option>
+                                                    <option value="1">June</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <select id="end-year" class="form-control" name="end-year">
+                                                    <option selected>2017</option>
+                                                    <option value="0">2018</option>
+                                                    <option value="1">2019</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+
+                                        <label class="checkbox-right">
+                                            <input type="checkbox" id="understood" value="yes" />
+                                            <span>I have read and understood the <a href="#">T&Cs</a>.</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-
-
 
                         </div>
                         <div class="col-sm-6">
@@ -268,10 +330,21 @@
                                     </tbody>
                                 </table>
 
-                                <div class="copy-border-top">
-                                    <button class="btn btn-product pull-right">Proceed to payment</button>
-                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-actions">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
 
+                            <div class="copy-border-top text-right">
+                                    <span class="logo">
+                                        <img src="images/sage-pay.png" width="103" height="56" alt="Sage">
+                                    </span>
+                                <button class="btn btn-product pull-right">Proceed to payment</button>
                             </div>
                         </div>
                     </div>

@@ -1079,6 +1079,12 @@ body {
     color: #000000;
 }
 
+span {
+    &.logo {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
 
 
 
