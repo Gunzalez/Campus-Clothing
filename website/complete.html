@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Campus Clothing</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="js/vendor/easy-autocomplete.css" rel="stylesheet">
+    <link href="js/vendor/animated-burgers.css" rel="stylesheet">
+    <link href="css/campus.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <script src="js/lib/jsChecks.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="page">
+    <div class="section">
+        <div class="header-login">
+            <div class="container">
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="toggle-btn">
+                            <span class="show-menu">Login</span>
+                            <span class="hide-menu">Cancel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/CampusCLtd" target="_blank">
+                            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            <span class="text">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="another-page.html?goingTo=FaceBook" target="_blank">
+                            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                            <span class="text">Facebook</span>
+                        </a>
+                    </li>
+                </ul>
+                <form id="login-form" action="another-page.html?goingTo=LoggedInState" method="get" class="form-inline login-form">
+                    <div class="form-group">
+                        <label for="orderNumberOrEmail">Order number / email:</label>
+                        <input type="text" class="form-control" id="orderNumberOrEmail" placeholder="Order number / email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                    </div>
+                    <button type="submit" class="btn">Login <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    <a href="forgot.html">Forgotten details <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                </form>
+            </div>
+        </div>
+        <div class="header-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="header-box">
+                            <h1>
+                                <a href="index.html">
+                                    <span class="text">We are forever</span>
+                                    <span class="imagery"><img src="images/cc-logo.png" alt="Campus Clothing"></span>
+                                </a>
+                            </h1>
+                            <button type="button" class="hamburger hamburger--spin toggle-navigation" aria-hidden="true">
+                                  <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                  </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="main-navigation">
+                            <ul class="header-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="institution.html">Institutions</a></li>
+                                <li><a href="corporate.html">Corporate</a></li>
+                                <li><a href="jobs.html">Jobs</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="size-guide.html">Size guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+
+        <div class="order-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <h3 class="strike-through"><span>Checkout Complete!</span></h3>
+
+
+                    </div>
+                    <div class="col-sm-6">
+
+                        <h3 class="strike-through">
+                            <span>Basket</span>
+
+                            <span class="shopping-basket-link">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="items">2</span>
+                            </span>
+                        </h3>
+
+                        <!-- item starts-->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4 class="item-title">1. University of Oxford Hoodie</h4>
+                            </div>
+                            <div class="col-xs-4"><img src="uploaded/item-13.png" class="img-responsive item-image" alt="Chest Print" /></div>
+                            <div class="col-xs-8">
+                                <dl class="item-attributes">
+                                    <dt>Colour:</dt>
+                                    <dd>Sports Grey</dd>
+                                    <dt>Size:</dt>
+                                    <dd>M</dd>
+                                    <dt>Hood Print:</dt>
+                                    <dd>ABC</dd>
+                                </dl>
+                                <p class="shout-out">Total: <span class="money">&pound;59.95</span></p>
+                            </div>
+                            <div class="col-xs-12">
+                                <ul class="basket-item-controls">
+                                    <li>
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        <a href="#">Edit item
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <a href="#">Delete item
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- item starts-->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4 class="item-title">2. University of Oxford Graduation Teddy</h4>
+                            </div>
+                            <div class="col-xs-4"><img src="uploaded/item-15.jpg" class="img-responsive item-image" alt="Chest Print" /></div>
+                            <div class="col-xs-8">
+                                <dl class="item-attributes">
+                                    <dt>Text:</dt>
+                                    <dd>Class of 2017</dd>
+                                    <dt>Name:</dt>
+                                    <dd>Donald Trump</dd>
+                                </dl>
+                                <p class="shout-out">Total: <span class="money">&pound;15.00</span></p>
+                            </div>
+                            <div class="col-xs-12">
+                                <ul class="basket-item-controls">
+                                    <li>
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        <a href="#">Edit item
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <a href="#">Delete item
+                                            <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-totals">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="basket-total">
+                            <table border="0" class="total-table pull-right">
+                                <tbody>
+                                <tr>
+                                    <th scope="col">Goods:</th>
+                                    <td scope="col">&pound;74.95</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Delivery:</th>
+                                    <td>&pound;4.95</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Total:</th>
+                                    <td>&pound;79.90</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-actions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="copy-border-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="section">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="footer-links">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">T&Cs</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Corporate</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <div class="footer-copy">
+                            <p>Campus Global Ltd, Knights Farm, Avon Dasset, Southam, Warwickshire, CV47 2AS</p>
+                            <p>Enquiries: <a href="tel:03333403474">03333&nbsp;403&nbsp;474</a> &copy; 2013 Campus Global Ltd | Company Registration Number: 123456789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery-2.1.4.min.js"></script>
+<script src="js/vendor/easy-autocomplete.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/campus.js"></script>
+</body>
+</html>

@@ -882,13 +882,14 @@ body {
         border-bottom: none; } }
 
 .order-announcement {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  padding-top: 10px; }
   .order-announcement .title {
     color: #000000;
     margin-bottom: 5px; }
 
 .order-detail {
-  padding-bottom: 15px; }
+  padding: 25px 0; }
   .order-detail .product-image {
     width: 100%;
     padding-bottom: 15px; }
