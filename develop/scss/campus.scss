@@ -198,15 +198,17 @@ body {
         position: absolute;
         right: 0;
         top: 50%;
-        margin-top: -15px;
+        margin-top: -6px;
         color: $brand-white !important;
         outline: none !important;
+        display: none;
+
         &:hover {
             color: #ffffff !important;
         }
 
         @media (max-width: $width-sm){
-            margin-top: -6px;
+            display: block;
         }
     }
 
@@ -270,11 +272,15 @@ body {
         &.animate {
             @include transition(height, 0.25s);
         }
+
+        @media (max-width: $width-sm) {
+            height: 0;
+        }
     }
 }
 
 .js .main-navigation {
-    height: 0;
+    //height: 0;
 }
 
 .shopping-basket-link {

@@ -134,14 +134,14 @@
             this.$parentRow.removeClass('open');
             this.isOpen = false;
             this.$toggleBtn.removeClass('is-active');
-            this.$buttonsContainer.height('0');
+            this.$buttonsContainer.removeAttr('style');
         },
 
         // rest navigation
         reset: function(){
             this.isOpen = false;
             this.$toggleBtn.removeClass('is-active');
-            this.$buttonsContainer.removeClass('animate').height('0');
+            this.$buttonsContainer.removeClass('animate').removeAttr('style');
         },
 
         // close on resize
