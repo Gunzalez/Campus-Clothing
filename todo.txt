@@ -13,7 +13,7 @@ TODO - essentials
 Add in validation error messages to form fields
 Ask about JS validation or backend
 - Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
-
+Overlay with form in the middle
 
 TODO - Ask Robin
 Ask how Product page works?
@@ -41,4 +41,5 @@ TODO - time log
 3 - 2
 4 - 5
 5 - 6
-6 - 3
+6 - 2
+7 - 2
