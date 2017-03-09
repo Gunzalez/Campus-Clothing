@@ -417,6 +417,9 @@ body {
     text-align: center;
     background-color: #e1e1e1; }
 
+.institution-detail .shopping-basket-link .items {
+  background-color: #ffffff; }
+
 .institutions-search {
   background: #adadad;
   text-align: center; }

@@ -39,8 +39,6 @@
                 campus.environment.$tooltips.tooltip();
             }
 
-
-
             // toggles display of divs
             campus.environment.$displayToggles.each(function(i, obj){
                 $(obj).on('click', function(){
@@ -61,15 +59,14 @@
     campus.largeCTA = {
 
         init: function () {
-
             // instantiate and assign variables
-            campus.largeCTA.$parent = $('.large-cta');
-            campus.largeCTA.$pointers = $('i', campus.largeCTA.$parent);
-            campus.largeCTA.$stringDisplay = $('#animated-text', campus.largeCTA.$parent);
-            campus.largeCTA.$stringSource = $("#text-list", campus.largeCTA.$parent);
+            this.$parent = $('.large-cta');
+            this.$pointers = $('i', this.$parent);
+            this.$stringDisplay = $('#animated-text', this.$parent);
+            this.$stringSource = $("#text-list", this.$parent);
 
             // big shout out to Matt from http://www.mattboldt.com/ for this, cheers.
-            if(this.$stringDisplay){
+            if(this.$stringDisplay.length > 0){
                 this.$stringDisplay.typed({
                     //strings: ["First sentence.", "Second sentence."],
                     //stringsElement: null,
@@ -123,43 +120,15 @@
     };
 
     campus.login = {
-        // elements of this component
-        $parentRow: $('.header-login'),
-        $openBtn: $('.toggle-btn', $('.header-login')),
-        $loginFrm: $('.login-form', $('.header-login')),
-        delayedClose: null,
-
-        // open action
-        openFrm: function(){
-            var newHeight = this.$loginFrm.outerHeight() +
-                    this.$parentRow.height();
-            this.$parentRow.css('height', newHeight);
-            this.$parentRow.addClass('open');
-
-            // if Main Navigation is open, close it first
-            if(campus.navigation.isOpen){
-                campus.navigation.$toggleBtn.trigger('click');
-            }
-        },
-
-        // close action
-        closeFrm: function(){
-            this.$parentRow.removeAttr('style');
-            this.$parentRow.removeClass('open');
-        },
-
-        // close on resize
-        resize: function(){
-            this.closeFrm();
-        },
 
         // initial set up
         init: function(){
 
             // assign variables
-            campus.login.$parentRow = $('.header-login');
-            campus.login.$openBtn = $('.toggle-btn', $('.header-login'));
-            campus.login.$loginFrm = $('.login-form', $('.header-login'));
+            this.$parentRow = $('.header-login');
+            this.$openBtn = $('.toggle-btn', this.$parentRow);
+            this.$loginFrm = $('.login-form', this.$parentRow);
+            campus.login.delayedClose = null;
 
             // attach open action
             var self = this;
@@ -182,52 +151,87 @@
                     }
                 }, 3000);
             })
+        },
+
+        // open action
+        openFrm: function(){
+            var newHeight = this.$loginFrm.outerHeight() +  this.$parentRow.height();
+            this.$parentRow.css('height', newHeight);
+            this.$parentRow.addClass('open');
+
+            // if Main Navigation is open, close it first
+            if(campus.navigation.isOpen){
+                this.$toggleBtn.trigger('click');
+            }
+        },
+
+        // close action
+        closeFrm: function(){
+            this.$parentRow.removeAttr('style');
+            this.$parentRow.removeClass('open');
+        },
+
+        // close on resize
+        resize: function(){
+            this.closeFrm();
         }
     };
 
     campus.overlay = {
-
-        /* Open */
-        showOverlay:function(){
-
-            document.getElementById("myNav").style.height = "100%";
-        },
-
-        hideOverlay: function(){
-            document.getElementById("myNav").style.height = "0%";
-
-        },
-
 
         init: function () {
 
             $('.openModal').on('click', function (e) {
                 e.preventDefault();
                 campus.overlay.showOverlay();
-            })
+            });
 
             $('.hideModal').on('click', function (e) {
                 e.preventDefault();
                 campus.overlay.hideOverlay();
-            })
+            });
+        },
 
+        showOverlay:function(){
+            $('#campus-overlay').css('height', '100%');
+        },
+
+        hideOverlay: function(){
+            $('#campus-overlay').css('height', '0');
         }
     };
 
     campus.navigation = {
-        // elements of this component
-        $parentRow: $('.header-title'),
-        $toggleBtn: $('.toggle-navigation', this.$parentRow),
-        $buttonsContainer: $('.main-navigation', this.$parentRow),
-        $buttons: $('.header-links', this.$parentRow),
-        isOpen: false,
+
+        // initial set up
+        init: function(){
+
+            // elements of this component
+            this.$parentRow = $('.header-title');
+            this.$toggleBtn = $('.toggle-navigation', this.$parentRow);
+            this.$buttonsContainer = $('.main-navigation', this.$parentRow);
+            this.$buttons = $('.header-links', this.$parentRow);
+            this.isOpen = false;
+            var self = this;
+
+
+            this.$toggleBtn.on('click', function(e){
+                e.preventDefault();
+                self.$buttonsContainer.addClass('animate');
+                if(!self.isOpen){
+                    self.open();
+                } else {
+                    self.close();
+                }
+            });
+        },
 
         // open menu
         open: function(){
             this.$parentRow.addClass('open');
             this.isOpen = true;
             this.$toggleBtn.addClass('is-active');
-            this.$buttonsContainer.height(campus.navigation.$buttons.outerHeight());
+            this.$buttonsContainer.height(this.$buttons.outerHeight());
         },
 
         // close navigation
@@ -248,35 +252,20 @@
         // close on resize
         resize: function(){
             this.reset();
-        },
-
-        // initial set up
-        init: function(){
-            var self = this;
-            this.$toggleBtn.on('click', function(e){
-                e.preventDefault();
-                self.$buttonsContainer.addClass('animate');
-                if(!self.isOpen){
-                    self.open();
-                } else {
-                    self.close();
-                }
-            });
         }
     };
 
     campus.institutions = {
-        // elements for this component
-        $parentRow: $('.institutions-search'),
-        $form: $('#select-institution-form', this.$parentRow),
-        $input: $('#institution-name', this.$parentRow),
-        listMax: 5,
-        basUrl: 'institution.html?id=',
 
         init: function(){
-
+            // elements for this component
+            this.$parentRow = $('.institutions-search');
+            this.$form = $('#select-institution-form', this.$parentRow);
+            this.$input = $('#institution-name', this.$parentRow);
+            this.listMax = 5;
+            this.basUrl = 'institution.html?id=';
             var self = this;
-
+            
             // stopping default for action,
             // not best practice, but breaks the autoComplete :(
             this.$form.on('submit', function(e){
@@ -314,22 +303,14 @@
     };
 
     campus.products = {
-        $list: $('.products-list'),
-        $titles: $('.list-title', this.$list),
-        $buttons: $('.products-navigation a'),
-
-        setPosition: function(position){
-            // controls header and copy display
-            this.$list.removeClass('active');
-            this.$list.eq(position).addClass('active');
-
-            // controls buttons
-            this.$buttons.parents('li').removeClass('active');
-            this.$buttons.eq(position).parents('li').addClass('active');
-        },
 
         init: function(){
+            // instantiate and assign variables
+            this.$list = $('.products-list');
+            this.$titles = $('.list-title', this.$list);
+            this.$buttons = $('.products-navigation a');
             var products = this;
+
             this.$titles.each(function(i, obj){
                 $(obj).on('click', function(){
                     var index = products.$titles.index($(obj));
@@ -344,16 +325,27 @@
                     products.setPosition(index);
                 })
             });
+        },
+
+        setPosition: function(position){
+            // controls header and copy display
+            this.$list.removeClass('active');
+            this.$list.eq(position).addClass('active');
+
+            // controls buttons
+            this.$buttons.parents('li').removeClass('active');
+            this.$buttons.eq(position).parents('li').addClass('active');
         }
     };
 
     campus.product = {
-        // elements for this component
-        $parent: $('.product-detail'),
-        $miniCarousel: $('.product-image-carousel', this.$parent),
 
         init: function(){
-            campus.product.$miniCarousel.each(function(i, obj){
+            // elements for this component
+            this.$parent = $('.product-detail');
+            this.$miniCarousel = $('.product-image-carousel', this.$parent);
+            
+            this.$miniCarousel.each(function(i, obj){
                 var $buttons = $('[data-image-target]', $(obj));
                 $buttons.on('click', function(e){
                     e.preventDefault();
