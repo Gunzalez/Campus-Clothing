@@ -185,6 +185,35 @@
         }
     };
 
+    campus.overlay = {
+
+        /* Open */
+        showOverlay:function(){
+
+            document.getElementById("myNav").style.height = "100%";
+        },
+
+        hideOverlay: function(){
+            document.getElementById("myNav").style.height = "0%";
+
+        },
+
+
+        init: function () {
+
+            $('.openModal').on('click', function (e) {
+                e.preventDefault();
+                campus.overlay.showOverlay();
+            })
+
+            $('.hideModal').on('click', function (e) {
+                e.preventDefault();
+                campus.overlay.hideOverlay();
+            })
+
+        }
+    };
+
     campus.navigation = {
         // elements of this component
         $parentRow: $('.header-title'),
@@ -348,6 +377,7 @@
         campus.products.init();
         campus.product.init();
         campus.largeCTA.init();
+        campus.overlay.init();
 
         // resize triggers
         $(window).on('resize', function () {

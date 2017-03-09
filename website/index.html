@@ -90,7 +90,7 @@
                                     <li><a href="delivery.html">Jobs</a></li>
                                     <li><a href="payment.html">About us</a></li>
                                     <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="size-guide.html">Size guide</a></li>
+                                    <li><a href="size-guide.html" class="openModal">Size guide</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -244,6 +244,21 @@
         </div>
     </div>
 
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="#" class="hideModal">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
     <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="js/vendor/easy-autocomplete.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>

@@ -14,6 +14,11 @@ Add in validation error messages to form fields
 Ask about JS validation or backend
 - Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 Overlay with form in the middle
+Add/Remove option features
+
+
+
+
 
 TODO - Ask Robin
 Ask how Product page works?
@@ -43,3 +48,4 @@ TODO - time log
 5 - 6
 6 - 2
 7 - 2
+8 - 1
