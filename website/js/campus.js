@@ -64,6 +64,7 @@
             this.$pointers = $('i', this.$parent);
             this.$stringDisplay = $('#animated-text', this.$parent);
             this.$stringSource = $("#text-list", this.$parent);
+            var largeCTA = this;
 
             // big shout out to Matt from http://www.mattboldt.com/ for this, cheers.
             if(this.$stringDisplay.length > 0){
@@ -72,7 +73,7 @@
                     //stringsElement: null,
                     stringsElement: this.$stringSource,
                     // typing speed
-                    typeSpeed: 0,
+                    typeSpeed: 1,
                     // time before typing starts
                     startDelay: 0,
                     // backspacing speed
@@ -86,7 +87,7 @@
                     // false = infinite
                     loopCount: 2,
                     // show cursor
-                    showCursor: false,
+                    showCursor: true,
                     // character for cursor
                     cursorChar: "|",
                     // attribute to type (null == text)
@@ -94,7 +95,9 @@
                     // either html or text
                     contentType: 'html',
                     // call when done callback function
-                    callback: function() {},
+                    callback: function() {
+                        $('.typed-cursor', largeCTA.$parent).empty().text('.').removeAttr('class');
+                    },
                     // starting callback function before each string
                     preStringTyped: function(i) {
                         switch (i){
@@ -111,9 +114,11 @@
                         }
                     },
                     //callback for every typed string
-                    onStringTyped: function() {},
+                    onStringTyped: function() {
+                    },
                     // callback for reset
-                    resetCallback: function() {}
+                    resetCallback: function() {
+                    }
                 });
             }
         }
@@ -302,7 +307,7 @@
 
     };
 
-    campus.products = {
+    campus.productsLists = {
 
         init: function(){
             // instantiate and assign variables
@@ -338,7 +343,7 @@
         }
     };
 
-    campus.product = {
+    campus.productImageSwitcher = {
 
         init: function(){
             // elements for this component
@@ -366,8 +371,8 @@
         campus.login.init();
         campus.navigation.init();
         campus.institutions.init();
-        campus.products.init();
-        campus.product.init();
+        campus.productsLists.init();
+        campus.productImageSwitcher.init();
         campus.largeCTA.init();
         campus.overlay.init();
 
