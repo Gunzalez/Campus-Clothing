@@ -39,12 +39,41 @@
                 campus.environment.$tooltips.tooltip();
             }
 
-            if($('#animated-text')){
-                $("#animated-text").typed({
+
+
+            // toggles display of divs
+            campus.environment.$displayToggles.each(function(i, obj){
+                $(obj).on('click', function(){
+                    var toggleTargetId = $(this).attr('data-toggle-display'),
+                        $toggleTarget = $('#'+toggleTargetId),
+                        isChecked = $(this).prop("checked");
+
+                    if(isChecked){
+                        $toggleTarget.addClass('display-none');
+                    } else {
+                        $toggleTarget.removeClass('display-none');
+                    }
+                })
+            });
+        }
+    };
+
+    campus.largeCTA = {
+
+        init: function () {
+
+            // instantiate and assign variables
+            campus.largeCTA.$parent = $('.large-cta');
+            campus.largeCTA.$pointers = $('i', campus.largeCTA.$parent);
+            campus.largeCTA.$stringDisplay = $('#animated-text', campus.largeCTA.$parent);
+            campus.largeCTA.$stringSource = $("#text-list", campus.largeCTA.$parent);
+
+            // big shout out to Matt from http://www.mattboldt.com/ for this, cheers.
+            if(this.$stringDisplay){
+                this.$stringDisplay.typed({
                     //strings: ["First sentence.", "Second sentence."],
-                    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
                     //stringsElement: null,
-                    stringsElement: $('#text-list'),
+                    stringsElement: this.$stringSource,
                     // typing speed
                     typeSpeed: 0,
                     // time before typing starts
@@ -70,36 +99,34 @@
                     // call when done callback function
                     callback: function() {},
                     // starting callback function before each string
-                    preStringTyped: function() {},
+                    preStringTyped: function(i) {
+                        switch (i){
+                            case 0:
+                                campus.largeCTA.$pointers.addClass('fa-caret-up');
+                                break;
+                            case 1:
+                                campus.largeCTA.$pointers.addClass('fa-caret-down').removeClass('fa-caret-up');
+                                break;
+                            default:
+                                campus.largeCTA.$pointers.removeClass('fa-caret-down').removeClass('fa-caret-up');
+                                campus.largeCTA.$pointers.eq(0).addClass('fa-caret-up');
+                                campus.largeCTA.$pointers.eq(1).addClass('fa-caret-down');
+                        }
+                    },
                     //callback for every typed string
                     onStringTyped: function() {},
                     // callback for reset
                     resetCallback: function() {}
                 });
             }
-
-            // toggles display of divs
-            campus.environment.$displayToggles.each(function(i, obj){
-                $(obj).on('click', function(){
-                    var toggleTargetId = $(this).attr('data-toggle-display'),
-                        $toggleTarget = $('#'+toggleTargetId),
-                        isChecked = $(this).prop("checked");
-
-                    if(isChecked){
-                        $toggleTarget.addClass('display-none');
-                    } else {
-                        $toggleTarget.removeClass('display-none');
-                    }
-                })
-            });
         }
     };
 
     campus.login = {
         // elements of this component
         $parentRow: $('.header-login'),
-        $openBtn: $('.toggle-btn', this.$parentRow),
-        $loginFrm: $('.login-form', this.$parentRow),
+        $openBtn: $('.toggle-btn', $('.header-login')),
+        $loginFrm: $('.login-form', $('.header-login')),
         delayedClose: null,
 
         // open action
@@ -128,6 +155,12 @@
 
         // initial set up
         init: function(){
+
+            // assign variables
+            campus.login.$parentRow = $('.header-login');
+            campus.login.$openBtn = $('.toggle-btn', $('.header-login'));
+            campus.login.$loginFrm = $('.login-form', $('.header-login'));
+
             // attach open action
             var self = this;
             this.$openBtn.on('click', function(e){
@@ -314,6 +347,7 @@
         campus.institutions.init();
         campus.products.init();
         campus.product.init();
+        campus.largeCTA.init();
 
         // resize triggers
         $(window).on('resize', function () {
