@@ -11,7 +11,6 @@ Full width buttons on mobile
 - Date picker widget on Contact page
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
-- Overlay submit button styling
 
 
 # TODO - Questions
@@ -28,6 +27,7 @@ Rob okay to do validation, or shall I begin?
 
 
 # TODO - done
+Overlay submit button styling
 Menu copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 Add/Remove option features
 Scroll tabs to view on mobile screens

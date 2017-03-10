@@ -1070,41 +1070,33 @@ span.logo {
   .overlay-content button {
     margin: 0 2px !important; }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block;
-  /* Display block instead of inline */
-  transition: 0.3s;
-  /* Transition effects on hover (color) */
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: -80px;
-  right: 0; }
-
 .overlay form {
   margin: 0 auto;
   display: inline-block;
   position: relative; }
   .overlay form input {
-    width: 300px !important; }
+    width: 280px !important;
+    padding: 10px !important;
+    height: auto !important;
+    border-color: #000000 !important; }
+  .overlay form .btn i {
+    margin-left: 4px; }
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #ffffff; }
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
+.overlay a {
+  text-decoration: none;
+  font-size: 3.0em;
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px; }
+  top: -100px;
+  right: 0; }
+  .overlay a i {
+    color: #ffffff; }
+    .overlay a i:hover {
+      color: #98322e;
+      -moz-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      -webkit-transition: color 0.5s;
+      transition: color 0.5s; }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 .faqs {
   padding: 25px 0; }
 
