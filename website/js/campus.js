@@ -386,7 +386,9 @@
             this.buttons.each(function(i, obj){
                 $(obj).on('click', function(e){
                     e.preventDefault();
-                    $(obj).parents('li').addClass('active').siblings().removeAttr('class');
+                    $(obj).parents('li').addClass('active').find('> a i').removeClass('fa-caret-right').addClass('fa-caret-down');
+                    $(obj).parents('li').siblings().removeAttr('class').find('> a i').addClass('fa-caret-right').removeClass('fa-caret-down');
+
                 })
             });
         }
