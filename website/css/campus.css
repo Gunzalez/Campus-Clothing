@@ -178,14 +178,22 @@ select.short-select {
   -o-transition: background 0.25s;
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
-  -webkit-border-radius: 4px !important;
-  -moz-border-radius: 4px !important;
-  border-radius: 4px !important;
   border: none;
   text-transform: uppercase;
   margin-bottom: 10px;
   text-shadow: none !important;
-  outline: none !important; }
+  outline: none !important;
+  font-size: 1.2em;
+  padding: 15px 24px;
+  -webkit-border-radius: 9px !important;
+  -moz-border-radius: 9px !important;
+  border-radius: 9px !important; }
+  .btn-product.btn-small {
+    font-size: 1.0em;
+    padding: 10px 18px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important; }
   .btn-product:hover, .btn-product:focus {
     color: #ffffff;
     background-color: #712522; }
@@ -194,7 +202,11 @@ select.short-select {
     background-color: #00365a; }
   @media (max-width: 992px) {
     .btn-product {
-      padding: 6px 12px; } }
+      padding: 6px 12px !important;
+      font-size: 0.9em !important;
+      -webkit-border-radius: 4px !important;
+      -moz-border-radius: 4px !important;
+      border-radius: 4px !important; } }
 
 html {
   overflow-y: scroll; }

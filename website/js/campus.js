@@ -313,33 +313,42 @@
             // instantiate and assign variables
             this.$list = $('.products-list');
             this.$titles = $('.list-title', this.$list);
-            this.$buttons = $('.products-navigation a');
-            var products = this;
+            this.$navbar = $('.products-navigation');
+            this.$buttons = $('a', this.$navbar);
+            var productsList = this;
 
             this.$titles.each(function(i, obj){
                 $(obj).on('click', function(){
-                    var index = products.$titles.index($(obj));
-                    products.setPosition(index);
+                    var index = productsList.$titles.index($(obj));
+                    productsList.setPosition(index);
                 })
             });
 
             this.$buttons.each(function(i, obj){
                 $(obj).on('click', function(e){
                     e.preventDefault();
-                    var index = products.$buttons.index($(obj));
-                    products.setPosition(index);
+                    var index = productsList.$buttons.index($(obj));
+                    productsList.setPosition(index);
                 })
             });
         },
 
         setPosition: function(position){
+            // controls buttons
+            this.$buttons.parents('li').removeClass('active');
+            this.$buttons.eq(position).parents('li').addClass('active');
+
             // controls header and copy display
             this.$list.removeClass('active');
             this.$list.eq(position).addClass('active');
 
-            // controls buttons
-            this.$buttons.parents('li').removeClass('active');
-            this.$buttons.eq(position).parents('li').addClass('active');
+            // scroll to header if visible
+            if(this.$navbar.css('display') === 'none'){
+                //console.log(this.$buttons.eq(position));
+                $('html, body').animate({
+                    scrollTop: this.$list.eq(position).offset().top
+                }, 500);
+            }
         }
     };
 

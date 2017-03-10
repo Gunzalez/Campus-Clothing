@@ -4,13 +4,21 @@
     background-color: $brand-red;
     color: $brand-white;
     @include transition(background 0.25s);
-    //padding: 12px 20px;
-    @include border-radius(4px);
     border: none;
     text-transform: uppercase;
     margin-bottom: 10px;
     text-shadow: none !important;
     outline: none !important;
+
+    font-size: 1.2em;
+    padding: 15px 24px;
+    @include border-radius(9px);
+
+    &.btn-small {
+        font-size: 1.0em;
+        padding: 10px 18px;
+        @include border-radius(6px);
+    }
 
     &:hover,
     &:focus {
@@ -24,7 +32,9 @@
     }
 
     @media (max-width: $width-md){
-        padding: 6px 12px;
+        padding: 6px 12px !important;
+        font-size: 0.9em !important;
+        @include border-radius(4px);
     }
 
     .btn-left {

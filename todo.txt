@@ -2,8 +2,6 @@
 TODO - nice to have
 Align basket better on mobile
 Style pointy buttons
-Scroll tabs to view on mobile screens
-Change basket to include 'items |', instead of number
 
 
 TODO - essentials
@@ -24,8 +22,13 @@ Overlay with form in the middle
 TODO - Ask Robin
 Ask how Product page works?
 
+TODO - Not doing
+Change basket to include 'items |', instead of number
+        * Makes long names difficult on Institution page
+
 
 TODO - done
+Scroll tabs to view on mobile screens
 Add in validation error messages to form fields
 Horizontal lines across product detail page
 Table on mobile
