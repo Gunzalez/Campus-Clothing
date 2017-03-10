@@ -370,7 +370,9 @@
                     e.preventDefault();
                     var $targetImage = $('.' + $(this).attr('data-image-target'));
                     var imagePath = $('img', $(this)).attr('src');
+                    var imageAlt = $('img', $(this)).attr('alt');
                     $targetImage.attr('src', imagePath);
+                    $targetImage.attr('alt', imageAlt);
                     $buttons.removeClass('active');
                     $(this).addClass('active');
                 });

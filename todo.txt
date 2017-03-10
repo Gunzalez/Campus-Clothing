@@ -9,6 +9,8 @@ TODO - essentials
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
 
+Full width buttons on mobile
+
 - Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 
 
