@@ -36,6 +36,11 @@
 
             // displays tooltips
             if(campus.environment.$tooltips.length > 0){
+                campus.environment.$tooltips.each(function(i, obj){
+                    $(obj).on('click', function(e){
+                        e.preventDefault();
+                    })
+                });
                 campus.environment.$tooltips.tooltip();
             }
 
