@@ -1,9 +1,8 @@
-// buttons
 
 .btn-product {
     background-color: $brand-red;
     color: $brand-white;
-    @include transition(background 0.25s);
+    @include transition(background 0.5s);
     border: none;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -36,66 +35,27 @@
         font-size: 0.9em !important;
         @include border-radius(4px);
     }
+}
 
-    .btn-left {
-
-    }
-
-    .btn-right {
-
+// TODO: Rob
+// Works it <button type="button" class="btn btn-product btn-small" data-btn-state="positive"> in html
+// And campus.buttonToggles module in javaScript
+[data-btn-state] {
+    i {
+        margin-left: 4px;
     }
 }
 
-//a.btn-point-right,
-//a.btn-point-left {
-//    height:38px;
-//    line-height:38px;
-//    vertical-align:middle;
-//    text-align:center;
-//    padding:0 15px;
-//    color: #ffffff !important;
-//    background-color: $brand-red;
-//    position:relative;
-//    display:inline-block;
-//    border-radius: 5px;
-//    border-top-right-radius: 0;
-//    border-bottom-right-radius: 0;
-//    border: none;
-//    @include transition(background, 0.5s);
-//}
-//
-//a.btn-point-right:after {
-//    position:absolute;
-//    right:-26px;
-//    content:" ";
-//    width: 0px;
-//    height: 0px;
-//    border-style: solid;
-//    border-width: 19px 0 19px 26px;
-//    border-radius: -5px;
-//    border-color: transparent transparent transparent $brand-red;
-//    @include transition(background, 0.5s);
-//}
-//
-//a.btn-point-left:before {
-//    position:absolute;
-//    left:-26px;
-//    content:" ";
-//    width: 0px;
-//    height: 0px;
-//    border-style: solid;
-//    border-width: 19px 0 19px 26px;
-//    border-radius: -5px;
-//    border-color: transparent transparent transparent $brand-red;
-//    @include transition(background, 0.5s);
-//}
-//
-//a.btn-point-right:hover,
-//a.btn-point-left:hover {
-//    background-color: $brand-red;
-//}
-//
-//a.btn-point-right:hover:after,
-//a.btn-point-left:hover:after  {
-//    border-color: transparent transparent transparent $brand-red;
-//}
+[data-btn-state="positive"],
+[data-btn-state="positive"]:hover{
+    background-color: $brand-red;
+    .positive { display: block }
+    .negative { display: none }
+}
+
+[data-btn-state="negative"],
+[data-btn-state="negative"]:hover {
+    background-color: $brand-blue;
+    .positive { display: none }
+    .negative { display: block }
+}

@@ -378,6 +378,23 @@
         }
     };
 
+    campus.buttonToggles = {
+        init: function(){
+            this.buttons = $('[data-btn-state]');
+            this.buttons.each(function(i, obj){
+                $(obj).on('click', function(){
+                    var state = $(obj).attr('data-btn-state');
+                    if(state == 'positive'){
+                        $(obj).attr('data-btn-state', 'negative');
+                    } else {
+                        $(obj).attr('data-btn-state', 'positive');
+                    }
+                    $(obj).blur();
+                })
+            })
+        }
+    };
+
     campus.init = function () {
 
         // all init here
@@ -387,6 +404,7 @@
         campus.institutions.init();
         campus.productsLists.init();
         campus.productImageSwitcher.init();
+        campus.buttonToggles.init();
         campus.largeCTA.init();
         campus.overlay.init();
 

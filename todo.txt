@@ -9,12 +9,11 @@ TODO - essentials
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
 
-Ask about JS validation or backend
-Add/Remove option features
-
 - Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 
 
+
+Ask about JS validation or backend
 
 Overlay with form in the middle
 
@@ -28,6 +27,7 @@ Change basket to include 'items |', instead of number
 
 
 TODO - done
+Add/Remove option features
 Scroll tabs to view on mobile screens
 Add in validation error messages to form fields
 Horizontal lines across product detail page

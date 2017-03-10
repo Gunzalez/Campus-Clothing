@@ -287,7 +287,17 @@
                                                 <span class="help-block">Max 3 initials</span>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-product btn-small">Add</button>
+
+
+                                        <!-- TODO:
+                                            When click, it turns red/blue, by switching state to true/false, css changes the display
+                                             Hook this up to your validation, and totalling functions as you need.
+                                              Hop this helped. -->
+
+                                        <button type="button" class="btn btn-product btn-small" data-btn-state="positive">
+                                            <span class="positive">Add <i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            <span class="negative">Remove <i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -313,7 +323,17 @@
                                                 <span class="help-block">Max 12 letters</span>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-product btn-small">Add</button>
+
+
+                                        <!-- TODO:
+                                            When click, it turns red/blue, by switching state to true/false, css changes the display
+                                             Hook this up to your validation, and totalling functions as you need.
+                                              Hop this helped. -->
+
+                                        <button type="button" class="btn btn-product btn-small" data-btn-state="positive">
+                                            <span class="positive">Add <i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            <span class="negative">Remove <i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -341,7 +361,16 @@
                                             <p class="like-label">Name highlight</p>
                                             <p>Mau smet erat a lectus impeger eget libero commodo.</p>
                                         </div>
-                                        <button type="button" class="btn btn-product btn-small">Add</button>
+
+                                        <!-- TODO:
+                                            When click, it turns red/blue, by switching state to true/false, css changes the display
+                                             Hook this up to your validation, and totalling functions as you need.
+                                              Hop this helped. -->
+
+                                        <button type="button" class="btn btn-product btn-small" data-btn-state="positive">
+                                            <span class="positive">Add <i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            <span class="negative">Remove <i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -366,7 +395,17 @@
                                                 <span class="help-block">Max 3 initials</span>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-product btn-small">Add</button>
+
+
+                                        <!-- TODO:
+                                            When click, it turns red/blue, by switching state to true/false, css changes the display
+                                             Hook this up to your validation, and totalling functions as you need.
+                                              Hop this helped. -->
+
+                                        <button type="button" class="btn btn-product btn-small" data-btn-state="positive">
+                                            <span class="positive">Add <i class="fa fa-plus" aria-hidden="true"></i></span>
+                                            <span class="negative">Remove <i class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -375,7 +414,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="copy-border-top text-right">
-                                <p class="shout-out">Total price: <span class="money">£40.00</span> (excluding P&P)</p>
+                                <p class="shout-out">Total price: <span class="money" id="total-price">£40.00</span> (excluding P&P)</p>
                                     <label class="checkbox-right">
                                         <input type="checkbox" id="double-checked" value="yes" />
                                         <span class="shout-out">I have double checked and can verify that the product and personalisations selected are correct.</span>

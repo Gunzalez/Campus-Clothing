@@ -174,10 +174,10 @@ select.short-select {
 .btn-product {
   background-color: #98322e;
   color: #faf6dd;
-  -moz-transition: background 0.25s;
-  -o-transition: background 0.25s;
-  -webkit-transition: background 0.25s;
-  transition: background 0.25s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
   border: none;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -207,6 +207,29 @@ select.short-select {
       -webkit-border-radius: 4px !important;
       -moz-border-radius: 4px !important;
       border-radius: 4px !important; } }
+
+[data-btn-state] i {
+  margin-left: 4px; }
+
+[data-btn-state="positive"],
+[data-btn-state="positive"]:hover {
+  background-color: #98322e; }
+  [data-btn-state="positive"] .positive,
+  [data-btn-state="positive"]:hover .positive {
+    display: block; }
+  [data-btn-state="positive"] .negative,
+  [data-btn-state="positive"]:hover .negative {
+    display: none; }
+
+[data-btn-state="negative"],
+[data-btn-state="negative"]:hover {
+  background-color: #00365a; }
+  [data-btn-state="negative"] .positive,
+  [data-btn-state="negative"]:hover .positive {
+    display: none; }
+  [data-btn-state="negative"] .negative,
+  [data-btn-state="negative"]:hover .negative {
+    display: block; }
 
 html {
   overflow-y: scroll; }
@@ -1068,7 +1091,7 @@ span.logo {
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1; }
+  color: #ffffff; }
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
