@@ -1,0 +1,29 @@
+
+.main-navigation,
+.header-login,
+.institutions-search,
+button,
+.sign-board,
+.btn,
+.order-status {
+    display: none;
+}
+
+.js .faqs-list {
+    ul {
+        display: block;
+    }
+    .active {
+        ul {
+            display: block;
+            ul {
+                display: block;
+            }
+            .active {
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}

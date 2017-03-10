@@ -4,30 +4,31 @@ Align basket better on mobile
 Style pointy buttons
 Full width buttons on mobile
 
+
 # TODO - essentials
 - Change typeAhead to use data in page
 - Find one that works in IE9 first
-- Do date widget on Contact page
+- Date picker widget on Contact page
+- TypeAhead for Product page form
+- TypeAhead for Order status page form
+- Overlay submit button styling
+
 
 # TODO - Questions
-TypeAhead for Product page form?
-TypeAhead for Order status page form?
 Overlay with form in the middle?
-Rob okay to do validation, or shall I begin?
 Ask how Product page works in general?
-
-
-
-
 
 
 # TODO - Not doing
 Change basket to include 'items |', instead of number
         * Makes long names difficult on Institution page
 
+Rob okay to do validation, or shall I begin?
+        * Handled with .Net
+
 
 # TODO - done
-- Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
+Menu copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 Add/Remove option features
 Scroll tabs to view on mobile screens
 Add in validation error messages to form fields
@@ -41,6 +42,7 @@ Preparations
 Checkbox position on JOBS.html.
 Same Delivery functionality on browser resize.
 Leave menu open on desktop
+
 
 # TODO - time log
 25 - 3

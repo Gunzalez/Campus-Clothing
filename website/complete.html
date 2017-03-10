@@ -10,6 +10,7 @@
     <link href="js/vendor/easy-autocomplete.css" rel="stylesheet">
     <link href="js/vendor/animated-burgers.css" rel="stylesheet">
     <link href="css/campus.css" rel="stylesheet">
+    <link href="css/campus-print.css" media="print" rel="stylesheet">
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -114,17 +115,11 @@
 
                         <p>Please review your order or click the buttons to download or print your order at the bottom of the page.</p>
 
-
                     </div>
                     <div class="col-sm-6">
 
                         <h3 class="strike-through">
                             <span>Basket</span>
-
-                            <!--<span class="shopping-basket-link">-->
-                                <!--<i class="fa fa-shopping-cart"></i>-->
-                                <!--<span class="items">2</span>-->
-                            <!--</span>-->
                         </h3>
 
                         <!-- item starts-->
@@ -228,7 +223,7 @@
                     <div class="col-xs-12">
                         <div class="copy-border-top text-right">
                             <button type="button" class="btn btn-product">Save</button>
-                            <button type="button" class="btn btn-product">Print</button>
+                            <button type="button" class="btn btn-product" onclick="window.print(); return false;">Print</button>
                         </div>
                     </div>
                 </div>
