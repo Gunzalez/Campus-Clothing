@@ -89,6 +89,13 @@ form {
       padding-left: 27px; }
     form .checkbox-left input {
       left: 0; }
+  form .error-message {
+    display: none;
+    padding-top: 2px;
+    color: #98322e;
+    font-size: 0.8em; }
+  form .error .error-message {
+    display: block; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -423,10 +430,11 @@ body {
 .institutions-search {
   background: #adadad;
   text-align: center; }
+  .institutions-search ul {
+    text-align: left; }
   .institutions-search .form-box {
     position: relative; }
   .institutions-search input {
-    text-align: center;
     height: auto;
     margin: 10px 0;
     font-size: 0.9em;
@@ -463,17 +471,14 @@ body {
       display: inline-block;
       background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
       background-size: contain;
-      padding-left: 120px; }
+      padding-left: 130px; }
     .institutions-search .form-group {
       background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
       background-size: contain;
-      padding-right: 120px; }
+      padding-right: 130px; }
     .institutions-search input {
-      width: 470px !important;
-      height: 40px;
-      font-size: 1.6em;
-      line-height: 40px;
-      text-align: center; } }
+      width: 500px !important;
+      font-size: 1.5em; } }
 
 .institution-detail {
   background: #e1e1e1; }
@@ -1022,6 +1027,9 @@ span.logo {
   /* Centered text/links */
   margin-top: 30px;
   /* 30px top margin to avoid conflict with the close button on smaller screens */ }
+  .overlay-content input,
+  .overlay-content button {
+    margin: 0 2px !important; }
 
 /* The navigation links inside the overlay */
 .overlay a {
@@ -1032,7 +1040,19 @@ span.logo {
   display: block;
   /* Display block instead of inline */
   transition: 0.3s;
-  /* Transition effects on hover (color) */ }
+  /* Transition effects on hover (color) */
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -80px;
+  right: 0; }
+
+.overlay form {
+  margin: 0 auto;
+  display: inline-block;
+  position: relative; }
+  .overlay form input {
+    width: 300px !important; }
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
@@ -1046,10 +1066,3 @@ span.logo {
   font-size: 60px; }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px; }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px; } }

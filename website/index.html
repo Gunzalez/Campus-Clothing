@@ -247,18 +247,23 @@
     <!-- The overlay -->
     <div id="campus-overlay" class="overlay">
 
-        <!-- Button to close the overlay navigation -->
-        <a href="#" class="hideModal">&times;</a>
-
         <!-- Overlay content -->
         <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <form id="form" action="institution.html" method="get" class="form-inline">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="#" class="hideModal">&times;</a>
+
+                <div class="form-group">
+                    <label for="name-of-institution" class="sr-only">Institution name</label>
+                    <input type="text" class="form-control" id="name-of-institution" placeholder="Name of institution">
+                </div>
+                <button type="submit" class="btn btn-product">Go <i class="fa fa-lg fa-caret-right" aria-hidden="true"></i></button>
+            </form>
         </div>
 
     </div>
+
     <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="js/vendor/easy-autocomplete.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>

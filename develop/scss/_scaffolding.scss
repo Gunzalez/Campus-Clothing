@@ -116,6 +116,19 @@ form {
             left: 0;
         }
     }
+
+    .error-message {
+        display: none;
+        padding-top: 2px;
+        color: $brand-red;
+        font-size: 0.8em;
+    }
+
+    .error {
+        .error-message {
+            display: block;
+        }
+    }
 }
 
 

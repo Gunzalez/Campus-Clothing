@@ -197,6 +197,7 @@
             });
         },
 
+
         showOverlay:function(){
             $('#campus-overlay').css('height', '100%');
         },
@@ -304,7 +305,6 @@
             // attach action
             this.$input.easyAutocomplete(options);
         }
-
     };
 
     campus.productsLists = {

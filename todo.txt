@@ -10,14 +10,15 @@ TODO - essentials
 - Change typeAhead, does not work on IE9
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
-Add in validation error messages to form fields
+
 Ask about JS validation or backend
-- Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
-Overlay with form in the middle
 Add/Remove option features
 
+- Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 
 
+
+Overlay with form in the middle
 
 
 TODO - Ask Robin
@@ -25,6 +26,7 @@ Ask how Product page works?
 
 
 TODO - done
+Add in validation error messages to form fields
 Horizontal lines across product detail page
 Table on mobile
 Sort out hours
@@ -49,3 +51,4 @@ TODO - time log
 6 - 2
 7 - 2
 8 - 1
+9 - 2

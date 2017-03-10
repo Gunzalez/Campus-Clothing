@@ -317,6 +317,10 @@ body {
     background: $brand-coal;
     text-align: center;
 
+    ul {
+        text-align: left;
+    }
+
     .form-box {
         position: relative;
     }
@@ -326,7 +330,6 @@ body {
     }
 
     input {
-        text-align: center;
         height: auto;
         margin: 10px 0;
         font-size: 0.9em;
@@ -380,21 +383,18 @@ body {
             display: inline-block;
             background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
             background-size: contain;
-            padding-left: 120px;
+            padding-left: 130px;
         }
 
         .form-group {
             background: url("../images/bg-form-institution-right.gif") top right no-repeat #ffffff;
             background-size: contain;
-            padding-right: 120px;
+            padding-right: 130px;
         }
 
         input {
-            width: 470px !important;
-            height: 40px;
-            font-size: 1.6em;
-            line-height: 40px;
-            text-align: center;
+            width: 500px !important;
+            font-size: 1.5em;
         }
     }
 }
@@ -1148,16 +1148,38 @@ span {
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+    input,
+    button {
+        margin: 0 2px !important;
+    }
 }
 
 /* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+.overlay {
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block; /* Display block instead of inline */
+        transition: 0.3s; /* Transition effects on hover (color) */
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -80px;
+        right: 0;
+    }
+
+    form {
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+
+        input {
+            width: 300px !important;
+        }
+    }
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -1174,14 +1196,14 @@ span {
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
+//@media screen and (max-height: 450px) {
+//  .overlay a {font-size: 20px}
+//  .overlay .closebtn {
+//    font-size: 40px;
+//    top: 15px;
+//    right: 35px;
+//  }
+//}
 
 
 
