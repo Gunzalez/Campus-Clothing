@@ -96,6 +96,11 @@ form {
     font-size: 0.8em; }
   form .error .error-message {
     display: block; }
+  form textarea {
+    resize: none; }
+  form .stacked-group label {
+    margin-bottom: 5px !important;
+    padding-top: 0 !important; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -1101,6 +1106,9 @@ span.logo {
   font-size: 60px; }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+.faqs {
+  padding: 25px 0; }
+
 .faqs-list a {
   display: block;
   padding: 10px 15px;
@@ -1119,7 +1127,8 @@ span.logo {
     margin-right: 7px; }
 
 .faqs-list > li > a {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: bold; }
 
 .faqs-list ul a {
   background: #9fb1bf;

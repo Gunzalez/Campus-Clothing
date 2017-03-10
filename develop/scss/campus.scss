@@ -1205,6 +1205,9 @@ span {
 //  }
 //}
 
+.faqs {
+    padding: 25px 0;
+}
 
 .faqs-list {
     @extend %cleanUl;
@@ -1232,6 +1235,7 @@ span {
     > li {
         > a {
             text-transform: uppercase;
+            font-weight: bold;
         }
     }
 
