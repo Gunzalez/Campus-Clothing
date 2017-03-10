@@ -1124,17 +1124,26 @@ span.logo {
 .faqs-list ul a {
   background: #9fb1bf;
   padding-left: 37px; }
+  @media (max-width: 768px) {
+    .faqs-list ul a {
+      padding-left: 15px; } }
   .faqs-list ul a:hover {
     background: #aebdc9; }
 
 .faqs-list ul .questions a {
   padding-left: 60px; }
+  @media (max-width: 768px) {
+    .faqs-list ul .questions a {
+      padding-left: 15px; } }
 
 .faqs-list .questions a {
   background: #cfd8df;
   padding-left: 37px; }
   .faqs-list .questions a:hover {
     background: #cfd8df; }
+  @media (max-width: 768px) {
+    .faqs-list .questions a {
+      padding-left: 15px; } }
 
 .js .faqs-list ul {
   display: none; }
