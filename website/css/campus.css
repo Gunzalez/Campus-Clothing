@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 .header-login .navigation, .header-title .header-links, .institution-detail .institution-meta ul, .products-navigation ul, .product-detail .product-image-carousel .image-list,
-.products-list .product-image-carousel .image-list, .footer .footer-links, .progress-meter ul, .basket-item-controls {
+.products-list .product-image-carousel .image-list, .footer .footer-links, .progress-meter ul, .basket-item-controls, .faqs-list, .faqs-list ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -1101,3 +1101,47 @@ span.logo {
   font-size: 60px; }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+.faqs-list a {
+  display: block;
+  padding: 10px 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #7f97a9;
+  border-bottom: 2px solid #ffffff;
+  -moz-transition: background 0.25s;
+  -o-transition: background 0.25s;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s; }
+  .faqs-list a:hover {
+    background: #708b9f; }
+  .faqs-list a i {
+    color: #ffffff;
+    margin-right: 7px; }
+
+.faqs-list > li > a {
+  text-transform: uppercase; }
+
+.faqs-list ul a {
+  background: #9fb1bf;
+  padding-left: 37px; }
+  .faqs-list ul a:hover {
+    background: #aebdc9; }
+
+.faqs-list ul .questions a {
+  padding-left: 60px; }
+
+.faqs-list .questions a {
+  background: #cfd8df;
+  padding-left: 37px; }
+  .faqs-list .questions a:hover {
+    background: #cfd8df; }
+
+.js .faqs-list ul {
+  display: none; }
+
+.js .faqs-list .active ul {
+  display: block; }
+  .js .faqs-list .active ul ul {
+    display: none; }
+  .js .faqs-list .active ul .active ul {
+    display: block; }

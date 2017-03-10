@@ -1206,4 +1206,84 @@ span {
 //}
 
 
+.faqs-list {
+    @extend %cleanUl;
+
+    a {
+        display: block;
+        padding: 10px 15px;
+        color: #000000;
+        text-decoration: none;
+        background: #7f97a9;
+        border-bottom: 2px solid #ffffff;
+        @include transition(background 0.25s);
+
+        &:hover {
+            background: darken(#7f97a9, 5%);
+        }
+
+        i {
+            color: #ffffff;
+            margin-right: 7px;
+        }
+    }
+
+
+    > li {
+        > a {
+            text-transform: uppercase;
+        }
+    }
+
+
+    ul {
+        @extend %cleanUl;
+
+        a {
+            background: #9fb1bf;
+            padding-left: 37px;
+
+            &:hover {
+                background: lighten(#9fb1bf, 5%);
+            }
+        }
+
+        .questions {
+            a {
+                padding-left: 60px;
+            }
+        }
+    }
+
+    .questions {
+        a {
+            background: #cfd8df;
+            padding-left: 37px;
+            &:hover {
+                background: #cfd8df;
+            }
+        }
+    }
+}
+
+.js .faqs-list {
+    ul {
+        display: none;
+    }
+    .active {
+        ul {
+            display: block;
+            ul {
+                display: none;
+            }
+            .active {
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
 

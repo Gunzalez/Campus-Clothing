@@ -1,34 +1,29 @@
 
-TODO - nice to have
+# TODO - nice to have
 Align basket better on mobile
 Style pointy buttons
-
-
-TODO - essentials
-- Change typeAhead, does not work on IE9
-- TypeAhead for Product page form
-- TypeAhead for Order status page form
-
 Full width buttons on mobile
 
+
+# TODO - essentials
+- Change typeAhead, does not work on IE9
 - Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 
 
+# TODO - Questions
+TypeAhead for Product page form?
+TypeAhead for Order status page form?
+Overlay with form in the middle?
+Rob okay to do validation, or shall I begin?
+Ask how Product page works in general?
 
-Ask about JS validation or backend
 
-Overlay with form in the middle
-
-
-TODO - Ask Robin
-Ask how Product page works?
-
-TODO - Not doing
+# TODO - Not doing
 Change basket to include 'items |', instead of number
         * Makes long names difficult on Institution page
 
 
-TODO - done
+# TODO - done
 Add/Remove option features
 Scroll tabs to view on mobile screens
 Add in validation error messages to form fields
@@ -43,7 +38,7 @@ Checkbox position on JOBS.html.
 Same Delivery functionality on browser resize.
 Leave menu open on desktop
 
-TODO - time log
+# TODO - time log
 25 - 3
 26 - 12
 27 - 8

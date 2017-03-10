@@ -380,6 +380,18 @@
         }
     };
 
+    campus.FAQs = {
+        init: function(){
+            this.buttons = $('.faqs-list a').not('.questions a');
+            this.buttons.each(function(i, obj){
+                $(obj).on('click', function(e){
+                    e.preventDefault();
+                    $(obj).parents('li').addClass('active').siblings().removeAttr('class');
+                })
+            });
+        }
+    };
+
     campus.buttonToggles = {
         init: function(){
             this.buttons = $('[data-btn-state]');
@@ -409,6 +421,7 @@
         campus.buttonToggles.init();
         campus.largeCTA.init();
         campus.overlay.init();
+        campus.FAQs.init();
 
         // resize triggers
         $(window).on('resize', function () {
