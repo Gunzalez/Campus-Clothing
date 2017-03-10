@@ -4,11 +4,10 @@ Align basket better on mobile
 Style pointy buttons
 Full width buttons on mobile
 
-
 # TODO - essentials
-- Change typeAhead, does not work on IE9
-- Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
-
+- Change typeAhead to use data in page
+- Find one that works in IE9 first
+- Do date widget on Contact page
 
 # TODO - Questions
 TypeAhead for Product page form?
@@ -18,12 +17,17 @@ Rob okay to do validation, or shall I begin?
 Ask how Product page works in general?
 
 
+
+
+
+
 # TODO - Not doing
 Change basket to include 'items |', instead of number
         * Makes long names difficult on Institution page
 
 
 # TODO - done
+- Update header navigation with real copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 Add/Remove option features
 Scroll tabs to view on mobile screens
 Add in validation error messages to form fields

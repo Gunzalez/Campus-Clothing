@@ -231,7 +231,6 @@ body {
     }
 
     .header-links {
-        padding-top: 10px;
         @extend %cleanUl;
         text-align: center;
         li { display: inline; }
@@ -489,7 +488,6 @@ body {
             padding: 0;
         }
     }
-
 }
 
 .large-cta {
