@@ -1035,67 +1035,49 @@ span.logo {
   100% {
     opacity: 1; } }
 
-/* The Overlay (background) */
 .overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 0;
   width: 100%;
   position: fixed;
-  /* Stay in place */
   z-index: 10;
-  /* Sit on top */
   left: 0;
   top: 0;
   background-color: black;
-  /* Black fallback color */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/opacity */
   overflow-x: hidden;
-  /* Disable horizontal scroll */
-  transition: 0.25s;
-  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
-
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%;
-  /* 25% from the top */
-  width: 100%;
-  /* 100% width */
-  text-align: center;
-  /* Centered text/links */
-  margin-top: 30px;
-  /* 30px top margin to avoid conflict with the close button on smaller screens */ }
-  .overlay-content input,
-  .overlay-content button {
-    margin: 0 2px !important; }
-
-.overlay form {
-  margin: 0 auto;
-  display: inline-block;
-  position: relative; }
-  .overlay form input {
-    width: 280px !important;
-    padding: 10px !important;
-    height: auto !important;
-    border-color: #000000 !important; }
-  .overlay form .btn i {
-    margin-left: 4px; }
-
-.overlay a {
-  text-decoration: none;
-  font-size: 3.0em;
-  position: absolute;
-  top: -100px;
-  right: 0; }
-  .overlay a i {
-    color: #ffffff; }
-    .overlay a i:hover {
-      color: #98322e;
-      -moz-transition: color 0.5s;
-      -o-transition: color 0.5s;
-      -webkit-transition: color 0.5s;
-      transition: color 0.5s; }
+  transition: 0.25s; }
+  .overlay .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center; }
+    .overlay .overlay-content input, .overlay .overlay-content button {
+      margin: 0 3px !important; }
+  .overlay form {
+    margin: 0 auto;
+    display: inline-block;
+    position: relative; }
+    .overlay form input {
+      width: 280px !important;
+      padding: 10px !important;
+      height: auto !important;
+      border-color: #000000 !important; }
+    .overlay form .btn i {
+      margin-left: 4px; }
+  .overlay a {
+    text-decoration: none;
+    font-size: 3.0em;
+    position: absolute;
+    top: -100px;
+    right: 0; }
+    .overlay a i {
+      color: #ffffff; }
+      .overlay a i:hover {
+        color: #98322e;
+        -moz-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        -webkit-transition: color 0.5s;
+        transition: color 0.5s; }
 
 .faqs {
   padding: 25px 0; }

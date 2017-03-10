@@ -1,8 +1,6 @@
 
 # TODO - nice to have
-Align basket better on mobile
 Style pointy buttons
-Full width buttons on mobile
 
 
 # TODO - essentials
@@ -11,6 +9,7 @@ Full width buttons on mobile
 - Date picker widget on Contact page
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
+Full width buttons on mobile
 
 
 # TODO - Questions
@@ -24,6 +23,9 @@ Change basket to include 'items |', instead of number
 
 Rob okay to do validation, or shall I begin?
         * Handled with .Net
+
+Align basket better on mobile
+        * I think it's fine the way it is
 
 
 # TODO - done
@@ -58,3 +60,4 @@ Leave menu open on desktop
 7 - 2
 8 - 1
 9 - 2
+10 - 10
