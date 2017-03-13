@@ -375,7 +375,6 @@
 
             // scroll to header if visible
             if(this.$navbar.css('display') === 'none'){
-                //console.log(this.$buttons.eq(position));
                 $('html, body').animate({
                     scrollTop: this.$list.eq(position).offset().top
                 }, 500);
