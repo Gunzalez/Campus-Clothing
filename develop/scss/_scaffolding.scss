@@ -17,6 +17,12 @@ form {
         font-weight: normal !important;
     }
 
+    .form-group {
+        [readonly] {
+            background: #ffffff !important; // done for date widget, edit as you like
+        }
+    }
+
     input, select, textarea, button {
 
         @include border-radius(2px);
