@@ -411,9 +411,13 @@
             this.buttons.each(function(i, obj){
                 $(obj).on('click', function(e){
                     e.preventDefault();
-                    $(obj).parents('li').addClass('active').find('> a i').removeClass('fa-caret-right').addClass('fa-caret-down');
-                    $(obj).parents('li').siblings().removeAttr('class').find('> a i').addClass('fa-caret-right').removeClass('fa-caret-down');
-
+                    var $parentLi = $(obj).parent();
+                    if(!$parentLi.hasClass('active')){
+                        $parentLi.addClass('active').find('> a i').removeClass('fa-caret-right').addClass('fa-caret-down');
+                        $parentLi.siblings().removeAttr('class').find('> a i').addClass('fa-caret-right').removeClass('fa-caret-down');
+                    } else {
+                        $parentLi.removeAttr('class').find('> a i').addClass('fa-caret-right').removeClass('fa-caret-down');
+                    }
                 })
             });
         }
