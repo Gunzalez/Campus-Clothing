@@ -24,7 +24,7 @@
 
         // globally used functions
         $displayToggles: $('.js-toggle-display'), // show/hide
-        $tooltips: $('[data-toggle="tooltip"]'),  // tool tips
+        $toolTips: $('[data-toggle="tooltip"]'),  // tool tips
         $inputPods: $('.input-group-pod'),
         $datePickers: $('.datepicker'),
         $datePickersList: [],
@@ -37,60 +37,35 @@
                 campus.properties.isMobile = true;
             }
 
-            // shout out to
-            // http://amsul.ca/pickadate.js
+            // shout out to http://amsul.ca/pickadate.js
             if(this.$datePickers.length > 0){
-
-
-
-                var picker = this.$datePickers.each(function(i, obj){
-                    $(obj).pickadate({
+                this.$datePickers.each(function(i, obj){
+                    var picker = $(obj).pickadate({
                         formatSubmit: 'yyyy/mm/dd',
                         //min: [2017, 2, 31], // stop dates in the past
                         //max: [2017, 2, 31], // stop dates in the future
                         container: '.page',
                         close: 'Cancel'
                     });
+                    campus.environment.$datePickersList.push(picker);
                 });
-
-
-
-                this.$datePickersList.push(picker);
-                console.log(this.$datePickersList);
             }
 
-            //var $input = $( '.datepicker' ).pickadate({
-            //    formatSubmit: 'yyyy/mm/dd',
-            //    // min: [2015, 7, 14],
-            //    container: '#container',
-            //    // editable: true,
-            //    closeOnSelect: false,
-            //    closeOnClear: false,
-            //})
-            //
-            //var picker = $input.pickadate('picker')
-            //// picker.set('select', '14 October, 2014')
-            //// picker.open()
-            //
-            //// $('button').on('click', function() {
-            ////     picker.set('disable', true);
-            //// });
-            //
-
+            // cosmetic helper, put focus on input field
             this.$inputPods.each(function(i, obj){
                 $('.symbol', $(obj)).on('click', function(){
-                    $('input', $(obj)).trigger('focus');
+                   // $('input', $(obj)).trigger('focus');
                 });
             });
 
             // displays tooltips (bootstrap tooltips)
-            if(this.$tooltips.length > 0){
-                this.$tooltips.each(function(i, obj){
+            if(this.$toolTips.length > 0){
+                this.$toolTips.each(function(i, obj){
                     $(obj).on('click', function(e){
                         e.preventDefault();
                     })
                 });
-                this.$tooltips.tooltip();
+                this.$toolTips.tooltip();
             }
 
             // displays of divs (toggles)

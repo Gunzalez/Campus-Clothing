@@ -1148,8 +1148,30 @@ span.logo {
     padding: 6px 12px;
     background: #98322e;
     color: #ffffff;
-    cursor: pointer;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px; }
   .input-group-pod input {
     padding-left: 45px; }
+
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected,
+.picker__day--highlighted {
+  border-color: #00365a;
+  background: #00365a; }
+
+.picker__button--clear:before {
+  border-color: #98322e; }
+
+.picker__year {
+  font-style: normal; }
+
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  color: #98322e; }
+
+.picker__nav--prev:before {
+  border-right: 0.75em solid #98322e; }
+
+.picker__nav--next:before {
+  border-left: 0.75em solid #98322e; }

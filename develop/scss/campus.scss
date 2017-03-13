@@ -1288,7 +1288,7 @@ span {
         padding: 6px 12px;
         background: $brand-red;
         color: #ffffff;
-        cursor: pointer;
+        //cursor: pointer;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
@@ -1298,5 +1298,34 @@ span {
     }
 }
 
+// datepicker overrides
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected,
+.picker__day--highlighted {
+    border-color: $brand-blue;
+    background: $brand-blue;
+}
+
+.picker__button--clear:before {
+    border-color: $brand-red;
+}
+
+.picker__year {
+    font-style: normal;
+}
+
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+    color: $brand-red;
+}
+
+.picker__nav--prev:before {
+    border-right: 0.75em solid $brand-red;
+}
+
+.picker__nav--next:before {
+    border-left: 0.75em solid $brand-red;
+}
 
 
