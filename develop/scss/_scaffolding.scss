@@ -153,14 +153,12 @@ form {
 h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
-    //text-transform: uppercase;
-    //color: $brand-blue;
     font-weight: bold;
-    line-height: 120%;
 }
 
 h2 {
     font-size: 1.4em;
+    line-height: 120%;
 }
 
 h3 {
@@ -168,6 +166,7 @@ h3 {
     color: $brand-blue;
     text-transform: uppercase;
     font-size: 1.2em;
+    line-height: 120%;
 
     &.strike-through {
         position: relative;

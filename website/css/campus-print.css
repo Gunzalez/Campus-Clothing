@@ -17,3 +17,6 @@ button,
     display: block; }
   .js .faqs-list .active ul .active ul {
     display: block; }
+
+h3.strike-through:before {
+  border-top: 1px solid #ffffff; }

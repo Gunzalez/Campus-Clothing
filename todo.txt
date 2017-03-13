@@ -1,15 +1,12 @@
 
 # TODO - nice to have
-Style pointy buttons
 
 
 # TODO - essentials
-- Change typeAhead to use data in page
 - Find one that works in IE9 first
-- Date picker widget on Contact page
+- Change typeAhead to use data in page
 - TypeAhead for Product page form
 - TypeAhead for Order status page form
-Full width buttons on mobile
 
 
 # TODO - Questions
@@ -27,8 +24,13 @@ Rob okay to do validation, or shall I begin?
 Align basket better on mobile
         * I think it's fine the way it is
 
+Style pointy buttons
+        * Everyone is fine with the way they are now, ...hopefully client too
+
 
 # TODO - done
+- Date picker widget on Contact page
+Full width buttons on mobile
 Overlay submit button styling
 Menu copy from Al - [ faq’s, returns, jobs, corporate, contact ]
 Add/Remove option features
