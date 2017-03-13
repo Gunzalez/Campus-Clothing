@@ -195,7 +195,7 @@
 
             // if Main Navigation is open, close it first
             if(campus.navigation.isOpen){
-                this.$toggleBtn.trigger('click');
+                campus.navigation.$toggleBtn.trigger('click');
             }
         },
 

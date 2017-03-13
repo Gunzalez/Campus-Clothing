@@ -107,7 +107,8 @@ form {
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 120%; }
 
 h2 {
   font-size: 1.4em; }
@@ -237,6 +238,10 @@ select.short-select {
   [data-btn-state="negative"] .negative,
   [data-btn-state="negative"]:hover .negative {
     display: block; }
+
+@media (max-width: 480px) {
+  .page-actions button {
+    width: 100%; } }
 
 html {
   overflow-y: scroll; }
@@ -1004,8 +1009,7 @@ body {
   color: #000000; }
 
 span.logo {
-  display: inline-block;
-  margin: 0 10px; }
+  display: inline-block; }
 
 .typed-cursor {
   opacity: 1;

@@ -59,3 +59,11 @@
     .positive { display: none }
     .negative { display: block }
 }
+
+.page-actions {
+    @media (max-width: $width-xs){
+        button {
+            width: 100%;
+        }
+    }
+}

@@ -156,6 +156,7 @@ h1, h2, h3, h4 {
     //text-transform: uppercase;
     //color: $brand-blue;
     font-weight: bold;
+    line-height: 120%;
 }
 
 h2 {
@@ -238,8 +239,6 @@ select::-ms-expand {
     }
 }
 
-
-
 select {
     &.short-select {
         width: 60px;
@@ -247,8 +246,3 @@ select {
         float: left;
     }
 }
-
-
-
-
-
