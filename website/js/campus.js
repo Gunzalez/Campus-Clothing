@@ -25,6 +25,7 @@
         // globally used functions
         $displayToggles: $('.js-toggle-display'), // show/hide
         $tooltips: $('[data-toggle="tooltip"]'),  // tool tips
+        $inputPods: $('.input-group-pod'),
 
         resize: function(){},
 
@@ -34,7 +35,13 @@
                 campus.properties.isMobile = true;
             }
 
-            // displays tooltips
+            campus.environment.$inputPods.each(function(i, obj){
+                $('.symbol', $(obj)).on('click', function(){
+                    $('input', $(obj)).trigger('focus');
+                });
+            });
+
+            // displays tooltips (bootstrap tooltips)
             if(campus.environment.$tooltips.length > 0){
                 campus.environment.$tooltips.each(function(i, obj){
                     $(obj).on('click', function(e){
@@ -44,7 +51,7 @@
                 campus.environment.$tooltips.tooltip();
             }
 
-            // toggles display of divs
+            // displays of divs (toggles)
             campus.environment.$displayToggles.each(function(i, obj){
                 $(obj).on('click', function(){
                     var toggleTargetId = $(this).attr('data-toggle-display'),

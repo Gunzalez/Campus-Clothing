@@ -1137,7 +1137,7 @@ span {
     top: 0;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.9);
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.25s;
 
     .overlay-content {
@@ -1275,6 +1275,22 @@ span {
                 }
             }
         }
+    }
+}
+
+.input-group-pod {
+    position: relative;
+
+    .symbol {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        border-right: 1px solid $brand-vGrey;
+        padding: 5px 10px;
+    }
+
+    input {
+        padding-left: 45px;
     }
 }
 
