@@ -46,7 +46,8 @@
                         //max: [2017, 2, 31], // stop dates in the future
                         container: '.page',
                         closeOnSelect: false,
-                        closeOnClear: false
+                        closeOnClear: false,
+                        close: 'Done'
                     });
                     campus.environment.$datePickersList.push(picker);
                 });
