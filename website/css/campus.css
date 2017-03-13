@@ -29,6 +29,8 @@ form {
   padding-bottom: 15px; }
   form label {
     font-weight: normal !important; }
+  form .form-group [readonly] {
+    background: #ffffff !important; }
   form input, form select, form textarea, form button {
     -webkit-border-radius: 2px !important;
     -moz-border-radius: 2px !important;
@@ -1141,9 +1143,13 @@ span.logo {
   position: relative; }
   .input-group-pod .symbol {
     position: absolute;
-    left: 1px;
-    top: 1px;
-    border-right: 1px solid #e1e1e1;
-    padding: 5px 10px; }
+    left: 0;
+    top: 0;
+    padding: 6px 12px;
+    background: #98322e;
+    color: #ffffff;
+    cursor: pointer;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px; }
   .input-group-pod input {
     padding-left: 45px; }

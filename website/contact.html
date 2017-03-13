@@ -9,6 +9,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="js/vendor/easy-autocomplete.css" rel="stylesheet">
     <link href="js/vendor/animated-burgers.css" rel="stylesheet">
+    <link href="js/vendor/default.css" rel="stylesheet">
+    <link href="js/vendor/default.date.css" rel="stylesheet">
     <link href="css/campus.css" rel="stylesheet">
     <link href="css/campus-print.css" media="print" rel="stylesheet">
 
@@ -295,13 +297,21 @@
                         <div class="col-sm-6">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="order-number" class="col-sm-5 control-label">Order number:</label>
+                                    <label for="order-number" class="col-sm-5 control-label">Order number:
+                                        <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="If you have an order with us">
+                                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        </a>
+                                    </label>
                                     <div class="col-sm-7">
                                         <input type="text" id="order-number" name="order-number" class="form-control" value="" placeholder="Order number" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="post-code" class="col-sm-5 control-label">Post code:</label>
+                                    <label for="post-code" class="col-sm-5 control-label">Post code:
+                                        <a href="#" class="tool-tip" data-toggle="tooltip" data-placement="right" title="If you have an order with us">
+                                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                        </a>
+                                    </label>
                                     <div class="col-sm-4">
                                         <input type="text" id="post-code" name="post-code" class="form-control" value="" placeholder="Post code" />
                                     </div>
@@ -311,14 +321,15 @@
                                     <div class="col-sm-7">
                                         <div class="input-group-pod">
                                             <div class="symbol"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-                                            <input type="text" id="graduation-date" name="graduation-date" class="form-control" value="" placeholder="Graduation date" />
+                                            <input type="text" id="graduation-date" name="graduation-date" class="form-control datepicker" value="" placeholder="Graduation date" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group error">
                                     <label for="institution" class="col-sm-5 control-label">Institution:</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="institution" name="institution" class="form-control" value="" placeholder="Institution" />
+                                        <span class="error-message">Please enter institution name</span>
                                     </div>
                                 </div>
                             </div>
@@ -386,6 +397,8 @@
 <script src="js/vendor/jquery-2.1.4.min.js"></script>
 <script src="js/vendor/easy-autocomplete.min.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/picker.js"></script>
+<script src="js/vendor/picker.date.js"></script>
 <script src="js/campus.js"></script>
 </body>
 </html>
