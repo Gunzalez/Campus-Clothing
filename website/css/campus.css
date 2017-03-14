@@ -149,6 +149,8 @@ h3 {
     top: 55%;
     margin-top: -26px;
     font-size: 2.0em; }
+    h3 .shopping-basket-link .items {
+      top: -4px; }
 
 hr {
   border-color: #e1e1e1; }
