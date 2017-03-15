@@ -665,6 +665,9 @@ body {
     color: #000000;
     text-transform: lowercase;
     font-size: 0.8em; }
+  @media (max-width: 768px) {
+    .size-guide {
+      margin: 0 0 20px 0; } }
   @media (max-width: 480px) {
     .size-guide th:first-child {
       display: none; } }

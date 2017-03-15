@@ -610,6 +610,10 @@ body {
         font-size: 0.8em;
     }
 
+    @media (max-width: $width-sm){
+        margin: 0 0 20px 0;
+    }
+
     @media (max-width: $width-xs){
         th:first-child {
             display: none;
