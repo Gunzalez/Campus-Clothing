@@ -1208,14 +1208,38 @@ span {
 
         i {
             color: #ffffff;
-            margin-right: 7px;
         }
     }
 
     > li {
+        position: relative;
+        i {
+            position: absolute;
+            left: 16px;
+            top: 12px;
+        }
+
         > a {
             text-transform: uppercase;
             font-weight: bold;
+            padding-left: 37px;
+        }
+
+        > ul {
+            > li {
+                position: relative;
+
+                i {
+                    left: 37px;
+                    @media (max-width: $width-sm){
+                        left: 15px;
+                    }
+                }
+
+                > a {
+                    font-weight: bold;
+                }
+            }
         }
     }
 
@@ -1224,9 +1248,9 @@ span {
 
         a {
             background: #9fb1bf;
-            padding-left: 37px;
+            padding-left: 60px;
             @media (max-width: $width-sm){
-                padding-left: 15px;
+                padding-left: 37px;
             }
 
             &:hover {
@@ -1234,9 +1258,10 @@ span {
             }
         }
 
-        .questions {
-            a {
+        .faq-group {
+            li {
                 padding-left: 60px;
+
                 @media (max-width: $width-sm){
                     padding-left: 15px;
                 }
@@ -1244,15 +1269,26 @@ span {
         }
     }
 
-    .questions {
-        a {
+
+
+    .faq-group {
+        li {
+            padding: 10px 15px 10px 35px;
             background: #cfd8df;
-            padding-left: 37px;
-            &:hover {
-                background: #cfd8df;
-            }
+            border-bottom: 2px solid #ffffff;
             @media (max-width: $width-sm){
                 padding-left: 15px;
+            }
+
+        }
+
+        .question {
+            padding-bottom: 5px;
+        }
+
+        .answer {
+            p:last-child {
+                margin-bottom: 0;
             }
         }
     }
