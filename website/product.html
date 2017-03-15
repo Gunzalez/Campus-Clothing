@@ -126,7 +126,12 @@
             <div class="product-detail">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-4 col-sm-3">
+                        <div class="col-sm-4">
+
+                            <h1 class="title hidden-sm hidden-md hidden-lg">&pound;24.95 Mordor High Hoodie</h1>
+                            <div class="underline hidden-sm hidden-md hidden-lg">
+                                <span aria-hidden="true"></span><hr>
+                            </div>
                             <div class="product-image">
                                 <img src="uploaded/item-1.png" class="img-responsive data-image-receiver" alt="Hoodie 1" />
                             </div>
@@ -150,17 +155,18 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xs-8 col-sm-9">
+                        <div class="col-sm-8">
                             <div class="product-description">
-                                <h1 class="title">&pound;24.95 Mordor High Hoodie</h1>
-                                <div class="underline">
+
+                                <h1 class="title hidden-xs">&pound;24.95 Mordor High Hoodie</h1>
+                                <div class="underline hidden-xs">
                                     <span class="dot" aria-hidden="true"></span><hr>
                                 </div>
                                 <p>A et ligula. Sed luctus, elit ac commodo porttitor, elit ante eleifend odio, vitae sollicitudin eros quam consectetur odio. </p>
                                 <p>Praesent elementum justo quis volutpat cursus. Curabitur semper, libero ut congue pharetra, diam ex auctor justo,.</p>
 
                                 <!-- Table for desktop view -->
-                                <table width="100%" border="0" class="size-guide hidden-xs" style="margin-top: 50px;">
+                                <table width="100%" border="0" class="size-guide">
                                     <caption>Chest size in inches and cm</caption>
                                     <tbody>
                                     <tr>
@@ -192,116 +198,77 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                <h3 class="strike-through"><span>About your garment</span></h3>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="size" class="col-sm-4 control-label">Size:</label>
+                                        <div class="col-sm-5">
+                                            <select id="size" name="size" class="form-control">
+                                                <option value="0" selected>Select</option>
+                                                <option value="s">S</option>
+                                                <option value="m">M</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="colour" class="col-sm-4 control-label">Colour:</label>
+                                        <div class="col-sm-5">
+                                            <select id="colour" name="colour" class="form-control">
+                                                <option selected>Select</option>
+                                                <option value="0">Sport Grey</option>
+                                                <option value="1">Deep Red</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group error">
+                                        <label for="quantity" class="col-sm-4 control-label">Quantity:</label>
+                                        <div class="col-sm-5">
+                                            <select id="quantity" name="quantity" class="form-control">
+                                                <option selected>Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <span class="error-message">Please select one</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 class="strike-through"><span>About your ceremony</span></h3>
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="year" class="col-sm-4 control-label">Graduation Year:</label>
+                                        <div class="col-sm-5">
+                                            <select id="year" name="size" class="form-control">
+                                                <option value="0" selected>Select</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="time" class="col-sm-4 control-label">Ceremony Time:</label>
+                                        <div class="col-sm-5">
+                                            <select id="time" name="time" class="form-control">
+                                                <option selected>Select</option>
+                                                <option value="0">Morning</option>
+                                                <option value="1">Afternoon</option>
+                                                <option value="2">Night</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="col-sm-4 control-label">Confirm your name:</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" id="name" name="name" class="form-control" value="" placeholder="Type and select.." />
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-9 col-sm-push-3">
-
-                            <!-- table for mobile view -->
-                            <table width="100%" border="0" class="size-guide hidden-sm hidden-md hidden-lg">
-                                <caption>Chest size in inches and cm</caption>
-                                <tbody>
-                                <tr>
-                                    <th scope="col">Chest size</th>
-                                    <th scope="col">XS</th>
-                                    <th scope="col">S</th>
-                                    <th scope="col">M</th>
-                                    <th scope="col">L</th>
-                                    <th scope="col">XL</th>
-                                    <th scope="col">XXL</th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">inches</th>
-                                    <td>19"</td>
-                                    <td>20"</td>
-                                    <td>21"</td>
-                                    <td>22"</td>
-                                    <td>23"</td>
-                                    <td>26"</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">cm</th>
-                                    <td>48cm</td>
-                                    <td>51cm</td>
-                                    <td>53cm</td>
-                                    <td>55cm</td>
-                                    <td>57cm</td>
-                                    <td>64cm</td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <div class="col-sm-9 col-sm-push-3">
-                            <h3 class="strike-through"><span>About your garment</span></h3>
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="size" class="col-sm-4 control-label">Size:</label>
-                                    <div class="col-sm-5">
-                                        <select id="size" name="size" class="form-control">
-                                            <option value="0" selected>Select</option>
-                                            <option value="s">S</option>
-                                            <option value="m">M</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="colour" class="col-sm-4 control-label">Colour:</label>
-                                    <div class="col-sm-5">
-                                        <select id="colour" name="colour" class="form-control">
-                                            <option selected>Select</option>
-                                            <option value="0">Sport Grey</option>
-                                            <option value="1">Deep Red</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group error">
-                                    <label for="quantity" class="col-sm-4 control-label">Quantity:</label>
-                                    <div class="col-sm-5">
-                                        <select id="quantity" name="quantity" class="form-control">
-                                            <option selected>Select</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                        </select>
-                                        <span class="error-message">Please select one</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h3 class="strike-through"><span>About your ceremony</span></h3>
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="year" class="col-sm-4 control-label">Graduation Year:</label>
-                                    <div class="col-sm-5">
-                                        <select id="year" name="size" class="form-control">
-                                            <option value="0" selected>Select</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2015">2015</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="time" class="col-sm-4 control-label">Ceremony Time:</label>
-                                    <div class="col-sm-5">
-                                        <select id="time" name="time" class="form-control">
-                                            <option selected>Select</option>
-                                            <option value="0">Morning</option>
-                                            <option value="1">Afternoon</option>
-                                            <option value="2">Night</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name" class="col-sm-4 control-label">Confirm your name:</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="name" name="name" class="form-control" value="" placeholder="Type and select.." />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-xs-12">
                             <div class="copy-border-bottom">
                                 <h3 class="strike-through large"><span>Extra personalisation</span></h3>
