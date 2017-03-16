@@ -217,12 +217,12 @@
 
         init: function () {
 
-            $('.openModal').on('click', function (e) {
+            $('.open-modal').on('click', function (e) {
                 e.preventDefault();
                 campus.overlay.showOverlay();
             });
 
-            $('.hideModal').on('click', function (e) {
+            $('.hide-modal').on('click', function (e) {
                 e.preventDefault();
                 campus.overlay.hideOverlay();
             });
