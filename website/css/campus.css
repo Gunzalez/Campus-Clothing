@@ -25,88 +25,104 @@
 .section {
   position: relative; }
 
-.form, form {
+.form label {
+  font-weight: normal !important; }
+
+.form .form-group [readonly] {
+  background: #ffffff !important; }
+
+.form input, .form select, .form textarea, .form button, .form .form-control {
+  -webkit-border-radius: 2px !important;
+  -moz-border-radius: 2px !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  border-color: #adadad !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal !important; }
+  .form input:focus, .form select:focus, .form textarea:focus, .form button:focus, .form .form-control:focus {
+    border-color: #000000 !important;
+    box-shadow: none !important; }
+
+.form input:not([type="checkbox"]), .form select:not([type="checkbox"]), .form textarea:not([type="checkbox"]), .form button:not([type="checkbox"]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.form input, .form select, .form textarea {
+  color: #000000; }
+
+.form .form-horizontal {
   padding-bottom: 15px; }
-  .form label, form label {
-    font-weight: normal !important; }
-  .form .form-group [readonly], form .form-group [readonly] {
-    background: #ffffff !important; }
-  .form input, .form select, .form textarea, .form button, .form .form-control, form input, form select, form textarea, form button, form .form-control {
-    -webkit-border-radius: 2px !important;
-    -moz-border-radius: 2px !important;
-    border-radius: 2px !important;
-    box-shadow: none !important;
-    border-color: #adadad !important;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal !important; }
-    .form input:focus, .form select:focus, .form textarea:focus, .form button:focus, .form .form-control:focus, form input:focus, form select:focus, form textarea:focus, form button:focus, form .form-control:focus {
-      border-color: #000000 !important;
-      box-shadow: none !important; }
-  .form input:not([type="checkbox"]), .form select:not([type="checkbox"]), .form textarea:not([type="checkbox"]), .form button:not([type="checkbox"]), form input:not([type="checkbox"]), form select:not([type="checkbox"]), form textarea:not([type="checkbox"]), form button:not([type="checkbox"]) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; }
-  .form input, .form select, .form textarea, form input, form select, form textarea {
-    color: #000000; }
-  .form .form-horizontal, form .form-horizontal {
-    padding-bottom: 15px; }
-    .form .form-horizontal label:not(.checkbox-right), form .form-horizontal label:not(.checkbox-right) {
-      font-weight: normal !important;
-      text-align: left !important; }
-  .form .form-inline label, form .form-inline label {
-    display: block;
-    float: left; }
-  .form .form-inline input, form .form-inline input {
-    float: none !important; }
-  .form .form-inline .form-group, form .form-inline .form-group {
-    margin: 0 !important;
-    width: 100%; }
-  .form .form-3-char, form .form-3-char {
-    width: 40% !important; }
-  .form .checkbox-right,
-  .form .checkbox-left, form .checkbox-right,
-  form .checkbox-left {
-    position: relative;
-    width: 100%;
-    min-height: 30px; }
-    .form .checkbox-right span,
-    .form .checkbox-left span, form .checkbox-right span,
-    form .checkbox-left span {
-      display: inline-block; }
-    .form .checkbox-right input,
-    .form .checkbox-left input, form .checkbox-right input,
-    form .checkbox-left input {
-      position: absolute;
-      top: 4px;
-      width: 15px;
-      height: 15px;
-      outline: none !important;
-      cursor: pointer;
-      margin: 0; }
-  .form .checkbox-right, form .checkbox-right {
-    text-align: right !important; }
-    .form .checkbox-right span, form .checkbox-right span {
-      padding-right: 27px; }
-    .form .checkbox-right input, form .checkbox-right input {
-      right: 0; }
-  .form .checkbox-left, form .checkbox-left {
+  .form .form-horizontal label:not(.checkbox-right) {
+    font-weight: normal !important;
     text-align: left !important; }
-    .form .checkbox-left span, form .checkbox-left span {
-      padding-left: 27px; }
-    .form .checkbox-left input, form .checkbox-left input {
-      left: 0; }
-  .form .error-message, form .error-message {
-    display: none;
-    padding-top: 2px;
-    color: #98322e;
-    font-size: 0.8em; }
-  .form .error .error-message, form .error .error-message {
-    display: block; }
-  .form textarea, form textarea {
-    resize: none; }
-  .form .stacked-group label, form .stacked-group label {
-    margin-bottom: 5px !important;
-    padding-top: 0 !important; }
+
+.form .form-inline label {
+  display: block;
+  float: left; }
+
+.form .form-inline input {
+  float: none !important; }
+
+.form .form-inline .form-group {
+  margin: 0 !important;
+  width: 100%; }
+
+.form .form-3-char {
+  width: 40% !important; }
+
+.form .checkbox-right,
+.form .checkbox-left {
+  position: relative;
+  width: 100%;
+  min-height: 30px; }
+  .form .checkbox-right span,
+  .form .checkbox-left span {
+    display: inline-block; }
+  .form .checkbox-right input,
+  .form .checkbox-left input {
+    position: absolute;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    outline: none !important;
+    cursor: pointer;
+    margin: 0; }
+
+.form .btn-product {
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  border-radius: 6px !important; }
+
+.form .checkbox-right {
+  text-align: right !important; }
+  .form .checkbox-right span {
+    padding-right: 27px; }
+  .form .checkbox-right input {
+    right: 0; }
+
+.form .checkbox-left {
+  text-align: left !important; }
+  .form .checkbox-left span {
+    padding-left: 27px; }
+  .form .checkbox-left input {
+    left: 0; }
+
+.form .error-message {
+  display: none;
+  padding-top: 2px;
+  color: #98322e;
+  font-size: 0.8em; }
+
+.form .error .error-message {
+  display: block; }
+
+.form textarea {
+  resize: none; }
+
+.form .stacked-group label {
+  margin-bottom: 5px !important;
+  padding-top: 0 !important; }
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -498,21 +514,21 @@ body {
   .institutions-search .form-group {
     width: 100%;
     margin-bottom: 0; }
-  .institutions-search form {
+  .institutions-search .form {
     padding-bottom: 0 !important; }
-    .institutions-search form .input-wrapper {
+    .institutions-search .form .input-wrapper {
       position: relative; }
-      .institutions-search form .input-wrapper i {
+      .institutions-search .form .input-wrapper i {
         position: absolute;
         left: 10px;
         top: 50%;
         margin-top: -8px;
         font-size: 1.2em;
         display: none; }
-    .institutions-search form.loading .form-control {
+    .institutions-search .form.loading .form-control {
       padding-left: 40px;
       text-align: left; }
-    .institutions-search form.loading i {
+    .institutions-search .form.loading i {
       display: block; }
   .institutions-search .shopping-basket-link {
     position: absolute;
@@ -520,7 +536,7 @@ body {
     top: 50%;
     margin-top: -28px; }
   @media (min-width: 769px) {
-    .institutions-search form {
+    .institutions-search .form {
       display: inline-block;
       background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
       background-size: contain;
@@ -1042,16 +1058,16 @@ span.logo {
     text-align: center; }
     .overlay .overlay-content input, .overlay .overlay-content button {
       margin: 0 3px !important; }
-  .overlay form {
+  .overlay .form {
     margin: 0 auto;
     display: inline-block;
     position: relative; }
-    .overlay form input {
+    .overlay .form input {
       width: 280px !important;
       padding: 10px !important;
       height: auto !important;
       border-color: #000000 !important; }
-    .overlay form .btn i {
+    .overlay .form .btn i {
       margin-left: 4px; }
   .overlay a {
     text-decoration: none;

@@ -10,8 +10,7 @@
     position: relative;
 }
 
-.form, form {
-    padding-bottom: 15px;
+.form {
 
     label {
         font-weight: normal !important;
@@ -98,6 +97,10 @@
             cursor: pointer;
             margin: 0;
         }
+    }
+
+    .btn-product {
+        @include border-radius(6px);
     }
 
     .checkbox-right {

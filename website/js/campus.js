@@ -44,7 +44,7 @@
                         formatSubmit: 'yyyy/mm/dd',
                         //min: [2017, 2, 31], // stop dates in the past
                         //max: [2017, 2, 31], // stop dates in the future
-                        container: '.page',
+                        container: 'body',
                         closeOnSelect: false,
                         closeOnClear: false,
                         close: 'Done'

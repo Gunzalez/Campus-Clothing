@@ -346,7 +346,7 @@ body {
         margin-bottom: 0;
     }
 
-    form {
+    .form {
         padding-bottom: 0 !important;
 
         .input-wrapper {
@@ -383,7 +383,7 @@ body {
     }
 
     @media (min-width: $width-sm + 1){
-        form {
+        .form {
             display: inline-block;
             background: url("../images/bg-form-institution-left.gif") 0 0 no-repeat #ffffff;
             background-size: contain;
@@ -1126,7 +1126,7 @@ span {
         }
     }
 
-    form {
+    .form {
         margin: 0 auto;
         display: inline-block;
         position: relative;

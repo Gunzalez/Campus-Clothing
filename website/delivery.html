@@ -24,187 +24,132 @@
 </head>
 <body>
 
-<div class="page">
-    <div class="section">
-        <div class="header-login">
-            <div class="container">
-                <ul class="navigation">
-                    <li>
-                        <a href="#" class="toggle-btn">
-                            <span class="show-menu">Login</span>
-                            <span class="hide-menu">Cancel</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/CampusCLtd" target="_blank">
-                            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-                            <span class="text">Twitter</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.facebook.com" target="_blank">
-                            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                            <span class="text">Facebook</span>
-                        </a>
-                    </li>
-                </ul>
-                <div id="login-form" class="form-inline login-form form">
-                    <div class="form-group">
-                        <label for="orderNumberOrEmail">Order number/email:</label>
-                        <input type="text" class="form-control" id="orderNumberOrEmail" placeholder="Order number/email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" />
-                    </div>
-                    <button type="submit" class="btn">Login <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                    <a href="forgot.html">Forgotten details <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="header-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="header-box">
-                            <h1>
-                                <a href="index.html">
-                                    <span class="text">We are forever</span>
-                                    <span class="imagery"><img src="images/cc-logo.png" alt="Campus Clothing"></span>
+    <form id="delivery-stage" action="payment.html" class="form">
+        <div class="page">
+            <div class="section">
+                <div class="header-login">
+                    <div class="container">
+                        <ul class="navigation">
+                            <li>
+                                <a href="#" class="toggle-btn">
+                                    <span class="show-menu">Login</span>
+                                    <span class="hide-menu">Cancel</span>
                                 </a>
-                            </h1>
-                            <button type="button" class="hamburger hamburger--spin toggle-navigation" aria-hidden="true">
-                                  <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                  </span>
-                            </button>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/CampusCLtd" target="_blank">
+                                    <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                                    <span class="text">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.facebook.com" target="_blank">
+                                    <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                                    <span class="text">Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="login-form" class="form-inline login-form form">
+                            <div class="form-group">
+                                <label for="orderNumberOrEmail">Order number/email:</label>
+                                <input type="text" class="form-control" id="orderNumberOrEmail" placeholder="Order number/email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" />
+                            </div>
+                            <button type="submit" class="btn">Login <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                            <a href="forgot.html">Forgotten details <i class="fa fa-caret-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="main-navigation">
-                            <ul class="header-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="contact.html">FAQ<span class="text-lowercase">s</span></a></li>
-                                <li><a href="empty-returns.html">Returns</a></li>
-                                <li><a href="http://uni.campusclothing.com/" target="_blank">Corporate</a></li>
-                                <li><a href="empty-jobs.html">Jobs</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
+                <div class="header-title">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="header-box">
+                                    <h1>
+                                        <a href="index.html">
+                                            <span class="text">We are forever</span>
+                                            <span class="imagery"><img src="images/cc-logo.png" alt="Campus Clothing"></span>
+                                        </a>
+                                    </h1>
+                                    <button type="button" class="hamburger hamburger--spin toggle-navigation" aria-hidden="true">
+                                          <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                          </span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section">
-        <form id="delivery-stage" action="payment.html">
-
-            <div class="order-status">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="progress-meter">
-                                <ul>
-                                    <li>Products</li>
-                                    <li class="current-state">Delivery</li>
-                                    <li>Payment</li>
-                                </ul>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="main-navigation">
+                                    <ul class="header-links">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="contact.html">FAQ<span class="text-lowercase">s</span></a></li>
+                                        <li><a href="empty-returns.html">Returns</a></li>
+                                        <li><a href="http://uni.campusclothing.com/" target="_blank">Corporate</a></li>
+                                        <li><a href="empty-jobs.html">Jobs</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="order-detail">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-
-                            <h3 class="strike-through"><span>Payment Address</span></h3>
-                            <div class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="first-name" class="col-sm-5 control-label">First name:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="first-name" name="first-name" class="form-control" value="" placeholder="First name" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last-name" class="col-sm-5 control-label">Last name:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="last-name" name="last-name" class="form-control" value="" placeholder="Last name" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="col-sm-5 control-label">Email address:</label>
-                                    <div class="col-sm-7">
-                                        <input type="email" id="email" name="email" class="form-control" value="" placeholder="Email address" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="col-sm-5 control-label">Telephone:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" id="phone" name="phone" class="form-control" value="" placeholder="Phone" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="country" class="col-sm-5 control-label">Country:</label>
-                                    <div class="col-sm-7">
-                                        <select id="country" name="country" class="form-control">
-                                            <option selected>United Kingdom</option>
-                                            <option value="0">United States</option>
-                                            <option value="1">Manchester United</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="post-code" class="col-sm-5 control-label">Post code:</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" id="post-code" name="post-code" class="form-control" value="" placeholder="Post code" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-7 col-sm-push-5">
-                                        <label class="checkbox-left">
-                                            <input type="checkbox" id="delivery-address" value="yes" class="js-toggle-display" data-toggle-display="delivery-address-section" />
-                                            <span>Same as delivery address</span>
-                                        </label>
-                                    </div>
+            <div class="section">
+                <div class="order-status">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="progress-meter">
+                                    <ul>
+                                        <li>Products</li>
+                                        <li class="current-state">Delivery</li>
+                                        <li>Payment</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-detail">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
 
-                            <div id="delivery-address-section">
-
-                                <h3 class="strike-through"><span>Delivery Address</span></h3>
+                                <h3 class="strike-through"><span>Payment Address</span></h3>
                                 <div class="form-horizontal">
                                     <div class="form-group">
-                                        <label for="delivery-first-name" class="col-sm-5 control-label">First name:</label>
+                                        <label for="first-name" class="col-sm-5 control-label">First name:</label>
                                         <div class="col-sm-7">
-                                            <input type="text" id="delivery-first-name" name="delivery-first-name" class="form-control" value="" placeholder="First name" />
+                                            <input type="text" id="first-name" name="first-name" class="form-control" value="" placeholder="First name" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="delivery-last-name" class="col-sm-5 control-label">Last name:</label>
+                                        <label for="last-name" class="col-sm-5 control-label">Last name:</label>
                                         <div class="col-sm-7">
-                                            <input type="text" id="delivery-last-name" name="delivery-last-name" class="form-control" value="" placeholder="Last name" />
+                                            <input type="text" id="last-name" name="last-name" class="form-control" value="" placeholder="Last name" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="delivery-email" class="col-sm-5 control-label">Email address:</label>
+                                        <label for="email" class="col-sm-5 control-label">Email address:</label>
                                         <div class="col-sm-7">
-                                            <input type="email" id="delivery-email" name="delivery-email" class="form-control" value="" placeholder="Email address" />
+                                            <input type="email" id="email" name="email" class="form-control" value="" placeholder="Email address" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="delivery-phone" class="col-sm-5 control-label">Telephone:</label>
+                                        <label for="phone" class="col-sm-5 control-label">Telephone:</label>
                                         <div class="col-sm-7">
-                                            <input type="text" id="delivery-phone" name="delivery-phone" class="form-control" value="" placeholder="Phone" />
+                                            <input type="text" id="phone" name="phone" class="form-control" value="" placeholder="Phone" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="delivery-country" class="col-sm-5 control-label">Country:</label>
+                                        <label for="country" class="col-sm-5 control-label">Country:</label>
                                         <div class="col-sm-7">
-                                            <select id="delivery-country" name="delivery-country" class="form-control">
+                                            <select id="country" name="country" class="form-control">
                                                 <option selected>United Kingdom</option>
                                                 <option value="0">United States</option>
                                                 <option value="1">Manchester United</option>
@@ -212,167 +157,220 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="delivery-post-code" class="col-sm-5 control-label">Post code:</label>
+                                        <label for="post-code" class="col-sm-5 control-label">Post code:</label>
                                         <div class="col-sm-4">
-                                            <input type="text" id="delivery-post-code" name="delivery-post-code" class="form-control" value="" placeholder="Post code" />
+                                            <input type="text" id="post-code" name="post-code" class="form-control" value="" placeholder="Post code" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-7 col-sm-push-5">
+                                            <label class="checkbox-left">
+                                                <input type="checkbox" id="delivery-address" value="yes" class="js-toggle-display" data-toggle-display="delivery-address-section" />
+                                                <span>Same as delivery address</span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div id="delivery-address-section">
 
+                                    <h3 class="strike-through"><span>Delivery Address</span></h3>
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="delivery-first-name" class="col-sm-5 control-label">First name:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" id="delivery-first-name" name="delivery-first-name" class="form-control" value="" placeholder="First name" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-last-name" class="col-sm-5 control-label">Last name:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" id="delivery-last-name" name="delivery-last-name" class="form-control" value="" placeholder="Last name" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-email" class="col-sm-5 control-label">Email address:</label>
+                                            <div class="col-sm-7">
+                                                <input type="email" id="delivery-email" name="delivery-email" class="form-control" value="" placeholder="Email address" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-phone" class="col-sm-5 control-label">Telephone:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" id="delivery-phone" name="delivery-phone" class="form-control" value="" placeholder="Phone" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-country" class="col-sm-5 control-label">Country:</label>
+                                            <div class="col-sm-7">
+                                                <select id="delivery-country" name="delivery-country" class="form-control">
+                                                    <option selected>United Kingdom</option>
+                                                    <option value="0">United States</option>
+                                                    <option value="1">Manchester United</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery-post-code" class="col-sm-5 control-label">Post code:</label>
+                                            <div class="col-sm-4">
+                                                <input type="text" id="delivery-post-code" name="delivery-post-code" class="form-control" value="" placeholder="Post code" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
 
                             </div>
+                            <div class="col-sm-6">
 
+                                <h3 class="strike-through">
+                                    <span>Basket</span>
+
+                                    <span class="shopping-basket-link">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="items">2</span>
+                                    </span>
+                                </h3>
+
+                                <!-- item starts-->
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="item-title">1. University of Oxford Hoodie</h4>
+                                    </div>
+                                    <div class="col-xs-4"><img src="uploaded/item-13.png" class="img-responsive item-image" alt="Chest Print" /></div>
+                                    <div class="col-xs-8">
+                                        <dl class="item-attributes">
+                                            <dt>Colour:</dt>
+                                            <dd>Sports Grey</dd>
+                                            <dt>Size:</dt>
+                                            <dd>M</dd>
+                                            <dt>Hood Print:</dt>
+                                            <dd>ABC</dd>
+                                        </dl>
+                                        <p class="shout-out">Total: <span class="money">&pound;59.95</span></p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <ul class="basket-item-controls">
+                                            <li>
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                <a href="#">Edit item
+                                                    <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                <a href="#">Delete item
+                                                    <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- item starts-->
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="item-title">2. University of Oxford Graduation Teddy</h4>
+                                    </div>
+                                    <div class="col-xs-4"><img src="uploaded/item-15.jpg" class="img-responsive item-image" alt="Chest Print" /></div>
+                                    <div class="col-xs-8">
+                                        <dl class="item-attributes">
+                                            <dt>Text:</dt>
+                                            <dd>Class of 2017</dd>
+                                            <dt>Name:</dt>
+                                            <dd>Donald Trump</dd>
+                                        </dl>
+                                        <p class="shout-out">Total: <span class="money">&pound;15.00</span></p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <ul class="basket-item-controls">
+                                            <li>
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                <a href="#">Edit item
+                                                    <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                <a href="#">Delete item
+                                                    <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-
-                            <h3 class="strike-through">
-                                <span>Basket</span>
-
-                                <span class="shopping-basket-link">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span class="items">2</span>
-                                </span>
-                            </h3>
-
-                            <!-- item starts-->
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="item-title">1. University of Oxford Hoodie</h4>
-                                </div>
-                                <div class="col-xs-4"><img src="uploaded/item-13.png" class="img-responsive item-image" alt="Chest Print" /></div>
-                                <div class="col-xs-8">
-                                    <dl class="item-attributes">
-                                        <dt>Colour:</dt>
-                                        <dd>Sports Grey</dd>
-                                        <dt>Size:</dt>
-                                        <dd>M</dd>
-                                        <dt>Hood Print:</dt>
-                                        <dd>ABC</dd>
-                                    </dl>
-                                    <p class="shout-out">Total: <span class="money">&pound;59.95</span></p>
-                                </div>
-                                <div class="col-xs-12">
-                                    <ul class="basket-item-controls">
-                                        <li>
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                            <a href="#">Edit item
-                                                <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            <a href="#">Delete item
-                                                <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
+                    </div>
+                </div>
+                <div class="order-totals">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="basket-total">
+                                    <table border="0" class="total-table pull-right">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="col">Goods:</th>
+                                            <td scope="col">&pound;74.95</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Delivery:</th>
+                                            <td>&pound;4.95</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Total:</th>
+                                            <td>&pound;79.90</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-
-                            <!-- item starts-->
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="item-title">2. University of Oxford Graduation Teddy</h4>
-                                </div>
-                                <div class="col-xs-4"><img src="uploaded/item-15.jpg" class="img-responsive item-image" alt="Chest Print" /></div>
-                                <div class="col-xs-8">
-                                    <dl class="item-attributes">
-                                        <dt>Text:</dt>
-                                        <dd>Class of 2017</dd>
-                                        <dt>Name:</dt>
-                                        <dd>Donald Trump</dd>
-                                    </dl>
-                                    <p class="shout-out">Total: <span class="money">&pound;15.00</span></p>
-                                </div>
-                                <div class="col-xs-12">
-                                    <ul class="basket-item-controls">
-                                        <li>
-                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                            <a href="#">Edit item
-                                                <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            <a href="#">Delete item
-                                                <i class="fa fa-caret-right" aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-actions">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="copy-border-top text-right">
+                                    <button class="btn btn-product">Proceed to payment</button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="order-totals">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="basket-total">
-                                <table border="0" class="total-table pull-right">
-                                    <tbody>
-                                    <tr>
-                                        <th scope="col">Goods:</th>
-                                        <td scope="col">&pound;74.95</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Delivery:</th>
-                                        <td>&pound;4.95</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Total:</th>
-                                        <td>&pound;79.90</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+            <div class="section">
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="footer-links">
+                                    <li><a href="contact.html">FAQs</a></li>
+                                    <li><a href="empty-returns.html">Returns</a></li>
+                                    <li><a href="empty-jobs.html">Jobs</a></li>
+                                    <li><a href="http://uni.campusclothing.com/" target="_blank">Corporate</a></li>
+                                    <li><a href="tandcs.html">T&Cs</a></li>
+                                    <li><a href="privacy.html">Privacy</a></li>
+                                    <li><a href="cookies">Cookies</a></li>
+                                    <li><a href="sitemap.html">Sitemap</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                                <div class="footer-copy">
+                                    <p>Campus Global Ltd, Knights Farm, Avon Dasset, Southam, Warwickshire, CV47 2AS</p>
+                                    <p>Enquiries: <a href="tel:03333403474">03333&nbsp;403&nbsp;474</a> &copy; 2013 Campus Global Ltd | Company Registration Number: 123456789</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="page-actions">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="copy-border-top">
-                                <button class="btn btn-product pull-right">Proceed to payment</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </form>
-    </div>
-    <div class="section">
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <ul class="footer-links">
-                            <li><a href="contact.html">FAQs</a></li>
-                            <li><a href="empty-returns.html">Returns</a></li>
-                            <li><a href="empty-jobs.html">Jobs</a></li>
-                            <li><a href="http://uni.campusclothing.com/" target="_blank">Corporate</a></li>
-                            <li><a href="tandcs.html">T&Cs</a></li>
-                            <li><a href="privacy.html">Privacy</a></li>
-                            <li><a href="cookies">Cookies</a></li>
-                            <li><a href="sitemap.html">Sitemap</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="footer-copy">
-                            <p>Campus Global Ltd, Knights Farm, Avon Dasset, Southam, Warwickshire, CV47 2AS</p>
-                            <p>Enquiries: <a href="tel:03333403474">03333&nbsp;403&nbsp;474</a> &copy; 2013 Campus Global Ltd | Company Registration Number: 123456789</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </form>
 
-<script src="js/vendor/jquery-2.1.4.min.js"></script>
-<script src="js/vendor/easy-autocomplete.min.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/campus.js"></script>
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="js/vendor/easy-autocomplete.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/campus.js"></script>
 </body>
 </html>
