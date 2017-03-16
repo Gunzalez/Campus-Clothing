@@ -10,7 +10,7 @@
     position: relative;
 }
 
-form {
+.form, form {
     padding-bottom: 15px;
 
     label {
@@ -23,7 +23,7 @@ form {
         }
     }
 
-    input, select, textarea, button {
+    input, select, textarea, button, .form-control {
 
         @include border-radius(2px);
         box-shadow: none !important;
@@ -33,6 +33,7 @@ form {
 
         &:focus {
             border-color: #000000 !important;
+            box-shadow: none !important;
         }
     }
 

@@ -25,13 +25,13 @@
 .section {
   position: relative; }
 
-form {
+.form, form {
   padding-bottom: 15px; }
-  form label {
+  .form label, form label {
     font-weight: normal !important; }
-  form .form-group [readonly] {
+  .form .form-group [readonly], form .form-group [readonly] {
     background: #ffffff !important; }
-  form input, form select, form textarea, form button {
+  .form input, .form select, .form textarea, .form button, .form .form-control, form input, form select, form textarea, form button, form .form-control {
     -webkit-border-radius: 2px !important;
     -moz-border-radius: 2px !important;
     border-radius: 2px !important;
@@ -39,38 +39,42 @@ form {
     border-color: #adadad !important;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal !important; }
-    form input:focus, form select:focus, form textarea:focus, form button:focus {
-      border-color: #000000 !important; }
-  form input:not([type="checkbox"]), form select:not([type="checkbox"]), form textarea:not([type="checkbox"]), form button:not([type="checkbox"]) {
+    .form input:focus, .form select:focus, .form textarea:focus, .form button:focus, .form .form-control:focus, form input:focus, form select:focus, form textarea:focus, form button:focus, form .form-control:focus {
+      border-color: #000000 !important;
+      box-shadow: none !important; }
+  .form input:not([type="checkbox"]), .form select:not([type="checkbox"]), .form textarea:not([type="checkbox"]), .form button:not([type="checkbox"]), form input:not([type="checkbox"]), form select:not([type="checkbox"]), form textarea:not([type="checkbox"]), form button:not([type="checkbox"]) {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
-  form input, form select, form textarea {
+  .form input, .form select, .form textarea, form input, form select, form textarea {
     color: #000000; }
-  form .form-horizontal {
+  .form .form-horizontal, form .form-horizontal {
     padding-bottom: 15px; }
-    form .form-horizontal label:not(.checkbox-right) {
+    .form .form-horizontal label:not(.checkbox-right), form .form-horizontal label:not(.checkbox-right) {
       font-weight: normal !important;
       text-align: left !important; }
-  form .form-inline label {
+  .form .form-inline label, form .form-inline label {
     display: block;
     float: left; }
-  form .form-inline input {
+  .form .form-inline input, form .form-inline input {
     float: none !important; }
-  form .form-inline .form-group {
+  .form .form-inline .form-group, form .form-inline .form-group {
     margin: 0 !important;
     width: 100%; }
-  form .form-3-char {
+  .form .form-3-char, form .form-3-char {
     width: 40% !important; }
-  form .checkbox-right,
+  .form .checkbox-right,
+  .form .checkbox-left, form .checkbox-right,
   form .checkbox-left {
     position: relative;
     width: 100%;
     min-height: 30px; }
-    form .checkbox-right span,
+    .form .checkbox-right span,
+    .form .checkbox-left span, form .checkbox-right span,
     form .checkbox-left span {
       display: inline-block; }
-    form .checkbox-right input,
+    .form .checkbox-right input,
+    .form .checkbox-left input, form .checkbox-right input,
     form .checkbox-left input {
       position: absolute;
       top: 4px;
@@ -79,28 +83,28 @@ form {
       outline: none !important;
       cursor: pointer;
       margin: 0; }
-  form .checkbox-right {
+  .form .checkbox-right, form .checkbox-right {
     text-align: right !important; }
-    form .checkbox-right span {
+    .form .checkbox-right span, form .checkbox-right span {
       padding-right: 27px; }
-    form .checkbox-right input {
+    .form .checkbox-right input, form .checkbox-right input {
       right: 0; }
-  form .checkbox-left {
+  .form .checkbox-left, form .checkbox-left {
     text-align: left !important; }
-    form .checkbox-left span {
+    .form .checkbox-left span, form .checkbox-left span {
       padding-left: 27px; }
-    form .checkbox-left input {
+    .form .checkbox-left input, form .checkbox-left input {
       left: 0; }
-  form .error-message {
+  .form .error-message, form .error-message {
     display: none;
     padding-top: 2px;
     color: #98322e;
     font-size: 0.8em; }
-  form .error .error-message {
+  .form .error .error-message, form .error .error-message {
     display: block; }
-  form textarea {
+  .form textarea, form textarea {
     resize: none; }
-  form .stacked-group label {
+  .form .stacked-group label, form .stacked-group label {
     margin-bottom: 5px !important;
     padding-top: 0 !important; }
 
