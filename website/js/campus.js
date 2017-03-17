@@ -298,7 +298,7 @@
             // elements for this component
             this.$parentRow = $('.institutions-search');
             this.$form = $('#select-institution-form', this.$parentRow);
-            this.$input = $('#institution-name', this.$parentRow);
+            this.$input = $('.institution-name');
             this.listMax = 5;
             this.basUrl = 'institution.html?id=';
             var self = this;

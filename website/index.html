@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <form id="homepage-form" action="institution.html">
+    <form id="homepage-form" action="institution.html" autocomplete="off">
         <div class="page">
             <div class="section">
                 <div class="header-login">
@@ -105,11 +105,11 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-box">
-                                    <div id="select-institution-form" class="form-inline form" autocomplete="off">
+                                    <div id="select-institution-form" class="form-inline form">
                                         <div class="form-group">
                                             <label for="institution-name" class="sr-only">Institution name:</label>
                                             <div class="input-wrapper">
-                                                <input type="text" class="form-control" id="institution-name" placeholder="Type your institution name..." />
+                                                <input type="text" class="form-control institution-name" id="institution-name" placeholder="Type your institution name..." />
                                                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                                             </div>
                                         </div>
@@ -246,12 +246,12 @@
         <div id="campus-overlay" class="overlay">
             <!-- Overlay content -->
             <div class="overlay-content">
-                <div id="form" class="form-inline form" autocomplete="off">
+                <div id="form" class="form-inline form">
                     <!-- Button to close the overlay navigation -->
                     <a href="#" class="hide-modal"><i class="fa fa-times" aria-hidden="true"></i></a>
                     <div class="form-group">
                         <label for="name-of-institution" class="sr-only">Institution name</label>
-                        <input type="text" class="form-control" id="name-of-institution" placeholder="Name of institution">
+                        <input type="text" class="form-control institution-name" id="name-of-institution" placeholder="Name of institution">
                     </div>
                     <button type="submit" class="btn btn-product btn-small">Lets go <i class="fa fa-lg fa-caret-right" aria-hidden="true"></i></button>
                 </div>
