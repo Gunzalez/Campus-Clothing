@@ -203,14 +203,9 @@ body {
         margin-top: -6px;
         color: $brand-white !important;
         outline: none !important;
-        display: none;
 
         &:hover {
             color: #ffffff !important;
-        }
-
-        @media (max-width: $width-sm){
-            display: block;
         }
     }
 
@@ -273,12 +268,9 @@ body {
     
     .main-navigation {
         position: relative;
+        height: 0;
         &.animate {
             @include transition(height, 0.25s);
-        }
-
-        @media (max-width: $width-sm) {
-            height: 0;
         }
     }
 }

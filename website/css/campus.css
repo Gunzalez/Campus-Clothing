@@ -415,13 +415,9 @@ body {
     top: 50%;
     margin-top: -6px;
     color: #faf6dd !important;
-    outline: none !important;
-    display: none; }
+    outline: none !important; }
     .header-title .toggle-navigation:hover {
       color: #ffffff !important; }
-    @media (max-width: 768px) {
-      .header-title .toggle-navigation {
-        display: block; } }
   @media (max-width: 768px) {
     .header-title h1 {
       text-align: left; }
@@ -459,15 +455,13 @@ body {
         text-align: right;
         padding: 10px; } }
   .header-title .main-navigation {
-    position: relative; }
+    position: relative;
+    height: 0; }
     .header-title .main-navigation.animate {
       -moz-transition: height, 0.25s;
       -o-transition: height, 0.25s;
       -webkit-transition: height, 0.25s;
       transition: height, 0.25s; }
-    @media (max-width: 768px) {
-      .header-title .main-navigation {
-        height: 0; } }
 
 .shopping-basket-link {
   font-size: 2.5em;
