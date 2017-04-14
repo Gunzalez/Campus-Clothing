@@ -112,7 +112,7 @@
                     // shuffle the strings
                     shuffle: false,
                     // time before backspacing
-                    backDelay: 5000,
+                    backDelay: 2000,
                     // loop
                     loop: false,
                     // false = infinite
@@ -393,7 +393,7 @@
                 var $buttons = $('[data-image-target]', $(obj));
                 $buttons.on('click', function(e){
                     e.preventDefault();
-                    var $targetImage = $('.' + $(this).attr('data-image-target'));
+                    var $targetImage = $("." + $(this).attr('data-image-target'));
                     var imagePath = $('img', $(this)).attr('src');
                     var imageAlt = $('img', $(this)).attr('alt');
                     $targetImage.attr('src', imagePath);

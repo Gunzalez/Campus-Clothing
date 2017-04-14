@@ -253,3 +253,9 @@ select {
         float: left;
     }
 }
+
+.wysiwig-image-fix {
+    img {
+        width: 100% !important;
+    };
+}

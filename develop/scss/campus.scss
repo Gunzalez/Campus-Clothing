@@ -273,6 +273,25 @@ body {
             @include transition(height, 0.25s);
         }
     }
+
+    .hamburger {
+        &:hover {
+            opacity: 1 !important;
+        }
+
+        @media (max-width: $width-xs){
+
+            right: -12px;
+
+            .hamburger-inner,
+            .hamburger-inner::before,
+            .hamburger-inner::after {
+                width: 30px;
+                height: 3px;
+            }
+
+        }
+    }
 }
 
 .shopping-basket-link {
