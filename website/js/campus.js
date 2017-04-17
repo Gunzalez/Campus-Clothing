@@ -231,6 +231,7 @@
 
         showOverlay:function(){
             $('#campus-overlay').css('height', '100%');
+            $('#name-of-institution', $('#campus-overlay')).focus();
         },
 
         hideOverlay: function(){

@@ -199,7 +199,7 @@ h3 {
 
     .shopping-basket-link {
         position: absolute;
-        right: 0;
+        right: 10px;
         padding: 0 !important;
         background: #ffffff;
         top: 55%;
@@ -231,6 +231,7 @@ hr {
 select {
     background: transparent;
     background: url('../images/bg-select.png') right center no-repeat !important;
+    padding-right: 50px !important;
 }
 
 /* CAUTION: IE hackery ahead */

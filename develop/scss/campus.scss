@@ -688,10 +688,11 @@ body {
 
     .product-image {
         margin-bottom: 15px;
+        display: block;
 
         img {
             width: 100%;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
     }
 
@@ -737,7 +738,7 @@ body {
         hr {
             margin-top: 10px;
             border-top: 2px solid $brand-red;
-            margin-left: -$inset;
+            //margin-left: -$inset;
         }
 
         .dot {
@@ -747,7 +748,7 @@ body {
             background: $brand-red;
             @include border-radius(50%);
             position: absolute;
-            left: -$inset;
+            left: 0;
             top: 50%;
             margin-top: -15px;
         }

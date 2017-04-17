@@ -163,7 +163,7 @@ h3 {
       padding: 0 15px 0 0; }
   h3 .shopping-basket-link {
     position: absolute;
-    right: 0;
+    right: 10px;
     padding: 0 !important;
     background: #ffffff;
     top: 55%;
@@ -184,7 +184,8 @@ hr {
 /* styling select dropdown form field */
 select {
   background: transparent;
-  background: url("../images/bg-select.png") right center no-repeat !important; }
+  background: url("../images/bg-select.png") right center no-repeat !important;
+  padding-right: 50px !important; }
 
 /* CAUTION: IE hackery ahead */
 select::-ms-expand {
@@ -739,11 +740,12 @@ body {
   padding-top: 15px; }
   .product-detail .product-image,
   .products-list .product-image {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    display: block; }
     .product-detail .product-image img,
     .products-list .product-image img {
       width: 100%;
-      padding-bottom: 10px; }
+      padding-bottom: 15px; }
   .product-detail .product-image-carousel,
   .products-list .product-image-carousel {
     padding-bottom: 15px;
@@ -781,8 +783,7 @@ body {
     .product-detail .underline hr,
     .products-list .underline hr {
       margin-top: 10px;
-      border-top: 2px solid #98322e;
-      margin-left: -12%; }
+      border-top: 2px solid #98322e; }
     .product-detail .underline .dot,
     .products-list .underline .dot {
       display: inline-block;
@@ -793,7 +794,7 @@ body {
       -moz-border-radius: 50% !important;
       border-radius: 50% !important;
       position: absolute;
-      left: -12%;
+      left: 0;
       top: 50%;
       margin-top: -15px; }
     @media (max-width: 767px) {
