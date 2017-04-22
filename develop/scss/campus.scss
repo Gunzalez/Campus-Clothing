@@ -140,6 +140,21 @@ body {
     }
 }
 
+.form {
+    .login-form {
+        &.form-inline {
+            .form-group {
+                width: auto !important;
+            }
+
+            label {
+                padding-top: 5px;
+
+            }
+        }
+    }
+}
+
 .header-title {
 
     .container {
@@ -191,7 +206,7 @@ body {
         }
 
         .imagery {
-            padding-top: 5px;
+            padding: 10px 0;
             display: block;
         }
     }
@@ -281,12 +296,12 @@ body {
 
         @media (max-width: $width-xs){
 
-            right: -12px;
+            right: -15px;
 
             .hamburger-inner,
             .hamburger-inner::before,
             .hamburger-inner::after {
-                width: 30px;
+                width: 27px;
                 height: 3px;
             }
 
@@ -1136,6 +1151,10 @@ span {
         button {
             margin: 0 0 0 10px !important;
         }
+
+        @media (max-width: $width-xs){
+            top: 15%;
+        }
     }
 
     .easy-autocomplete {
@@ -1211,6 +1230,10 @@ span {
                 color: $brand-red;
                 @include transition(color 0.5s);
             }
+        }
+
+        @media (max-width: $width-xs){
+            top: -75px;
         }
     }
 }

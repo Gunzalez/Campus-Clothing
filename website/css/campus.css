@@ -375,6 +375,12 @@ body {
     .header-login .login-form i {
       font-size: 1.0em; }
 
+.form .login-form.form-inline .form-group {
+  width: auto !important; }
+
+.form .login-form.form-inline label {
+  padding-top: 5px; }
+
 .header-title {
   background: url("../images/texture-blue.png") 0 0 #00365a; }
   .header-title .container {
@@ -411,7 +417,7 @@ body {
       border-bottom: 1px solid #faf6dd;
       letter-spacing: 3px; }
     .header-title h1 .imagery {
-      padding-top: 5px;
+      padding: 10px 0;
       display: block; }
   .header-title .toggle-navigation {
     position: absolute;
@@ -470,11 +476,11 @@ body {
     opacity: 1 !important; }
   @media (max-width: 480px) {
     .header-title .hamburger {
-      right: -12px; }
+      right: -15px; }
       .header-title .hamburger .hamburger-inner,
       .header-title .hamburger .hamburger-inner::before,
       .header-title .hamburger .hamburger-inner::after {
-        width: 30px;
+        width: 27px;
         height: 3px; } }
 
 .shopping-basket-link {
@@ -1066,6 +1072,9 @@ span.logo {
     text-align: center; }
     .overlay .overlay-content button {
       margin: 0 0 0 10px !important; }
+    @media (max-width: 480px) {
+      .overlay .overlay-content {
+        top: 15%; } }
   .overlay .easy-autocomplete input {
     border: none !important; }
   .overlay .easy-autocomplete-container ul {
@@ -1119,6 +1128,9 @@ span.logo {
         -o-transition: color 0.5s;
         -webkit-transition: color 0.5s;
         transition: color 0.5s; }
+    @media (max-width: 480px) {
+      .overlay a {
+        top: -75px; } }
 
 .faqs {
   padding: 25px 0; }
