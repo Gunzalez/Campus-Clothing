@@ -296,7 +296,7 @@ body {
 
         @media (max-width: $width-xs){
 
-            right: -15px;
+            right: -20px;
 
             .hamburger-inner,
             .hamburger-inner::before,
@@ -1153,7 +1153,11 @@ span {
         }
 
         @media (max-width: $width-xs){
-            top: 15%;
+            top: 80px;
+        }
+
+        @media (max-width: 400px){
+            top: 80px;
         }
     }
 

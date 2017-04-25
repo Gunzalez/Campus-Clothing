@@ -476,7 +476,7 @@ body {
     opacity: 1 !important; }
   @media (max-width: 480px) {
     .header-title .hamburger {
-      right: -15px; }
+      right: -20px; }
       .header-title .hamburger .hamburger-inner,
       .header-title .hamburger .hamburger-inner::before,
       .header-title .hamburger .hamburger-inner::after {
@@ -1074,7 +1074,10 @@ span.logo {
       margin: 0 0 0 10px !important; }
     @media (max-width: 480px) {
       .overlay .overlay-content {
-        top: 15%; } }
+        top: 80px; } }
+    @media (max-width: 400px) {
+      .overlay .overlay-content {
+        top: 80px; } }
   .overlay .easy-autocomplete input {
     border: none !important; }
   .overlay .easy-autocomplete-container ul {
