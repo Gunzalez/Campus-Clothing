@@ -1426,3 +1426,29 @@ span {
     }
 }
 
+#searchmessageoverlay,
+#searchmessage {
+    display: none;
+    color: #98322e;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 6px 10px;
+    background: white;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: -1px;
+    z-index: 11;
+    font-weight: bold;
+
+    &.show {
+        display: block;
+    }
+}
+
+#searchmessage {
+    z-index: 9;
+}
+
